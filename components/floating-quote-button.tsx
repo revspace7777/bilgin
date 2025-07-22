@@ -13,18 +13,16 @@ export default function FloatingQuoteButton() {
     
     const handleScroll = () => {
       const accolades = document.querySelector("[data-accolades-section]")
-      const reviews = document.querySelector("[data-reviews-section]")
       
       if (!accolades) return
       
       const accoladesRect = accolades.getBoundingClientRect()
-      const reviewsRect = reviews?.getBoundingClientRect()
       
-      // Show when accolades section is in view OR when past the reviews section
+      // Show when accolades section is in view OR when past it
       const accoladesInView = accoladesRect.top < window.innerHeight && accoladesRect.bottom > 0
-      const pastReviews = reviewsRect ? reviewsRect.bottom < window.innerHeight : false
+      const pastAccolades = accoladesRect.bottom < window.innerHeight
       
-      setIsVisible(accoladesInView || pastReviews)
+      setIsVisible(accoladesInView || pastAccolades)
     }
 
     window.addEventListener("scroll", handleScroll)
@@ -45,7 +43,7 @@ export default function FloatingQuoteButton() {
       <Button
         onClick={handleClick}
         size="lg"
-        className="w-full h-16 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold rounded-none border-t-3 border-gray-400 shadow-[0_-3px_6px_rgba(0,0,0,0.1)] transform translate-y-0"
+        className="w-full h-12 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold rounded-none border-t-3 border-gray-400 shadow-[0_-3px_6px_rgba(0,0,0,0.1)] transform translate-y-0"
         style={{
           borderTopWidth: '3px',
           borderTopColor: '#9CA3AF',
