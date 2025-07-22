@@ -75,13 +75,12 @@ export default function TEMoversLanding() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-red-600 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative bg-blue-900 text-white py-20 overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge className="bg-red-500 text-white px-4 py-2 text-sm font-medium animate-pulse">
+                <Badge className="bg-red-500 text-white px-4 py-2 text-sm font-medium opacity-0 animate-fade-in">
                   🏆 #1 Rated Long Distance Moving Company in Florida
                 </Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
@@ -969,11 +968,8 @@ export default function TEMoversLanding() {
             </Card>
           </div>
 
-          <div className="text-center">
-            <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent">
-              Read More Success Stories
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+          <div className="text-center mt-8">
+            <div className="text-lg font-semibold text-gray-700">Become our next success story!</div>
           </div>
         </div>
       </section>
@@ -1909,7 +1905,7 @@ export default function TEMoversLanding() {
           </Tabs>
 
           <div className="mt-12 text-center">
-            <Card className="border-0 shadow-xl bg-gradient-to-r from-red-500 to-blue-600 text-white max-w-2xl mx-auto">
+            <Card className="border-0 shadow-xl bg-red-600 text-white max-w-2xl mx-auto">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4">Too Much to Handle?</h3>
                 <p className="text-blue-100 mb-6">
@@ -1927,7 +1923,7 @@ export default function TEMoversLanding() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-red-600 via-red-500 to-blue-600 text-white relative overflow-hidden">
+      <section className="py-20 bg-red-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
