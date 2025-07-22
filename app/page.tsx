@@ -147,7 +147,7 @@ export default function TEMoversLanding() {
       </section>
 
       {/* Trust Indicators */}
-      <section className="py-12 bg-white border-b">
+      <section className="py-12 bg-white border-b" data-accolades-section>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
             <div className="text-center">
@@ -296,7 +296,7 @@ export default function TEMoversLanding() {
           </div>
 
           <Tabs defaultValue="residential" className="w-full">
-            <TabsList className="grid w-full grid-cols-4 mb-12">
+            <TabsList className="w-full mb-12 flex overflow-x-auto md:grid md:grid-cols-4">
               <TabsTrigger value="residential" className="text-sm">
                 Residential
               </TabsTrigger>
@@ -986,10 +986,11 @@ export default function TEMoversLanding() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
-            <div>
+            {/* Planning & Preparation */}
+            <div className="bg-gray-100 rounded-2xl p-6 mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Planning & Preparation</h3>
-              <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="planning-1" className="bg-gray-50 rounded-lg shadow-sm">
+              <Accordion type="single" collapsible className="space-y-6">
+                <AccordionItem value="planning-1" className="bg-gray-200 rounded-lg shadow-sm my-4">
                   <AccordionTrigger className="px-6 py-4 text-left font-semibold">
                     How far in advance should I book my long-distance move?
                   </AccordionTrigger>
@@ -1019,7 +1020,7 @@ export default function TEMoversLanding() {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="planning-2" className="bg-gray-50 rounded-lg shadow-sm">
+                <AccordionItem value="planning-2" className="bg-gray-200 rounded-lg shadow-sm my-4">
                   <AccordionTrigger className="px-6 py-4 text-left font-semibold">
                     What's the best time of year to move long-distance?
                   </AccordionTrigger>
@@ -1048,7 +1049,7 @@ export default function TEMoversLanding() {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="planning-3" className="bg-gray-50 rounded-lg shadow-sm">
+                <AccordionItem value="planning-3" className="bg-gray-200 rounded-lg shadow-sm my-4">
                   <AccordionTrigger className="px-6 py-4 text-left font-semibold">
                     How do I prepare for the moving estimate?
                   </AccordionTrigger>
@@ -1081,10 +1082,11 @@ export default function TEMoversLanding() {
               </Accordion>
             </div>
 
-            <div>
+            {/* Pricing & Payment */}
+            <div className="bg-gray-100 rounded-2xl p-6 mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Pricing & Payment</h3>
-              <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="pricing-1" className="bg-gray-50 rounded-lg shadow-sm">
+              <Accordion type="single" collapsible className="space-y-6">
+                <AccordionItem value="pricing-1" className="bg-gray-200 rounded-lg shadow-sm my-4">
                   <AccordionTrigger className="px-6 py-4 text-left font-semibold">
                     How much does a long-distance move typically cost?
                   </AccordionTrigger>
@@ -1125,7 +1127,7 @@ export default function TEMoversLanding() {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="pricing-2" className="bg-gray-50 rounded-lg shadow-sm">
+                <AccordionItem value="pricing-2" className="bg-gray-200 rounded-lg shadow-sm my-4">
                   <AccordionTrigger className="px-6 py-4 text-left font-semibold">
                     What payment methods do you accept and when is payment due?
                   </AccordionTrigger>
@@ -1165,7 +1167,7 @@ export default function TEMoversLanding() {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="pricing-3" className="bg-gray-50 rounded-lg shadow-sm">
+                <AccordionItem value="pricing-3" className="bg-gray-200 rounded-lg shadow-sm my-4">
                   <AccordionTrigger className="px-6 py-4 text-left font-semibold">
                     Are there any hidden fees I should know about?
                   </AccordionTrigger>
@@ -1200,13 +1202,12 @@ export default function TEMoversLanding() {
                 </AccordionItem>
               </Accordion>
             </div>
-          </div>
 
-          <div className="mt-12 grid lg:grid-cols-2 gap-8">
-            <div>
+            {/* Insurance & Protection */}
+            <div className="bg-gray-100 rounded-2xl p-6 mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Insurance & Protection</h3>
-              <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="insurance-1" className="bg-gray-50 rounded-lg shadow-sm">
+              <Accordion type="single" collapsible className="space-y-6">
+                <AccordionItem value="insurance-1" className="bg-gray-200 rounded-lg shadow-sm my-4">
                   <AccordionTrigger className="px-6 py-4 text-left font-semibold">
                     What insurance options do you offer?
                   </AccordionTrigger>
@@ -1246,7 +1247,7 @@ export default function TEMoversLanding() {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="insurance-2" className="bg-gray-50 rounded-lg shadow-sm">
+                <AccordionItem value="insurance-2" className="bg-gray-200 rounded-lg shadow-sm my-4">
                   <AccordionTrigger className="px-6 py-4 text-left font-semibold">
                     What happens if something gets damaged during the move?
                   </AccordionTrigger>
@@ -1288,10 +1289,11 @@ export default function TEMoversLanding() {
               </Accordion>
             </div>
 
-            <div>
+            {/* Moving Day & Logistics */}
+            <div className="bg-gray-100 rounded-2xl p-6 mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Moving Day & Logistics</h3>
-              <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="logistics-1" className="bg-gray-50 rounded-lg shadow-sm">
+              <Accordion type="single" collapsible className="space-y-6">
+                <AccordionItem value="logistics-1" className="bg-gray-200 rounded-lg shadow-sm my-4">
                   <AccordionTrigger className="px-6 py-4 text-left font-semibold">
                     How long does a long-distance move take?
                   </AccordionTrigger>
@@ -1331,7 +1333,7 @@ export default function TEMoversLanding() {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="logistics-2" className="bg-gray-50 rounded-lg shadow-sm">
+                <AccordionItem value="logistics-2" className="bg-gray-200 rounded-lg shadow-sm my-4">
                   <AccordionTrigger className="px-6 py-4 text-left font-semibold">
                     Can I track my belongings during the move?
                   </AccordionTrigger>
@@ -1370,154 +1372,155 @@ export default function TEMoversLanding() {
                 </AccordionItem>
               </Accordion>
             </div>
-          </div>
 
-          <div className="mt-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Special Situations & Services</h3>
-            <div className="grid lg:grid-cols-2 gap-8">
-              <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="special-1" className="bg-gray-50 rounded-lg shadow-sm">
-                  <AccordionTrigger className="px-6 py-4 text-left font-semibold">
-                    Do you handle specialty items like pianos, artwork, or antiques?
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 text-gray-600">
-                    <p className="mb-4">Yes! We're specialists in handling high-value and delicate items:</p>
-                    <div className="space-y-4">
-                      <div>
-                        <strong>Pianos:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Certified piano moving specialists</li>
-                          <li>• Custom equipment for all piano types</li>
-                          <li>• Climate-controlled transport</li>
-                          <li>• Tuning service referrals</li>
-                        </ul>
+            {/* Special Situations & Services */}
+            <div className="bg-gray-100 rounded-2xl p-6 mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Special Situations & Services</h3>
+              <div className="grid lg:grid-cols-2 gap-8">
+                <Accordion type="single" collapsible className="space-y-6">
+                  <AccordionItem value="special-1" className="bg-gray-200 rounded-lg shadow-sm my-4">
+                    <AccordionTrigger className="px-6 py-4 text-left font-semibold">
+                      Do you handle specialty items like pianos, artwork, or antiques?
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 text-gray-600">
+                      <p className="mb-4">Yes! We're specialists in handling high-value and delicate items:</p>
+                      <div className="space-y-4">
+                        <div>
+                          <strong>Pianos:</strong>
+                          <ul className="mt-2 space-y-1">
+                            <li>• Certified piano moving specialists</li>
+                            <li>• Custom equipment for all piano types</li>
+                            <li>• Climate-controlled transport</li>
+                            <li>• Tuning service referrals</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <strong>Fine Art & Antiques:</strong>
+                          <ul className="mt-2 space-y-1">
+                            <li>• Museum-quality packing materials</li>
+                            <li>• Custom crating services</li>
+                            <li>• White glove handling</li>
+                            <li>• Fine arts insurance available</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <strong>Other Specialty Items:</strong>
+                          <ul className="mt-2 space-y-1">
+                            <li>• Gun safes and heavy machinery</li>
+                            <li>• Wine collections (temperature controlled)</li>
+                            <li>• Medical equipment</li>
+                            <li>• Electronics and computers</li>
+                          </ul>
+                        </div>
                       </div>
-                      <div>
-                        <strong>Fine Art & Antiques:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Museum-quality packing materials</li>
-                          <li>• Custom crating services</li>
-                          <li>• White glove handling</li>
-                          <li>• Fine arts insurance available</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <strong>Other Specialty Items:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Gun safes and heavy machinery</li>
-                          <li>• Wine collections (temperature controlled)</li>
-                          <li>• Medical equipment</li>
-                          <li>• Electronics and computers</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
+                    </AccordionContent>
+                  </AccordionItem>
 
-                <AccordionItem value="special-2" className="bg-gray-50 rounded-lg shadow-sm">
-                  <AccordionTrigger className="px-6 py-4 text-left font-semibold">
-                    Can you help with international moves?
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 text-gray-600">
-                    <p className="mb-4">Yes, we partner with certified international moving specialists:</p>
-                    <div className="space-y-4">
-                      <div>
-                        <strong>Services Included:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Customs documentation assistance</li>
-                          <li>• Ocean and air freight options</li>
-                          <li>• Destination country partnerships</li>
-                          <li>• Door-to-door international service</li>
-                        </ul>
+                  <AccordionItem value="special-2" className="bg-gray-200 rounded-lg shadow-sm my-4">
+                    <AccordionTrigger className="px-6 py-4 text-left font-semibold">
+                      Can you help with international moves?
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 text-gray-600">
+                      <p className="mb-4">Yes, we partner with certified international moving specialists:</p>
+                      <div className="space-y-4">
+                        <div>
+                          <strong>Services Included:</strong>
+                          <ul className="mt-2 space-y-1">
+                            <li>• Customs documentation assistance</li>
+                            <li>• Ocean and air freight options</li>
+                            <li>• Destination country partnerships</li>
+                            <li>• Door-to-door international service</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <strong>Popular Destinations:</strong>
+                          <ul className="mt-2 space-y-1">
+                            <li>• Canada and Mexico</li>
+                            <li>• United Kingdom and Europe</li>
+                            <li>• Australia and New Zealand</li>
+                            <li>• Military overseas assignments</li>
+                          </ul>
+                        </div>
                       </div>
-                      <div>
-                        <strong>Popular Destinations:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Canada and Mexico</li>
-                          <li>• United Kingdom and Europe</li>
-                          <li>• Australia and New Zealand</li>
-                          <li>• Military overseas assignments</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
 
-              <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="special-3" className="bg-gray-50 rounded-lg shadow-sm">
-                  <AccordionTrigger className="px-6 py-4 text-left font-semibold">
-                    Do you offer storage solutions?
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 text-gray-600">
-                    <p className="mb-4">We offer comprehensive storage solutions for any timeline:</p>
-                    <div className="space-y-4">
-                      <div>
-                        <strong>Short-Term Storage (1-90 days):</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Perfect for timing mismatches</li>
-                          <li>• Climate-controlled facilities</li>
-                          <li>• Easy access when needed</li>
-                          <li>• Competitive daily rates</li>
-                        </ul>
+                <Accordion type="single" collapsible className="space-y-6">
+                  <AccordionItem value="special-3" className="bg-gray-200 rounded-lg shadow-sm my-4">
+                    <AccordionTrigger className="px-6 py-4 text-left font-semibold">
+                      Do you offer storage solutions?
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 text-gray-600">
+                      <p className="mb-4">We offer comprehensive storage solutions for any timeline:</p>
+                      <div className="space-y-4">
+                        <div>
+                          <strong>Short-Term Storage (1-90 days):</strong>
+                          <ul className="mt-2 space-y-1">
+                            <li>• Perfect for timing mismatches</li>
+                            <li>• Climate-controlled facilities</li>
+                            <li>• Easy access when needed</li>
+                            <li>• Competitive daily rates</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <strong>Long-Term Storage (3+ months):</strong>
+                          <ul className="mt-2 space-y-1">
+                            <li>• Warehouse-style storage</li>
+                            <li>• Inventory management system</li>
+                            <li>• Partial delivery options</li>
+                            <li>• Monthly billing available</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <strong>Specialty Storage:</strong>
+                          <ul className="mt-2 space-y-1">
+                            <li>• Vehicle storage (cars, boats, RVs)</li>
+                            <li>• Document storage with retrieval</li>
+                            <li>• Wine storage (temperature controlled)</li>
+                            <li>• Business inventory storage</li>
+                          </ul>
+                        </div>
                       </div>
-                      <div>
-                        <strong>Long-Term Storage (3+ months):</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Warehouse-style storage</li>
-                          <li>• Inventory management system</li>
-                          <li>• Partial delivery options</li>
-                          <li>• Monthly billing available</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <strong>Specialty Storage:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Vehicle storage (cars, boats, RVs)</li>
-                          <li>• Document storage with retrieval</li>
-                          <li>• Wine storage (temperature controlled)</li>
-                          <li>• Business inventory storage</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
+                    </AccordionContent>
+                  </AccordionItem>
 
-                <AccordionItem value="special-4" className="bg-gray-50 rounded-lg shadow-sm">
-                  <AccordionTrigger className="px-6 py-4 text-left font-semibold">
-                    What if I need to change my moving date?
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 text-gray-600">
-                    <p className="mb-4">We understand that plans change. Here's our flexible rescheduling policy:</p>
-                    <div className="space-y-4">
-                      <div>
-                        <strong>More than 7 days notice:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• No rescheduling fees</li>
-                          <li>• Subject to availability</li>
-                          <li>• Price adjustments if moving to peak season</li>
-                        </ul>
+                  <AccordionItem value="special-4" className="bg-gray-200 rounded-lg shadow-sm my-4">
+                    <AccordionTrigger className="px-6 py-4 text-left font-semibold">
+                      What if I need to change my moving date?
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 text-gray-600">
+                      <p className="mb-4">We understand that plans change. Here's our flexible rescheduling policy:</p>
+                      <div className="space-y-4">
+                        <div>
+                          <strong>More than 7 days notice:</strong>
+                          <ul className="mt-2 space-y-1">
+                            <li>• No rescheduling fees</li>
+                            <li>• Subject to availability</li>
+                            <li>• Price adjustments if moving to peak season</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <strong>3-7 days notice:</strong>
+                          <ul className="mt-2 space-y-1">
+                            <li>• Small rescheduling fee may apply</li>
+                            <li>• We'll do our best to accommodate</li>
+                            <li>• Alternative dates offered</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <strong>Less than 3 days notice:</strong>
+                          <ul className="mt-2 space-y-1">
+                            <li>• Emergency rescheduling fees apply</li>
+                            <li>• Limited availability</li>
+                            <li>• May require crew reassignment</li>
+                          </ul>
+                        </div>
                       </div>
-                      <div>
-                        <strong>3-7 days notice:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Small rescheduling fee may apply</li>
-                          <li>• We'll do our best to accommodate</li>
-                          <li>• Alternative dates offered</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <strong>Less than 3 days notice:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Emergency rescheduling fees apply</li>
-                          <li>• Limited availability</li>
-                          <li>• May require crew reassignment</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
             </div>
           </div>
         </div>
