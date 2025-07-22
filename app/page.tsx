@@ -872,7 +872,7 @@ export default function TEMoversLanding() {
       </section>
 
       {/* Customer Success Stories */}
-      <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50" data-reviews-section>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Real Stories from Real Customers</h2>
