@@ -1538,7 +1538,7 @@ export default function TEMoversLanding() {
           </div>
 
           <Tabs defaultValue="8weeks" className="w-full">
-            <TabsList className="grid w-full grid-cols-5 mb-12">
+            <TabsList className="grid w-full grid-cols-3 md:grid-cols-5 mb-12 gap-2">
               <TabsTrigger value="8weeks" className="text-xs">
                 8 Weeks Before
               </TabsTrigger>
