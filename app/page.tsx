@@ -65,7 +65,7 @@ export default function TEMoversLanding() {
           <div className="hidden md:flex items-center space-x-6">
             <div className="flex items-center space-x-2 text-sm">
               <Phone className="h-4 w-4 text-red-500" />
-              <span className="font-semibold">(904) 997-1884</span>
+              <a href="tel:9049971884" className="font-semibold mobile-lander-click-to-call">(904) 997-1884</a>
             </div>
             <Button className="bg-red-500 hover:bg-red-600" id="header-quote-btn">
               Get Free Quote
@@ -104,7 +104,7 @@ export default function TEMoversLanding() {
                   className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg bg-transparent"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call (904) 997-1884
+                  <a href="tel:9049971884" className="mobile-lander-click-to-call">Call (904) 997-1884</a>
                 </Button>
               </div>
 
@@ -1947,7 +1947,7 @@ export default function TEMoversLanding() {
               <div className="flex items-center space-x-3 text-xl">
                 <Phone className="h-6 w-6" />
                 <span>
-                  Or call <strong>(904) 997-1884</strong>
+                  Or call <a href="tel:9049971884" className="mobile-lander-click-to-call"><strong>(904) 997-1884</strong></a>
                 </span>
               </div>
             </div>
@@ -2047,7 +2047,9 @@ export default function TEMoversLanding() {
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-red-500" />
                   <div>
-                    <div className="font-semibold text-white">(904) 997-1884</div>
+                    <div className="font-semibold text-white">
+                      <a href="tel:9049971884" className="mobile-lander-click-to-call text-white">(904) 997-1884</a>
+                    </div>
                     <div className="text-sm">24/7 Customer Service</div>
                   </div>
                 </div>
