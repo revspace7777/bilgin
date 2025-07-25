@@ -23,14 +23,14 @@ import {
   Wrench,
   Boxes,
   MapPin,
-  Users2,
   Mail,
+  DollarSign,
 } from "lucide-react"
 import Image from "next/image"
 import FloatingQuoteButton from "@/components/floating-quote-button"
 import QuoteFormSlideout from "@/components/quote-form-slideout"
 
-export default function ResidentialMoversPage() {
+export default function AffordableMoversPage() {
   return (
     <div className="min-h-screen bg-white relative">
       {/* Floating Quote Button */}
@@ -46,7 +46,7 @@ export default function ResidentialMoversPage() {
             <Image src="/images/logo-main.png" alt="T&E Movers" width={60} height={60} className="rounded-full" />
             <div>
               <h1 className="text-xl font-bold text-gray-900">T&E Movers</h1>
-              <p className="text-sm text-gray-600">Residential Moving Experts</p>
+              <p className="text-sm text-gray-600">Affordable Moving Experts</p>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-6">
@@ -68,13 +68,13 @@ export default function ResidentialMoversPage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <Badge className="bg-red-500 text-white px-4 py-2 text-sm font-medium opacity-0 animate-fade-in">
-                  🏆 #1 Rated Residential Moving Company
+                  💰 #1 Affordable Moving Company
                 </Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                  Trusted <span className="text-red-400">Residential Movers</span> for Your Family
+                  Quality Moving at <span className="text-red-400">Affordable Prices</span>
                 </h1>
                 <p className="text-xl text-blue-100 leading-relaxed">
-                  Moving your family is a big decision - trust it to residential moving experts who understand what matters most. We've helped thousands of families move with care, compassion, and the attention to detail your family deserves.
+                  Quality moving services shouldn't break the bank. We provide professional moving services at affordable prices with transparent pricing and no hidden fees. Get the service you deserve without the premium price tag.
                 </p>
               </div>
 
@@ -100,11 +100,11 @@ export default function ResidentialMoversPage() {
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-red-400">10K+</div>
-                  <div className="text-sm text-blue-100">Families Moved</div>
+                  <div className="text-sm text-blue-100">Affordable Moves</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-400">99.9%</div>
-                  <div className="text-sm text-blue-100">Satisfaction Rate</div>
+                  <div className="text-3xl font-bold text-red-400">$0</div>
+                  <div className="text-sm text-blue-100">Hidden Fees</div>
                 </div>
               </div>
             </div>
@@ -119,10 +119,10 @@ export default function ResidentialMoversPage() {
               />
               <div className="absolute -bottom-6 -left-6 bg-white text-gray-900 p-4 rounded-lg shadow-lg">
                 <div className="flex items-center space-x-2">
-                  <Shield className="h-6 w-6 text-green-500" />
+                  <DollarSign className="h-6 w-6 text-green-500" />
                   <div>
-                    <div className="font-semibold">Family Focused</div>
-                    <div className="text-sm text-gray-600">Licensed & Insured</div>
+                    <div className="font-semibold">Affordable Rates</div>
+                    <div className="text-sm text-gray-600">No Hidden Fees</div>
                   </div>
                 </div>
               </div>
@@ -152,12 +152,12 @@ export default function ResidentialMoversPage() {
               <p className="text-sm font-medium">Family Owned</p>
             </div>
             <div className="text-center">
-              <Users2 className="h-12 w-12 mx-auto mb-2 text-purple-500" />
-              <p className="text-sm font-medium">Family Experts</p>
+              <DollarSign className="h-12 w-12 mx-auto mb-2 text-green-500" />
+              <p className="text-sm font-medium">Affordable Rates</p>
             </div>
             <div className="text-center">
               <Clock className="h-12 w-12 mx-auto mb-2 text-orange-500" />
-              <p className="text-sm font-medium">On-Time Guarantee</p>
+              <p className="text-sm font-medium">Quick Service</p>
             </div>
           </div>
         </div>
@@ -168,10 +168,10 @@ export default function ResidentialMoversPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Why 10,000+ Families Choose T&E for Residential Moves
+              Why Choose Our Affordable Moving Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              We're not just another moving company. We're residential moving specialists who understand that moving your family is about more than just moving boxes - it's about moving lives. Here's what makes us different:
+              We believe quality moving services should be accessible to everyone. Here's how we provide professional moving at affordable prices without compromising on quality.
             </p>
           </div>
 
@@ -179,13 +179,13 @@ export default function ResidentialMoversPage() {
             <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
               <CardHeader>
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <Users2 className="h-8 w-8 text-red-500" />
+                  <DollarSign className="h-8 w-8 text-red-500" />
                 </div>
-                <CardTitle className="text-xl text-center">Family Focused</CardTitle>
+                <CardTitle className="text-xl text-center">Transparent Pricing</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  We understand the unique needs of families - from children's rooms to home offices, we handle every aspect of your family's move with care.
+                  No hidden fees, no surprises. We provide upfront, transparent pricing so you know exactly what you're paying for.
                 </p>
               </CardContent>
             </Card>
@@ -195,11 +195,11 @@ export default function ResidentialMoversPage() {
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 mx-auto">
                   <Target className="h-8 w-8 text-green-500" />
                 </div>
-                <CardTitle className="text-xl text-center">Stress-Free Experience</CardTitle>
+                <CardTitle className="text-xl text-center">Quality Service</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  We handle all the details so you can focus on your family. From packing to unpacking, we make your residential move as stress-free as possible.
+                  Affordable doesn't mean cheap quality. We maintain high standards while keeping prices reasonable for our customers.
                 </p>
               </CardContent>
             </Card>
@@ -209,11 +209,11 @@ export default function ResidentialMoversPage() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
                   <Zap className="h-8 w-8 text-blue-500" />
                 </div>
-                <CardTitle className="text-xl text-center">Flexible Scheduling</CardTitle>
+                <CardTitle className="text-xl text-center">Efficient Operations</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  We work around your family's schedule, including school calendars, work schedules, and other family commitments.
+                  Our streamlined operations and experienced team allow us to provide quality service at affordable rates.
                 </p>
               </CardContent>
             </Card>
@@ -222,28 +222,28 @@ export default function ResidentialMoversPage() {
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-6">The T&E Residential Promise</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">The T&E Affordable Promise</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">Family Safety</h4>
-                      <p className="text-gray-600">We prioritize the safety of your family and pets throughout the moving process.</p>
+                      <h4 className="font-semibold text-gray-900">No Hidden Fees</h4>
+                      <p className="text-gray-600">Your quote is your final price. No surprises, ever.</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">Child-Friendly</h4>
-                      <p className="text-gray-600">We work carefully around children and create a safe environment during moves.</p>
+                      <h4 className="font-semibold text-gray-900">Quality Materials</h4>
+                      <p className="text-gray-600">Professional packing materials included in your service.</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">Complete Service</h4>
+                      <h4 className="font-semibold text-gray-900">Experienced Team</h4>
                       <p className="text-gray-600">
-                        From initial planning to final setup, we handle every detail of your residential move.
+                        Professional movers with years of experience at affordable rates.
                       </p>
                     </div>
                   </div>
@@ -268,10 +268,10 @@ export default function ResidentialMoversPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Complete Residential Moving Services
+              Affordable Moving Services
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              From apartments to large homes - we handle all your residential moving needs with the same level of care and professionalism.
+              Complete moving solutions at affordable prices. From local moves to long-distance relocations, we provide quality service without the premium price tag.
             </p>
           </div>
 
@@ -279,35 +279,35 @@ export default function ResidentialMoversPage() {
             <Card className="border-0 shadow-lg">
               <CardHeader>
                 <Home className="h-12 w-12 text-blue-500 mb-4" />
-                <CardTitle>Single Family Homes</CardTitle>
+                <CardTitle>Local Moving</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Complete moving services for single family homes of all sizes.
+                  Affordable local moving services throughout Jacksonville and surrounding areas.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Full-service packing</li>
-                  <li>• Furniture disassembly</li>
-                  <li>• Appliance moving</li>
-                  <li>• Complete setup</li>
+                  <li>• Residential moves</li>
+                  <li>• Commercial moves</li>
+                  <li>• Same-day service</li>
+                  <li>• Weekend availability</li>
                 </ul>
               </CardContent>
             </Card>
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <Building className="h-12 w-12 text-green-500 mb-4" />
-                <CardTitle>Apartments & Condos</CardTitle>
+                <Truck className="h-12 w-12 text-green-500 mb-4" />
+                <CardTitle>Long Distance Moving</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Specialized services for apartment and condo moves.
+                  Cost-effective long-distance moving with transparent pricing.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Building coordination</li>
-                  <li>• Elevator logistics</li>
-                  <li>• Compact furniture handling</li>
-                  <li>• Quick turnaround</li>
+                  <li>• Cross-country moves</li>
+                  <li>• GPS tracking</li>
+                  <li>• Climate-controlled transport</li>
+                  <li>• Full-service packing</li>
                 </ul>
               </CardContent>
             </Card>
@@ -319,7 +319,7 @@ export default function ResidentialMoversPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Professional packing and unpacking with quality materials.
+                  Professional packing and unpacking with quality materials included.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• Professional packing</li>
@@ -332,18 +332,18 @@ export default function ResidentialMoversPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <Wrench className="h-12 w-12 text-orange-500 mb-4" />
-                <CardTitle>Furniture Assembly</CardTitle>
+                <Building className="h-12 w-12 text-orange-500 mb-4" />
+                <CardTitle>Commercial Moving</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Professional furniture disassembly and reassembly services.
+                  Affordable business relocation services with minimal downtime.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Furniture disassembly</li>
-                  <li>• Professional reassembly</li>
-                  <li>• Appliance installation</li>
-                  <li>• Setup assistance</li>
+                  <li>• Office relocations</li>
+                  <li>• Retail store moves</li>
+                  <li>• After-hours service</li>
+                  <li>• Minimal disruption</li>
                 </ul>
               </CardContent>
             </Card>
@@ -373,7 +373,7 @@ export default function ResidentialMoversPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Secure storage facilities for items you need to store during your residential transition.
+                  Affordable storage facilities for short and long-term needs.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• Climate-controlled storage</li>
@@ -393,7 +393,7 @@ export default function ResidentialMoversPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Real Stories from Real Customers</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Don't just take our word for it. Here's what our residential moving customers have to say about their experience
+              Don't just take our word for it. Here's what our affordable moving customers have to say about their experience
               with T&E Movers.
             </p>
           </div>
@@ -409,14 +409,14 @@ export default function ResidentialMoversPage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 italic">
-                  "T&E made our family move so much easier than expected. They were careful with our kids' rooms and made sure everything arrived safely!"
+                  "T&E provided excellent service at an affordable price. No hidden fees and they were professional throughout. Great value for the money!"
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                    JM
+                    SM
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Jennifer M.</div>
+                    <div className="font-semibold text-gray-900">Sarah M.</div>
                     <div className="text-sm text-gray-600">Jacksonville Beach</div>
                   </div>
                 </div>
@@ -433,14 +433,14 @@ export default function ResidentialMoversPage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 italic">
-                  "Moving with kids was a breeze thanks to T&E. They worked around our schedule and made the whole process stress-free for our family."
+                  "Affordable rates without compromising on quality. The team was professional and careful with our belongings. Highly recommend!"
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                    RK
+                    MR
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Robert K.</div>
+                    <div className="font-semibold text-gray-900">Mike R.</div>
                     <div className="text-sm text-gray-600">Orange Park</div>
                   </div>
                 </div>
@@ -457,14 +457,14 @@ export default function ResidentialMoversPage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 italic">
-                  "Professional residential movers who understand family needs. They made our move smooth and efficient for our entire family."
+                  "Affordable local movers who actually care about your belongings. Professional service at family-owned prices."
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                    SL
+                    JL
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Sarah L.</div>
+                    <div className="font-semibold text-gray-900">Jennifer L.</div>
                     <div className="text-sm text-gray-600">Ponte Vedra Beach</div>
                   </div>
                 </div>
@@ -486,7 +486,7 @@ export default function ResidentialMoversPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Every Question Answered</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              We've compiled answers to the most common questions about our residential moving services. Can't find what you're
+              We've compiled answers to the most common questions about our affordable moving services. Can't find what you're
               looking for? Contact us directly.
             </p>
           </div>
@@ -495,55 +495,55 @@ export default function ResidentialMoversPage() {
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-left">
-                  How do you handle moves with children and pets?
+                  How do you keep prices affordable?
                 </AccordionTrigger>
                 <AccordionContent>
-                  We work carefully around children and pets, creating a safe environment during moves. We can coordinate with you to ensure children and pets are in a safe area during the moving process.
+                  We maintain affordable prices through efficient operations, family-owned business structure, and transparent pricing. We pass savings directly to our customers without compromising on quality.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-2">
                 <AccordionTrigger className="text-left">
-                  Do you provide packing materials for residential moves?
+                  Are there any hidden fees?
                 </AccordionTrigger>
                 <AccordionContent>
-                  Yes, we provide all necessary packing materials including boxes, tape, bubble wrap, furniture blankets, and specialty containers for fragile items and family possessions.
+                  No, we believe in complete transparency. Your quote is your final price. We include all necessary services in our upfront pricing with no hidden fees or surprises.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-3">
                 <AccordionTrigger className="text-left">
-                  How far in advance should I book my residential move?
+                  What areas do you serve for affordable moving?
                 </AccordionTrigger>
                 <AccordionContent>
-                  We recommend booking 3-4 weeks in advance for residential moves, especially during peak moving seasons. This ensures we can provide the complete service your family deserves.
+                  We serve all local areas including Jacksonville, Jacksonville Beach, Atlantic Beach, Ponte Vedra Beach, Orange Park, Fleming Island, and surrounding communities.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-4">
                 <AccordionTrigger className="text-left">
-                  Do you handle specialty items like pianos or artwork?
+                  Is affordable moving still quality service?
                 </AccordionTrigger>
                 <AccordionContent>
-                  Yes, we have specialized training and equipment for moving pianos, artwork, antiques, and other valuable family items. We treat these items with extra care and attention.
+                  Absolutely! We maintain high quality standards while keeping prices affordable. Our team is licensed, insured, and experienced - we just don't overcharge for our services.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-5">
                 <AccordionTrigger className="text-left">
-                  What if I need to store some items temporarily?
+                  Do you provide packing materials?
                 </AccordionTrigger>
                 <AccordionContent>
-                  We offer secure, climate-controlled storage facilities for items you need to store during your residential transition. We can coordinate moving and storage services for your convenience.
+                  Yes, we provide quality packing materials at affordable rates. All materials are included in our transparent pricing.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-6">
                 <AccordionTrigger className="text-left">
-                  Are you licensed and insured for residential moves?
+                  How far in advance should I book for affordable rates?
                 </AccordionTrigger>
                 <AccordionContent>
-                  Yes, we are fully licensed and insured. Your family and belongings are protected throughout the entire residential moving process with comprehensive coverage for your peace of mind.
+                  We recommend booking 2-3 weeks in advance for the best rates, though we can often accommodate last-minute moves when available.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -554,10 +554,10 @@ export default function ResidentialMoversPage() {
       {/* Final CTA */}
       <section className="py-20 bg-red-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">Ready to Move Your Family?</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">Ready for Affordable Moving?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Get your free quote today and experience stress-free residential moving with trusted family experts. 
-            Join thousands of satisfied families who chose T&E Movers for their residential moves.
+            Get your free quote today and experience quality moving at affordable prices. 
+            Join thousands of satisfied customers who chose T&E Movers for their affordable moves.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -582,15 +582,15 @@ export default function ResidentialMoversPage() {
             </div>
             <div className="text-center">
               <Users className="h-8 w-8 mx-auto mb-2" />
-              <p className="text-sm">Family Experts</p>
+              <p className="text-sm">Affordable Rates</p>
             </div>
             <div className="text-center">
               <Star className="h-8 w-8 mx-auto mb-2" />
-              <p className="text-sm">5-Star Service</p>
+              <p className="text-sm">Quality Service</p>
             </div>
             <div className="text-center">
               <Award className="h-8 w-8 mx-auto mb-2" />
-              <p className="text-sm">BBB A+ Rated</p>
+              <p className="text-sm">No Hidden Fees</p>
             </div>
           </div>
         </div>
@@ -628,13 +628,13 @@ export default function ResidentialMoversPage() {
             <div>
               <h4 className="text-lg font-semibold mb-6">Our Services</h4>
               <ul className="space-y-3 text-gray-400">
-                <li className="hover:text-white transition-colors">Residential Moving</li>
+                <li className="hover:text-white transition-colors">Affordable Moving</li>
                 <li className="hover:text-white transition-colors">Local Moving</li>
                 <li className="hover:text-white transition-colors">Long Distance Moving</li>
                 <li className="hover:text-white transition-colors">Packing Services</li>
                 <li className="hover:text-white transition-colors">Storage Solutions</li>
                 <li className="hover:text-white transition-colors">Commercial Moving</li>
-                <li className="hover:text-white transition-colors">Family Moving</li>
+                <li className="hover:text-white transition-colors">Residential Moving</li>
               </ul>
             </div>
 

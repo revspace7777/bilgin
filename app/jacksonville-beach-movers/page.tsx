@@ -11,16 +11,16 @@ import FloatingQuoteButton from "@/components/floating-quote-button"
 import QuoteFormSlideout from "@/components/quote-form-slideout"
 
 export const metadata: Metadata = {
-  title: 'Jacksonville, FL Moving Services by T&E Moving',
-  description: 'T&E Moving in Jacksonville: Your local moving experts for a seamless, stress-free relocation. Get a free quote today!',
+  title: 'Jacksonville Beach, FL Moving Services by T&E Moving',
+  description: 'T&E Moving in Jacksonville Beach: Your local moving experts for a seamless, stress-free relocation. Get a free quote today!',
   openGraph: {
-    title: 'Jacksonville, FL - T&E Moving',
-    description: 'Embark on a seamless and stress-free moving journey with T&E Moving and Storage, your premier Jacksonville, FL movers.',
-    images: ['/images/te-jacksonville.jpg'],
+    title: 'Jacksonville Beach, FL - T&E Moving',
+    description: 'Embark on a seamless and stress-free moving journey with T&E Moving and Storage, your premier Jacksonville Beach, FL movers.',
+    images: ['/images/te-jacksonville-beach.jpg'],
   },
 }
 
-export default function JacksonvilleMoversPage() {
+export default function JacksonvilleBeachMoversPage() {
   return (
     <div className="min-h-screen relative">
       {/* Floating Quote Button */}
@@ -30,8 +30,8 @@ export default function JacksonvilleMoversPage() {
       <QuoteFormSlideout />
 
       <HeroSection
-        headline="Jacksonville's Most Trusted Moving Company"
-        subheadline="Embark on a seamless and stress-free moving journey with T&E Moving and Storage, your premier Jacksonville, FL movers. As your local moving experts, we take pride in providing top-notch services that cater to your unique needs."
+        headline="Jacksonville Beach's Most Trusted Moving Company"
+        subheadline="Embark on a seamless and stress-free moving journey with T&E Moving and Storage, your premier Jacksonville Beach, FL movers. As your local moving experts, we take pride in providing top-notch services that cater to your unique needs."
         primaryCTA={{
           text: "Get Your Free Quote",
           action: "/quote"
@@ -50,7 +50,7 @@ export default function JacksonvilleMoversPage() {
       <AccoladesSection
         badges={[
           'Licensed & Insured',
-          'Local Jacksonville Company',
+          'Local Jacksonville Beach Company',
           'Family-Owned Business',
           'Customer Satisfaction Guarantee',
           'BBB A+ Rated',
@@ -59,23 +59,23 @@ export default function JacksonvilleMoversPage() {
       />
 
       <ValuePropositionSection
-        title="Why Choose T&E Movers in Jacksonville?"
+        title="Why Choose T&E Movers in Jacksonville Beach?"
         subtitle="Experience the difference with our local expertise and community commitment"
         benefits={[
           {
-            icon: "🏠",
-            title: "Local Expertise",
-            description: "Deep knowledge of Jacksonville area and surrounding communities"
+            icon: "🏖️",
+            title: "Beach Community Expertise",
+            description: "Deep knowledge of Jacksonville Beach area and coastal communities"
           },
           {
             icon: "👥",
             title: "Community Involvement",
-            description: "Active members of the Jacksonville community for over 25 years"
+            description: "Active members of the Jacksonville Beach community for over 25 years"
           },
           {
             icon: "⚡",
             title: "Quick Response",
-            description: "Fast response times for quotes and scheduling in the Jacksonville area"
+            description: "Fast response times for quotes and scheduling in the Jacksonville Beach area"
           },
           {
             icon: "💰",
@@ -98,13 +98,13 @@ export default function JacksonvilleMoversPage() {
       />
 
       <ServiceOverviewSection
-        title="Jacksonville Moving Services"
-        subtitle="Comprehensive moving solutions for all your Jacksonville relocation needs"
+        title="Jacksonville Beach Moving Services"
+        subtitle="Comprehensive moving solutions for all your Jacksonville Beach relocation needs"
         services={[
           {
             icon: "🏠",
             title: "Local Moving",
-            description: "Professional local moving services throughout Jacksonville and surrounding areas",
+            description: "Professional local moving services throughout Jacksonville Beach and surrounding areas",
             features: [
               "Residential moves",
               "Commercial moves",
@@ -115,7 +115,7 @@ export default function JacksonvilleMoversPage() {
           {
             icon: "🚚",
             title: "Long Distance Moving",
-            description: "Reliable long-distance moving services from Jacksonville to anywhere in the US",
+            description: "Reliable long-distance moving services from Jacksonville Beach to anywhere in the US",
             features: [
               "Cross-country moves",
               "GPS tracking",
@@ -150,13 +150,13 @@ export default function JacksonvilleMoversPage() {
       />
 
       <TimelineSection
-        title="Your Jacksonville Move Timeline"
+        title="Your Jacksonville Beach Move Timeline"
         subtitle="A simple, stress-free process designed for your convenience"
         steps={[
           {
             number: "01",
             title: "Free Quote",
-            description: "Get a detailed estimate for your Jacksonville move with no hidden fees"
+            description: "Get a detailed estimate for your Jacksonville Beach move with no hidden fees"
           },
           {
             number: "02",
@@ -171,7 +171,7 @@ export default function JacksonvilleMoversPage() {
           {
             number: "04",
             title: "Safe Delivery",
-            description: "Careful unloading and setup at your new Jacksonville location"
+            description: "Careful unloading and setup at your new Jacksonville Beach location"
           },
           {
             number: "05",
@@ -182,61 +182,61 @@ export default function JacksonvilleMoversPage() {
       />
 
       <TestimonialSection
-        title="What Jacksonville Customers Say"
-        subtitle="Real experiences from Jacksonville families and businesses"
+        title="What Jacksonville Beach Customers Say"
+        subtitle="Real experiences from Jacksonville Beach families and businesses"
         testimonials={[
           {
-            quote: "T&E Moving made our local move so easy! They were professional, careful, and affordable. Highly recommend for anyone in Jacksonville!",
+            quote: "T&E Moving made our move to Jacksonville Beach so easy! They were professional, careful, and affordable. Highly recommend!",
             author: "Sarah M.",
             location: "Jacksonville Beach"
           },
           {
             quote: "The team was amazing - they handled everything from packing to setup. Our move was stress-free thanks to them.",
             author: "Mike R.",
-            location: "Orange Park"
+            location: "Jacksonville Beach"
           },
           {
             quote: "Fast, reliable, and professional. They moved our office in one day with minimal disruption to our business.",
             author: "Jennifer L.",
-            location: "Ponte Vedra Beach"
+            location: "Jacksonville Beach"
           }
         ]}
       />
 
       <FAQSection
         title="Frequently Asked Questions"
-        subtitle="Common questions about moving in Jacksonville"
+        subtitle="Common questions about moving in Jacksonville Beach"
         faqs={[
           {
-            question: "What areas do you serve in Jacksonville?",
-            answer: "We serve all of Jacksonville and surrounding areas including Jacksonville Beach, Atlantic Beach, Ponte Vedra Beach, Orange Park, Fleming Island, and more."
+            question: "What areas do you serve in Jacksonville Beach?",
+            answer: "We serve all of Jacksonville Beach and surrounding areas including Atlantic Beach, Neptune Beach, Ponte Vedra Beach, and more."
           },
           {
-            question: "How far in advance should I book my Jacksonville move?",
+            question: "How far in advance should I book my Jacksonville Beach move?",
             answer: "We recommend booking at least 2-3 weeks in advance for local moves, especially during peak moving seasons (May-September)."
           },
           {
-            question: "Do you offer same-day moving services in Jacksonville?",
+            question: "Do you offer same-day moving services in Jacksonville Beach?",
             answer: "Yes, we offer same-day moving services for local moves when available. Contact us for immediate availability."
           },
           {
-            question: "What is included in your Jacksonville moving quote?",
+            question: "What is included in your Jacksonville Beach moving quote?",
             answer: "Our quotes include loading, transportation, unloading, and basic furniture placement. Packing services are available for an additional fee."
           },
           {
-            question: "Are you licensed and insured in Jacksonville?",
+            question: "Are you licensed and insured in Jacksonville Beach?",
             answer: "Yes, we are fully licensed and insured. Your belongings are protected throughout the entire moving process."
           },
           {
-            question: "Do you provide packing materials in Jacksonville?",
+            question: "Do you provide packing materials in Jacksonville Beach?",
             answer: "Yes, we provide all necessary packing materials including boxes, tape, bubble wrap, and furniture blankets."
           }
         ]}
       />
 
       <CTASection
-        title="Ready to Start Your Jacksonville Move?"
-        subtitle="Get your free quote today and experience stress-free moving in Jacksonville"
+        title="Ready to Start Your Jacksonville Beach Move?"
+        subtitle="Get your free quote today and experience stress-free moving in Jacksonville Beach"
         primaryCTA={{
           text: "Get Free Quote",
           action: "/quote"
@@ -249,7 +249,7 @@ export default function JacksonvilleMoversPage() {
           "Free estimates",
           "No hidden fees",
           "Local expertise",
-          "Jacksonville service"
+          "Jacksonville Beach service"
         ]}
       />
     </div>

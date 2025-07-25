@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { CheckCircle } from 'lucide-react'
+import Link from 'next/link'
 
 interface CTASectionProps {
   title: string
@@ -35,22 +36,24 @@ export function CTASection({
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-            <Button
-              size="lg"
-              className="bg-white text-red-500 hover:bg-gray-100 px-12 py-6 text-xl font-semibold"
-              onClick={() => window.location.href = primaryCTA.action}
-            >
-              {primaryCTA.text}
-            </Button>
-            {secondaryCTA && (
+            <Link href={primaryCTA.action}>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-red-500 px-12 py-6 text-xl font-semibold"
-                onClick={() => window.location.href = secondaryCTA.action}
+                className="bg-white text-red-500 hover:bg-gray-100 px-12 py-6 text-xl font-semibold"
               >
-                {secondaryCTA.text}
+                {primaryCTA.text}
               </Button>
+            </Link>
+            {secondaryCTA && (
+              <Link href={secondaryCTA.action}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-red-500 px-12 py-6 text-xl font-semibold"
+                >
+                  {secondaryCTA.text}
+                </Button>
+              </Link>
             )}
           </div>
 

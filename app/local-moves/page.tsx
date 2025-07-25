@@ -9,12 +9,12 @@ import { CTASection } from '@/components/sections/cta-section'
 import { AccoladesSection } from '@/components/sections/accolades-section'
 
 export const metadata: Metadata = {
-  title: 'Jacksonville Local Moves: T&E Moving - Get a Quote',
-  description: 'Jacksonville local moves? T&E Moving provides stress-free moving services. Get a free quote today!',
+  title: 'Local Moving and Storage: T&E Moving - Complete Moving & Storage Solutions',
+  description: 'Professional local moving and storage services. T&E Moving provides comprehensive moving and storage solutions. Get your free quote for local moving and storage.',
   openGraph: {
-    title: 'Local Moves - T&E Moving - Jacksonville, FL',
-    description: 'Need local moving services in Jacksonville, FL? Call T&E Moving for a free quote for local moves. Stress-free local moving is our specialty!',
-    images: ['/images/te-localmoves.jpg'],
+    title: 'Local Moving and Storage - T&E Moving',
+    description: 'Complete local moving and storage solutions. Professional moving services with secure storage facilities. Get your free quote today!',
+    images: ['/images/facility-aerial.png'],
   },
 }
 
@@ -22,8 +22,8 @@ export default function LocalMovesPage() {
   return (
     <div className="min-h-screen">
       <HeroSection
-        headline="Professional Local Moving Services in Jacksonville"
-        subheadline="T&E Moving provides expert local moving services throughout Jacksonville and surrounding areas. Our experienced team handles residential and commercial moves with the utmost care and professionalism."
+        headline="Local Moving and Storage Solutions"
+        subheadline="T&E Moving provides expert local moving services combined with secure storage solutions. Our experienced team handles your move and offers flexible storage options for short and long-term needs. Complete moving and storage solutions under one roof."
         primaryCTA={{
           text: "Get Your Free Quote",
           action: "/quote"
@@ -34,53 +34,56 @@ export default function LocalMovesPage() {
         }}
         background={{
           type: 'image',
-          source: '/images/truck-fleet.png'
+          source: '/images/facility-aerial.png'
         }}
-        trustBadges={['Licensed & Insured', 'Family-Owned', 'Local Experts']}
+        trustBadges={['Licensed & Insured', 'Family-Owned', 'Secure Storage', '5-Star Rated']}
       />
 
       <AccoladesSection
         badges={[
           'Licensed & Insured',
           'Family-Owned Business',
-          'Local Jacksonville Company',
-          'Customer Satisfaction Guarantee'
+          'Secure Storage Facilities',
+          'Customer Satisfaction Guarantee',
+          'BBB A+ Rated',
+          '5-Star Google Reviews',
+          'Climate-Controlled Storage'
         ]}
       />
 
       <ValuePropositionSection
-        title="Why Choose Our Local Moving Services?"
-        subtitle="Experience the difference with our professional local moving expertise"
+        title="Why Choose Our Local Moving and Storage?"
+        subtitle="Experience the convenience of complete moving and storage solutions"
         benefits={[
           {
             icon: "🏠",
-            title: "Local Expertise",
-            description: "Deep knowledge of Jacksonville area and surrounding communities"
+            title: "Complete Solutions",
+            description: "Moving and storage services combined for your convenience"
+          },
+          {
+            icon: "🗄️",
+            title: "Secure Storage",
+            description: "Climate-controlled storage facilities with 24/7 security"
           },
           {
             icon: "👥",
             title: "Professional Team",
-            description: "Experienced moving professionals dedicated to your satisfaction"
-          },
-          {
-            icon: "🛡️",
-            title: "Licensed & Insured",
-            description: "Full protection for your belongings throughout the entire move"
+            description: "Experienced movers and storage specialists"
           },
           {
             icon: "💰",
-            title: "Competitive Pricing",
-            description: "Affordable rates for quality service without hidden fees"
+            title: "Flexible Pricing",
+            description: "Competitive rates for both moving and storage services"
           },
           {
-            icon: "❤️",
-            title: "Family-Owned",
-            description: "Personal touch and attention to detail you can trust"
+            icon: "🛡️",
+            title: "Full Protection",
+            description: "Comprehensive insurance for moving and stored items"
           },
           {
             icon: "⚡",
-            title: "Quick Response",
-            description: "Fast response times for quotes and scheduling"
+            title: "Quick Access",
+            description: "Easy access to your stored items when you need them"
           }
         ]}
         layout="grid"
@@ -88,51 +91,55 @@ export default function LocalMovesPage() {
       />
 
       <ServiceOverviewSection
-        title="Local Moving Services"
-        subtitle="Comprehensive moving solutions for residential and commercial needs"
+        title="Local Moving and Storage Services"
+        subtitle="Comprehensive solutions for all your moving and storage needs"
         services={[
           {
-            icon: "🏠",
-            title: "Residential Moving",
-            description: "Complete moving services for homes, apartments, condos, and senior living communities",
+            icon: "🚚",
+            title: "Local Moving",
+            description: "Professional local moving services with experienced teams",
             features: [
-              "Single-family homes",
-              "Apartments and condos", 
-              "Senior living communities",
-              "Student housing"
+              "Residential moves",
+              "Commercial moves",
+              "Packing services",
+              "Furniture assembly",
+              "Loading/unloading"
             ]
           },
           {
-            icon: "🏢",
-            title: "Commercial Moving",
-            description: "Professional office and business relocation services with minimal downtime",
+            icon: "🗄️",
+            title: "Storage Solutions",
+            description: "Secure storage facilities for short and long-term needs",
             features: [
-              "Office relocations",
-              "Retail store moves",
-              "Industrial equipment",
-              "Medical office moves"
+              "Climate-controlled storage",
+              "Short-term storage",
+              "Long-term storage",
+              "24/7 security",
+              "Easy access"
             ]
           },
           {
             icon: "📦",
-            title: "Packing Services",
-            description: "Expert packing and unpacking services with quality materials",
+            title: "Packing & Storage",
+            description: "Professional packing with storage coordination",
             features: [
               "Professional packing",
-              "Quality materials",
-              "Fragile item protection",
-              "Unpacking assistance"
+              "Storage coordination",
+              "Inventory management",
+              "Box labeling",
+              "Storage organization"
             ]
           },
           {
-            icon: "🚚",
-            title: "Loading & Unloading",
-            description: "Careful handling and secure transportation of all your belongings",
+            icon: "🔄",
+            title: "Moving & Storage Packages",
+            description: "Combined moving and storage solutions for convenience",
             features: [
-              "Secure loading",
-              "Professional equipment",
-              "Careful unloading",
-              "Furniture placement"
+              "Complete packages",
+              "Flexible terms",
+              "Cost savings",
+              "One-stop service",
+              "Convenient coordination"
             ]
           }
         ]}
@@ -140,93 +147,106 @@ export default function LocalMovesPage() {
       />
 
       <TimelineSection
-        title="Our Local Moving Process"
-        subtitle="A simple, stress-free process designed for your convenience"
+        title="Our Local Moving and Storage Process"
+        subtitle="A seamless process that combines moving and storage for your convenience"
         steps={[
           {
             number: "01",
-            title: "Free Quote",
-            description: "Get a detailed estimate for your move with no hidden fees"
+            title: "Free Consultation",
+            description: "We assess your moving and storage needs with a detailed consultation"
           },
           {
-            number: "02", 
-            title: "Professional Packing",
-            description: "Expert packing services available with quality materials"
+            number: "02",
+            title: "Customized Plan",
+            description: "Create a personalized moving and storage plan that fits your needs"
           },
           {
             number: "03",
-            title: "Careful Loading",
-            description: "Secure loading and transportation with professional equipment"
+            title: "Professional Moving",
+            description: "Expert moving services with careful handling of your belongings"
           },
           {
             number: "04",
-            title: "Safe Delivery",
-            description: "Careful unloading and setup at your new location"
+            title: "Secure Storage",
+            description: "Safe storage in our climate-controlled facilities with 24/7 security"
           },
           {
             number: "05",
-            title: "Post-Move Support",
-            description: "Assistance with unpacking and setup to complete your move"
+            title: "Flexible Access",
+            description: "Easy access to your stored items whenever you need them"
           }
         ]}
       />
 
       <TestimonialSection
-        title="What Our Customers Say"
-        subtitle="Real experiences from Jacksonville families and businesses"
+        title="What Our Moving and Storage Customers Say"
+        subtitle="Real experiences from customers who used our combined moving and storage services"
         testimonials={[
           {
-            quote: "T&E Moving made our local move so easy! They were professional, careful, and affordable. Highly recommend!",
+            quote: "The moving and storage package was perfect for our situation. They moved our furniture and stored the rest until we were ready. Great service!",
             author: "Sarah M.",
             location: "Jacksonville Beach"
           },
           {
-            quote: "The team was amazing - they handled everything from packing to setup. Our move was stress-free thanks to them.",
+            quote: "Secure storage facilities and professional moving service. They made our transition so much easier with the combined service.",
             author: "Mike R.",
             location: "Orange Park"
           },
           {
-            quote: "Fast, reliable, and professional. They moved our office in one day with minimal disruption to our business.",
+            quote: "We needed storage while our new home was being built. T&E handled everything - moving and storage in one convenient package.",
             author: "Jennifer L.",
             location: "Ponte Vedra Beach"
+          },
+          {
+            quote: "The storage facilities are clean and secure. Combined with their moving service, it was the perfect solution for our needs.",
+            author: "David K.",
+            location: "Atlantic Beach"
           }
         ]}
       />
 
       <FAQSection
-        title="Frequently Asked Questions"
-        subtitle="Common questions about our local moving services"
+        title="Frequently Asked Questions About Moving and Storage"
+        subtitle="Common questions about our local moving and storage services"
         faqs={[
           {
-            question: "How far in advance should I book my local move?",
-            answer: "We recommend booking at least 2-3 weeks in advance for local moves, especially during peak moving seasons (May-September)."
+            question: "What storage options do you offer?",
+            answer: "We offer climate-controlled storage facilities with flexible terms for short and long-term storage. Our facilities feature 24/7 security and easy access to your items."
           },
           {
-            question: "Do you provide packing materials?",
-            answer: "Yes, we provide all necessary packing materials including boxes, tape, bubble wrap, and furniture blankets."
+            question: "Can you coordinate moving and storage together?",
+            answer: "Yes, we offer combined moving and storage packages that coordinate both services for your convenience. This often saves money and simplifies the process."
           },
           {
-            question: "What areas do you serve for local moves?",
-            answer: "We serve all of Jacksonville and surrounding areas including Jacksonville Beach, Atlantic Beach, Ponte Vedra Beach, Orange Park, and more."
+            question: "How secure are your storage facilities?",
+            answer: "Our storage facilities feature 24/7 security monitoring, climate control, and secure access systems. Your belongings are protected with comprehensive insurance coverage."
           },
           {
-            question: "Do you offer same-day moving services?",
-            answer: "Yes, we offer same-day moving services for local moves when available. Contact us for immediate availability."
+            question: "Do you offer climate-controlled storage?",
+            answer: "Yes, our storage facilities are climate-controlled to protect your belongings from temperature and humidity damage."
           },
           {
-            question: "What is included in your local moving quote?",
-            answer: "Our quotes include loading, transportation, unloading, and basic furniture placement. Packing services are available for an additional fee."
+            question: "How do I access my stored items?",
+            answer: "You can access your stored items during business hours with advance notice. We make it easy to retrieve items when you need them."
           },
           {
-            question: "Are you licensed and insured?",
-            answer: "Yes, we are fully licensed and insured. Your belongings are protected throughout the entire moving process."
+            question: "What is included in a moving and storage package?",
+            answer: "Our packages typically include moving services, storage for a specified period, and coordination between the two services. Contact us for a custom quote."
+          },
+          {
+            question: "Do you provide storage for businesses?",
+            answer: "Yes, we offer storage solutions for both residential and commercial clients, including business equipment and inventory storage."
+          },
+          {
+            question: "How far in advance should I book moving and storage?",
+            answer: "We recommend booking 2-3 weeks in advance for combined moving and storage services, especially during peak seasons."
           }
         ]}
       />
 
       <CTASection
-        title="Ready to Start Your Local Move?"
-        subtitle="Get your free quote today and experience stress-free local moving"
+        title="Ready for Complete Moving and Storage Solutions?"
+        subtitle="Get your free quote today for professional moving and secure storage services"
         primaryCTA={{
           text: "Get Free Quote",
           action: "/quote"
@@ -236,10 +256,12 @@ export default function LocalMovesPage() {
           action: "tel:9049971884"
         }}
         features={[
-          "Free estimates",
-          "No hidden fees", 
+          "Complete solutions",
+          "Secure storage",
           "Licensed & insured",
-          "Local expertise"
+          "Climate-controlled",
+          "Flexible terms",
+          "Professional service"
         ]}
       />
     </div>

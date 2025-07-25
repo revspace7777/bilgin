@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
 
 interface HeroSectionProps {
   headline: string
@@ -47,23 +48,25 @@ export function HeroSection({
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button 
-              size="lg" 
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg"
-              onClick={() => window.location.href = primaryCTA.action}
-            >
-              {primaryCTA.text}
-            </Button>
+            <Link href={primaryCTA.action}>
+              <Button 
+                size="lg" 
+                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg"
+              >
+                {primaryCTA.text}
+              </Button>
+            </Link>
             
             {secondaryCTA && (
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg"
-                onClick={() => window.location.href = secondaryCTA.action}
-              >
-                {secondaryCTA.text}
-              </Button>
+              <Link href={secondaryCTA.action}>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg"
+                >
+                  {secondaryCTA.text}
+                </Button>
+              </Link>
             )}
           </div>
           
