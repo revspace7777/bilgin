@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -93,6 +93,13 @@ export default function QuoteForm() {
   const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [customId, setCustomId] = useState("")
+  
+  // Refs for Google Places Autocomplete
+  const fromAddressRef = useRef<HTMLInputElement>(null)
+  const toAddressRef = useRef<HTMLInputElement>(null)
+  const fromAutocompleteRef = useRef<google.maps.places.Autocomplete | null>(null)
+  const toAutocompleteRef = useRef<google.maps.places.Autocomplete | null>(null)
+  
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -131,6 +138,94 @@ export default function QuoteForm() {
   useEffect(() => {
     setCustomId(generateCustomId())
   }, [])
+
+  // Initialize Google Places Autocomplete
+  useEffect(() => {
+    const initAutocomplete = () => {
+      if (typeof google !== 'undefined' && google.maps && google.maps.places) {
+        // Initialize FROM address autocomplete
+        if (fromAddressRef.current) {
+          fromAutocompleteRef.current = new google.maps.places.Autocomplete(fromAddressRef.current, {
+            fields: ['address_components', 'geometry', 'formatted_address'],
+            types: ['address'],
+          });
+
+          fromAutocompleteRef.current.addListener('place_changed', () => {
+            const place = fromAutocompleteRef.current?.getPlace();
+            if (place && place.address_components) {
+              fillInAddress(place, 'movingFrom');
+            }
+          });
+        }
+
+        // Initialize TO address autocomplete
+        if (toAddressRef.current) {
+          toAutocompleteRef.current = new google.maps.places.Autocomplete(toAddressRef.current, {
+            fields: ['address_components', 'geometry', 'formatted_address'],
+            types: ['address'],
+          });
+
+          toAutocompleteRef.current.addListener('place_changed', () => {
+            const place = toAutocompleteRef.current?.getPlace();
+            if (place && place.address_components) {
+              fillInAddress(place, 'movingTo');
+            }
+          });
+        }
+      }
+    };
+
+    // Load Google Maps script if not already loaded
+    if (!window.google) {
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCKj2joDihjTqqzEVkeuibcRkCagNfA3Js&libraries=places`;
+      script.async = true;
+      script.defer = true;
+      script.onload = initAutocomplete;
+      document.head.appendChild(script);
+    } else {
+      initAutocomplete();
+    }
+
+    return () => {
+      // Cleanup autocomplete listeners
+      if (fromAutocompleteRef.current) {
+        google.maps.event.clearInstanceListeners(fromAutocompleteRef.current);
+      }
+      if (toAutocompleteRef.current) {
+        google.maps.event.clearInstanceListeners(toAutocompleteRef.current);
+      }
+    };
+  }, []);
+
+  // Fill in address fields based on Google Places result
+  const fillInAddress = (place: google.maps.places.PlaceResult, prefix: 'movingFrom' | 'movingTo') => {
+    const addressComponents = place.address_components || [];
+    
+    const getComponent = (type: string) => {
+      const component = addressComponents.find(comp => comp.types.includes(type));
+      return component ? component.short_name : '';
+    };
+
+    const getLongComponent = (type: string) => {
+      const component = addressComponents.find(comp => comp.types.includes(type));
+      return component ? component.long_name : '';
+    };
+
+    // Extract street number and route for street address
+    const streetNumber = getComponent('street_number');
+    const route = getLongComponent('route');
+    const streetAddress = streetNumber && route ? `${streetNumber} ${route}` : '';
+
+    // Update form data
+    setFormData(prev => ({
+      ...prev,
+      [`${prefix}Street`]: streetAddress,
+      [`${prefix}City`]: getLongComponent('locality'),
+      [`${prefix}State`]: getComponent('administrative_area_level_1'),
+      [`${prefix}Zip`]: getComponent('postal_code'),
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -270,9 +365,10 @@ export default function QuoteForm() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Input
+            ref={fromAddressRef}
             name="movingFromStreet"
             type="text"
-            placeholder="Moving From Street"
+            placeholder="Start typing address for autocomplete..."
             value={formData.movingFromStreet}
             onChange={(e) => handleInputChange("movingFromStreet", e.target.value)}
             className="bg-slate-700 border-slate-600 text-white placeholder:text-gray-400 focus:border-red-500"
@@ -355,9 +451,10 @@ export default function QuoteForm() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Input
+            ref={toAddressRef}
             name="movingToStreet"
             type="text"
-            placeholder="Moving To Street"
+            placeholder="Start typing address for autocomplete..."
             value={formData.movingToStreet}
             onChange={(e) => handleInputChange("movingToStreet", e.target.value)}
             className="bg-slate-700 border-slate-600 text-white placeholder:text-gray-400 focus:border-red-500"
