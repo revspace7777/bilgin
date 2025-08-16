@@ -1917,22 +1917,6 @@ export default function TEMoversLanding() {
               </div>
             </TabsContent>
           </Tabs>
-
-          <div className="mt-12 text-center">
-            <Card className="border-0 shadow-xl bg-red-600 text-white max-w-2xl mx-auto">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">Too Much to Handle?</h3>
-                <p className="text-blue-100 mb-6">
-                  Let us take care of everything! Our full-service moving packages handle every detail so you can focus
-                  on the excitement of your new adventure.
-                </p>
-                <Button size="lg" className="bg-white text-red-500 hover:bg-gray-100 quote-trigger">
-                  Get Full-Service Quote
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </section>
 
@@ -2124,6 +2108,56 @@ export default function TEMoversLanding() {
           </div>
         </div>
       </footer>
+
+      {/* Hidden form for Netlify detection */}
+      <form name="quote-request" method="POST" data-netlify="true" style={{ display: 'none' }}>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="typeOfMove" />
+        <input type="text" name="movingFromStreet" />
+        <input type="text" name="movingFromCity" />
+        <input type="text" name="movingFromState" />
+        <input type="text" name="movingFromZip" />
+        <input type="text" name="movingFromBedrooms" />
+        <input type="text" name="movingFromFloor" />
+        <input type="text" name="movingToStreet" />
+        <input type="text" name="movingToCity" />
+        <input type="text" name="movingToState" />
+        <input type="text" name="movingToZip" />
+        <input type="text" name="movingToBedrooms" />
+        <input type="text" name="movingToFloor" />
+        <textarea name="description"></textarea>
+        
+        {/* Add all tracking fields */}
+        <input type="text" name="campaignid" />
+        <input type="text" name="adgroupid" />
+        <input type="text" name="keyword" />
+        <input type="text" name="matchtype" />
+        <input type="text" name="targetid" />
+        <input type="text" name="creative" />
+        <input type="text" name="feeditemid" />
+        <input type="text" name="device" />
+        <input type="text" name="network" />
+        <input type="text" name="loc_physical_ms" />
+        <input type="text" name="loc_interest_ms" />
+        <input type="text" name="gclid" />
+        <input type="text" name="utm_source" />
+        <input type="text" name="utm_medium" />
+        <input type="text" name="utm_campaign" />
+        <input type="text" name="utm_adgroup" />
+        <input type="text" name="utm_term" />
+        <input type="text" name="utm_content" />
+        <input type="text" name="extensionid" />
+        <input type="text" name="ip_address" />
+        <input type="text" name="page_url" />
+        <input type="text" name="form_url" />
+        <input type="text" name="referrer" />
+        <input type="text" name="user_agent" />
+        <input type="text" name="timestamp" />
+        <input type="text" name="date" />
+        <input type="text" name="time" />
+      </form>
     </div>
   )
 }

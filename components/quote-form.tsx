@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
+import { getTrackingInputs } from "@/lib/form-tracking"
 
 interface FormData {
   name: string
@@ -138,34 +139,44 @@ export default function QuoteForm() {
     setIsSubmitting(true)
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-
-      toast({
-        title: "Quote Request Sent!",
-        description: "We'll contact you within 24 hours with your free quote.",
+      // Create FormData from the actual form element
+      const form = e.target as HTMLFormElement
+      const formData = new FormData(form)
+      
+      // Submit to Netlify
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
       })
+      
+      if (response.ok) {
+        toast({
+          title: "Quote Request Sent!",
+          description: "We'll contact you within 24 hours with your free quote.",
+        })
 
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        typeOfMove: "",
-        movingFromStreet: "",
-        movingFromCity: "",
-        movingFromState: "",
-        movingFromZip: "",
-        movingFromBedrooms: "",
-        movingFromFloor: "",
-        movingToStreet: "",
-        movingToCity: "",
-        movingToState: "",
-        movingToZip: "",
-        movingToBedrooms: "",
-        movingToFloor: "",
-        description: "",
-      })
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          typeOfMove: "",
+          movingFromStreet: "",
+          movingFromCity: "",
+          movingFromState: "",
+          movingFromZip: "",
+          movingFromBedrooms: "",
+          movingFromFloor: "",
+          movingToStreet: "",
+          movingToCity: "",
+          movingToState: "",
+          movingToZip: "",
+          movingToBedrooms: "",
+          movingToFloor: "",
+          description: "",
+        })
+      }
     } catch (error) {
       toast({
         title: "Error",
@@ -178,10 +189,14 @@ export default function QuoteForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true">
+      {/* Hidden input for Netlify */}
+      <input type="hidden" name="form-name" value="quote-request" />
+      
       {/* Basic Information Row */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Input
+          name="name"
           type="text"
           placeholder="Name"
           value={formData.name}
@@ -190,6 +205,7 @@ export default function QuoteForm() {
           required
         />
         <Input
+          name="email"
           type="email"
           placeholder="Email"
           value={formData.email}
@@ -201,6 +217,7 @@ export default function QuoteForm() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Input
+          name="phone"
           type="tel"
           placeholder="Phone"
           value={formData.phone}
@@ -228,6 +245,7 @@ export default function QuoteForm() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Input
+            name="movingFromStreet"
             type="text"
             placeholder="Moving From Street"
             value={formData.movingFromStreet}
@@ -235,6 +253,7 @@ export default function QuoteForm() {
             className="bg-slate-700 border-slate-600 text-white placeholder:text-gray-400 focus:border-red-500"
           />
           <Input
+            name="movingFromCity"
             type="text"
             placeholder="City"
             value={formData.movingFromCity}
@@ -262,6 +281,7 @@ export default function QuoteForm() {
           </Select>
 
           <Input
+            name="movingFromZip"
             type="text"
             placeholder="Zip"
             value={formData.movingFromZip}
@@ -310,6 +330,7 @@ export default function QuoteForm() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Input
+            name="movingToStreet"
             type="text"
             placeholder="Moving To Street"
             value={formData.movingToStreet}
@@ -317,6 +338,7 @@ export default function QuoteForm() {
             className="bg-slate-700 border-slate-600 text-white placeholder:text-gray-400 focus:border-red-500"
           />
           <Input
+            name="movingToCity"
             type="text"
             placeholder="City"
             value={formData.movingToCity}
@@ -341,6 +363,7 @@ export default function QuoteForm() {
           </Select>
 
           <Input
+            name="movingToZip"
             type="text"
             placeholder="Zip"
             value={formData.movingToZip}
@@ -383,6 +406,7 @@ export default function QuoteForm() {
       {/* Description */}
       <div>
         <Textarea
+          name="description"
           placeholder="Description of major items or details we should know"
           value={formData.description}
           onChange={(e) => handleInputChange("description", e.target.value)}
@@ -390,6 +414,9 @@ export default function QuoteForm() {
           rows={4}
         />
       </div>
+
+      {/* Tracking Fields */}
+      {getTrackingInputs()}
 
       {/* Submit Button */}
       <Button
