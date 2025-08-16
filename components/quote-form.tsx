@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -90,6 +90,7 @@ const moveTypes = ["Residential", "Commercial", "Long Distance", "Local", "Stora
 export default function QuoteForm() {
   const { toast } = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [customId, setCustomId] = useState("")
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -113,6 +114,21 @@ export default function QuoteForm() {
   const handleInputChange = (field: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }))
   }
+
+  // Generate random 4-character alphanumeric ID
+  const generateCustomId = () => {
+    const chars = 'abcdefghijklmnopqrstuvwxyz0123456789'
+    let result = ''
+    for (let i = 0; i < 4; i++) {
+      result += chars.charAt(Math.floor(Math.random() * chars.length))
+    }
+    return result
+  }
+
+  // Generate ID on component mount
+  useEffect(() => {
+    setCustomId(generateCustomId())
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -192,6 +208,13 @@ export default function QuoteForm() {
     <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true">
       {/* Hidden input for Netlify */}
       <input type="hidden" name="form-name" value="quote-request" />
+      
+      {/* Custom subject line with generated ID */}
+      <input 
+        type="hidden" 
+        name="subject" 
+        value={`New Moving Quote Request for ${formData.name || 'Customer'} | T&E Moving and Storage LLC | (id:${customId})`}
+      />
       
       {/* Basic Information Row */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
