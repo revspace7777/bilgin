@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
 import { getTrackingInputs, getTrackingDataForSubmission } from "@/lib/form-tracking"
+import { useRouter } from "next/navigation"
 
 interface FormData {
   name: string
@@ -89,6 +90,7 @@ const moveTypes = ["Residential", "Commercial", "Long Distance", "Local", "Stora
 
 export default function QuoteForm() {
   const { toast } = useToast()
+  const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [customId, setCustomId] = useState("")
   const [formData, setFormData] = useState<FormData>({
@@ -184,28 +186,8 @@ export default function QuoteForm() {
           description: "We'll contact you within 24 hours with your free quote.",
         });
 
-        // Reset form state
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          typeOfMove: "",
-          movingFromStreet: "",
-          movingFromCity: "",
-          movingFromState: "",
-          movingFromZip: "",
-          movingFromBedrooms: "",
-          movingFromFloor: "",
-          movingToStreet: "",
-          movingToCity: "",
-          movingToState: "",
-          movingToZip: "",
-          movingToBedrooms: "",
-          movingToFloor: "",
-          description: "",
-        });
-        // Also reset the custom ID for the next submission
-        setCustomId(generateCustomId());
+        // Redirect to thank-you page instead of resetting form
+        router.push('/thank-you');
       } else {
         // Handle Netlify submission error
         throw new Error('Netlify form submission failed');
