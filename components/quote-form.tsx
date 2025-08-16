@@ -155,15 +155,22 @@ export default function QuoteForm() {
     setIsSubmitting(true)
 
     try {
-      // Create FormData from the actual form element
-      const form = e.target as HTMLFormElement
-      const formData = new FormData(form)
+      // Use React state instead of DOM FormData
+      const formDataToSubmit = new FormData()
+      
+      // Add all form fields from React state
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataToSubmit.append(key, value)
+      })
+      
+      // Add the custom subject line
+      formDataToSubmit.append('subject', `New Moving Quote Request for ${formData.name || 'Customer'} | T&E Moving and Storage LLC | (id:${customId})`)
       
       // Submit to Netlify
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString()
+        body: new URLSearchParams(formDataToSubmit as any).toString()
       })
       
       if (response.ok) {
