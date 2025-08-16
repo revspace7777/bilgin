@@ -166,11 +166,9 @@ export default function QuoteForm() {
       // Add the custom subject line
       formDataToSubmit.append('subject', `New Moving Quote Request for ${formData.name || 'Customer'} | T&E Moving and Storage LLC | (id:${customId})`)
       
-      // Add all tracking fields
-      const trackingData = getTrackingDataForSubmission()
-      Object.entries(trackingData).forEach(([key, value]) => {
-        formDataToSubmit.append(key, value)
-      })
+      // Add minimal tracking for admin email
+      formDataToSubmit.append('source', 'Google Ads')
+      formDataToSubmit.append('landing_page', window.location.href)
       
       // Submit to Netlify
       const response = await fetch('/', {
@@ -450,9 +448,6 @@ export default function QuoteForm() {
           rows={4}
         />
       </div>
-
-      {/* Add tracking fields */}
-      {getTrackingInputs()}
 
       {/* Submit Button */}
       <Button
