@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
-import { getTrackingInputs } from "@/lib/form-tracking"
+import { getTrackingInputs, getTrackingDataForSubmission } from "@/lib/form-tracking"
 
 interface FormData {
   name: string
@@ -155,26 +155,23 @@ export default function QuoteForm() {
     setIsSubmitting(true)
 
     try {
-      // Use React state instead of DOM FormData
-      const formDataToSubmit = new FormData()
-      
-      // Add all form fields from React state
-      Object.entries(formData).forEach(([key, value]) => {
-        formDataToSubmit.append(key, value)
-      })
+      // Let the form submit naturally to Netlify
+      const form = e.target as HTMLFormElement
+      const formDataToSubmit = new FormData(form)
       
       // Add the custom subject line
       formDataToSubmit.append('subject', `New Moving Quote Request for ${formData.name || 'Customer'} | T&E Moving and Storage LLC | (id:${customId})`)
       
-      // Add minimal tracking for admin email
-      formDataToSubmit.append('source', 'Google Ads')
-      formDataToSubmit.append('landing_page', window.location.href)
+      // Add ALL tracking fields for n8n webhook
+      const trackingData = getTrackingDataForSubmission()
+      Object.entries(trackingData).forEach(([key, value]) => {
+        formDataToSubmit.append(key, value)
+      })
       
-      // Submit to Netlify
-      const response = await fetch('/', {
+      // Submit to Netlify using form action (Netlify intercepts this)
+      const response = await fetch(form.action || '/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formDataToSubmit as any).toString()
+        body: formDataToSubmit
       })
       
       if (response.ok) {
@@ -227,6 +224,9 @@ export default function QuoteForm() {
         value={`New Moving Quote Request for ${formData.name || 'Customer'} | T&E Moving and Storage LLC | (id:${customId})`}
       />
       
+      {/* Add tracking fields for Netlify to capture */}
+      {getTrackingInputs()}
+
       {/* Basic Information Row */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Input
