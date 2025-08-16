@@ -131,7 +131,7 @@ export default function QuoteForm() {
   }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
     // Basic validation
     if (!formData.name || !formData.email || !formData.phone) {
@@ -139,8 +139,8 @@ export default function QuoteForm() {
         title: "Missing Information",
         description: "Please fill in your name, email, and phone number.",
         variant: "destructive",
-      })
-      return
+      });
+      return;
     }
 
     if (!formData.movingFromCity || !formData.movingToCity) {
@@ -148,39 +148,43 @@ export default function QuoteForm() {
         title: "Missing Location Information",
         description: "Please provide both moving from and moving to cities.",
         variant: "destructive",
-      })
-      return
+      });
+      return;
     }
 
-    setIsSubmitting(true)
+    setIsSubmitting(true);
 
     try {
-      // Let the form submit naturally to Netlify
-      const form = e.target as HTMLFormElement
-      const formDataToSubmit = new FormData(form)
-      
+      // Create a new FormData object to send to Netlify
+      const dataForNetlify = new FormData();
+
+      // **THIS IS THE KEY FIX:** Append all data directly from your React state
+      dataForNetlify.append("form-name", "quote-request");
+      Object.entries(formData).forEach(([key, value]) => {
+        dataForNetlify.append(key, value);
+      });
+
       // Add the custom subject line
-      formDataToSubmit.append('subject', `New Moving Quote Request for ${formData.name || 'Customer'} | T&E Moving and Storage LLC | (id:${customId})`)
-      
+      dataForNetlify.append('subject', `New Moving Quote Request for ${formData.name || 'Customer'} | T&E Moving and Storage LLC | (id:${customId})`);
+
       // Add ALL tracking fields for n8n webhook
-      const trackingData = getTrackingDataForSubmission()
+      const trackingData = getTrackingDataForSubmission();
       Object.entries(trackingData).forEach(([key, value]) => {
-        formDataToSubmit.append(key, value)
-      })
-      
-      // Submit to Netlify using form action (Netlify intercepts this)
-      const response = await fetch(form.action || '/', {
-        method: 'POST',
-        body: formDataToSubmit
-      })
-      
+        dataForNetlify.append(key, value);
+      });
+
+      const response = await fetch("/", { // Submit to the root for Netlify
+        method: "POST",
+        body: dataForNetlify,
+      });
+
       if (response.ok) {
         toast({
           title: "Quote Request Sent!",
           description: "We'll contact you within 24 hours with your free quote.",
-        })
+        });
 
-        // Reset form
+        // Reset form state
         setFormData({
           name: "",
           email: "",
@@ -199,18 +203,23 @@ export default function QuoteForm() {
           movingToBedrooms: "",
           movingToFloor: "",
           description: "",
-        })
+        });
+        // Also reset the custom ID for the next submission
+        setCustomId(generateCustomId());
+      } else {
+        // Handle Netlify submission error
+        throw new Error('Netlify form submission failed');
       }
     } catch (error) {
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
         variant: "destructive",
-      })
+      });
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true">
