@@ -568,8 +568,6 @@ export default function TEMoversLanding() {
             <div className="space-y-8">
               <Card className="border-0 shadow-xl">
                 <CardHeader>
-                  
-               
                 <CardTitle className="flex items-center space-x-3">
                   <Calculator className="h-6 w-6 text-blue-500" />
                   <span>How We Calculate Your Quote</span>
