@@ -2157,6 +2157,9 @@ export default function TEMoversLanding() {
               </div>
               <div className="text-right">
                 <div className="flex justify-end space-x-6 text-sm text-gray-400">
+                  <a href="/sitemap" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                    Sitemap
+                  </a>
                   <a href="/privacy-policy" className="hover:text-white transition-colors">
                     Privacy Policy
                   </a>
