@@ -47,7 +47,7 @@ import Image from "next/image"
 import FloatingQuoteButton from "@/components/floating-quote-button"
 import QuoteFormSlideout from "@/components/quote-form-slideout"
 
-export default function TEMoversLanding() {
+export default function JacksonvilleToCapeCoralMovers() {
   return (
     <div className="min-h-screen bg-white relative">
       {/* Floating Quote Button */}

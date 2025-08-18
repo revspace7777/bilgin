@@ -389,9 +389,190 @@ export default function JacksonvilleToOrlandoMovers() {
         </div>
       </section>
 
-      {/* ... (Pricing Transparency section remains the same) ... */}
-      
-      {/* Moving Process Timeline Section remains the same */}
+      {/* Pricing Transparency */}
+      <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Transparent, Fair Pricing</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              No hidden fees, no surprise costs. Get a detailed estimate that covers everything, with our price-lock guarantee.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-8">What's Included in Every Quote</h3>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="h-5 w-5 text-green-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Professional Crew & Equipment</h4>
+                    <p className="text-gray-600">Trained movers, moving truck, dollies, straps, and blankets included.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="h-5 w-5 text-green-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Basic Protection Coverage</h4>
+                    <p className="text-gray-600">Standard liability coverage included at no extra cost.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="h-5 w-5 text-green-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Loading & Unloading</h4>
+                    <p className="text-gray-600">Complete loading, transport, and unloading services.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="h-5 w-5 text-green-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Travel Time & Mileage</h4>
+                    <p className="text-gray-600">All travel costs between locations included in your quote.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 quote-trigger">
+                  Get Your Detailed Quote
+                  <Calculator className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-xl">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Pricing Factors</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  <span className="text-gray-600">Distance (Jacksonville to Orlando)</span>
+                  <span className="font-semibold text-gray-900">~140 miles</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  <span className="text-gray-600">Size of Home</span>
+                  <span className="font-semibold text-gray-900">1-5 Bedrooms</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  <span className="text-gray-600">Packing Services</span>
+                  <span className="font-semibold text-gray-900">Optional Add-on</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  <span className="text-gray-600">Storage Needed</span>
+                  <span className="font-semibold text-gray-900">If Required</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  <span className="text-gray-600">Special Items</span>
+                  <span className="font-semibold text-gray-900">Quoted Separately</span>
+                </div>
+                <div className="flex justify-between items-center py-3">
+                  <span className="text-gray-600">Timing</span>
+                  <span className="font-semibold text-gray-900">Peak vs Off-Peak</span>
+                </div>
+              </div>
+
+              <div className="mt-8 bg-red-50 rounded-lg p-4">
+                <div className="flex items-center space-x-2 mb-2">
+                  <PiggyBank className="h-5 w-5 text-red-500" />
+                  <span className="font-semibold text-red-700">Price Lock Guarantee</span>
+                </div>
+                <p className="text-sm text-red-600">
+                  Your written quote is your final price. No surprises, no hidden fees, no last-minute changes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Moving Process Timeline */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Your Move, Step by Step</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              We make long-distance moving simple with our proven 6-step process that's been refined over 25 years.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-8">
+              {[
+                {
+                  step: "1",
+                  title: "Free In-Home Estimate",
+                  description: "We visit your home to provide an accurate, detailed quote. No surprises later.",
+                  icon: <Calculator className="h-6 w-6" />,
+                  color: "bg-red-500"
+                },
+                {
+                  step: "2", 
+                  title: "Moving Plan Creation",
+                  description: "We create a custom moving timeline and coordinate all logistics for your Jacksonville to Orlando move.",
+                  icon: <Clipboard className="h-6 w-6" />,
+                  color: "bg-orange-500"
+                },
+                {
+                  step: "3",
+                  title: "Professional Packing",
+                  description: "Our expert team carefully packs your belongings using premium materials (optional service).",
+                  icon: <Package className="h-6 w-6" />,
+                  color: "bg-yellow-500"
+                },
+                {
+                  step: "4",
+                  title: "Loading & Transport",
+                  description: "Your items are loaded with care and transported directly to Orlando in our modern trucks.",
+                  icon: <Truck className="h-6 w-6" />,
+                  color: "bg-green-500"
+                },
+                {
+                  step: "5",
+                  title: "Delivery & Unloading",
+                  description: "We deliver on time and place everything exactly where you want it in your new Orlando home.",
+                  icon: <Home className="h-6 w-6" />,
+                  color: "bg-blue-500"
+                },
+                {
+                  step: "6",
+                  title: "Post-Move Follow-Up",
+                  description: "We check in to ensure everything arrived safely and you're completely satisfied.",
+                  icon: <CheckCircle className="h-6 w-6" />,
+                  color: "bg-purple-500"
+                }
+              ].map((item, index) => (
+                <div key={index} className="flex items-start space-x-6">
+                  <div className={`w-16 h-16 ${item.color} rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0`}>
+                    {item.icon}
+                  </div>
+                  <div className="flex-1 pt-2">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <span className="text-sm text-gray-500 font-semibold">STEP {item.step}</span>
+                      <div className="flex-1 h-px bg-gray-200"></div>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 quote-trigger">
+              Start Your Move Today
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+      </section>
 
       {/* Customer Success Stories */}
       <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50" data-reviews-section>
@@ -487,7 +668,321 @@ export default function JacksonvilleToOrlandoMovers() {
         </div>
       </section>
 
-      {/* ... (FAQ and Checklist sections remain the same) ... */}
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Get answers to common questions about moving from Jacksonville to Orlando with T&E Movers.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="item-1" className="border border-gray-200 rounded-lg px-6">
+                <AccordionTrigger className="text-left">
+                  How long does it take to move from Jacksonville to Orlando?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600 pb-4">
+                  The drive from Jacksonville to Orlando is approximately 2-3 hours. For a typical household move, we can complete loading, transport, and unloading within 1 day, depending on the size of your home and specific requirements. We'll provide an exact timeline during your free estimate.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="border border-gray-200 rounded-lg px-6">
+                <AccordionTrigger className="text-left">
+                  How much does it cost to move from Jacksonville to Orlando?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600 pb-4">
+                  Moving costs vary based on the size of your home, services needed, and timing. A typical 2-3 bedroom home ranges from $1,200-$2,800 for full-service moving. We provide free, no-obligation estimates that include all costs upfront with our price-lock guarantee.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="border border-gray-200 rounded-lg px-6">
+                <AccordionTrigger className="text-left">
+                  Do you provide packing services for Orlando moves?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600 pb-4">
+                  Yes! We offer complete packing services using premium materials. Our team can pack everything from fragile items to your entire home. We also offer partial packing if you prefer to pack some items yourself. All packing services come with our damage protection guarantee.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border border-gray-200 rounded-lg px-6">
+                <AccordionTrigger className="text-left">
+                  Are you licensed and insured for moves to Orlando?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600 pb-4">
+                  Absolutely. T&E Movers is fully licensed and insured for interstate moves throughout Florida. We carry comprehensive liability and cargo insurance, and can provide additional coverage options for high-value items. All our credentials are available upon request.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="border border-gray-200 rounded-lg px-6">
+                <AccordionTrigger className="text-left">
+                  Can you move my car along with my household goods?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600 pb-4">
+                  Yes, we offer vehicle transport services for cars, motorcycles, boats, and other vehicles. We work with trusted auto transport partners to provide both open and enclosed vehicle shipping. This can be coordinated to arrive at your new Orlando home around the same time as your household goods.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="border border-gray-200 rounded-lg px-6">
+                <AccordionTrigger className="text-left">
+                  What if I need storage during my move to Orlando?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600 pb-4">
+                  We offer both short-term and long-term storage solutions in climate-controlled facilities. Whether you need storage because your new home isn't ready or you're downsizing, we can store your belongings safely and deliver them when you're ready. Storage is available in both Jacksonville and Central Florida areas.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Moving Checklist */}
+      <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Jacksonville to Orlando Moving Checklist
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Stay organized with our comprehensive moving checklist designed specifically for Jacksonville to Orlando relocations.
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <Tabs defaultValue="8-weeks" className="w-full">
+              <TabsList className="grid w-full grid-cols-4 mb-12">
+                <TabsTrigger value="8-weeks">8 Weeks Before</TabsTrigger>
+                <TabsTrigger value="4-weeks">4 Weeks Before</TabsTrigger>
+                <TabsTrigger value="2-weeks">2 Weeks Before</TabsTrigger>
+                <TabsTrigger value="moving-day">Moving Day</TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="8-weeks" className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <Card className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                      <CalendarDays className="h-6 w-6 text-blue-500 mr-2" />
+                      Research & Planning
+                    </h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Research Orlando neighborhoods and schools</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Get multiple moving quotes from licensed companies</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Create a moving budget and timeline</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Start decluttering and organizing belongings</span>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                      <FileText className="h-6 w-6 text-purple-500 mr-2" />
+                      Documentation
+                    </h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Gather important documents (birth certificates, passports, etc.)</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Request school transcripts and medical records</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Notify your employer about your relocation</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Research Orlando job market if needed</span>
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+              </TabsContent>
+
+              <TabsContent value="4-weeks" className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <Card className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                      <Truck className="h-6 w-6 text-orange-500 mr-2" />
+                      Booking & Logistics
+                    </h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Book your moving company and confirm dates</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Order packing supplies if packing yourself</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Arrange time off work for moving day</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Book hotel if overnight stay needed in Orlando</span>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                      <Mail className="h-6 w-6 text-red-500 mr-2" />
+                      Address Changes
+                    </h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Submit change of address with USPS</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Update address with banks and credit cards</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Notify insurance companies (auto, home, health)</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Update voter registration information</span>
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+              </TabsContent>
+
+              <TabsContent value="2-weeks" className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <Card className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                      <Zap className="h-6 w-6 text-yellow-500 mr-2" />
+                      Utilities & Services
+                    </h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Schedule utility disconnection in Jacksonville</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Set up utilities at your new Orlando home</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Transfer internet and cable services</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Find new healthcare providers in Orlando</span>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                      <Package className="h-6 w-6 text-green-500 mr-2" />
+                      Packing Preparation
+                    </h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Start packing non-essential items</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Label boxes clearly with room destinations</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Pack a "first day" essentials box</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Confirm moving day details with T&E Movers</span>
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+              </TabsContent>
+
+              <TabsContent value="moving-day" className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <Card className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                      <CheckCircle className="h-6 w-6 text-blue-500 mr-2" />
+                      Before Movers Arrive
+                    </h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Pack a suitcase with essentials for Orlando</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Do final walk-through and take photos</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Confirm arrival time with T&E Movers</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Have important documents with you</span>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                      <Users className="h-6 w-6 text-purple-500 mr-2" />
+                      During the Move
+                    </h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Review inventory list with crew leader</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Stay available for questions</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Keep pets safe and comfortable</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">Check inventory upon delivery in Orlando</span>
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+              </TabsContent>
+            </Tabs>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 quote-trigger">
+              Get Your Free Moving Quote
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+      </section>
       
       {/* Final CTA Section */}
       <section className="py-20 text-white relative overflow-hidden">
