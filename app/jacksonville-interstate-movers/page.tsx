@@ -678,6 +678,7 @@ export default function TEMoversLanding() {
             </Button>
           </div>
         </div>
+      </div>
       </section>
 
       {/* Moving Process Timeline */}
@@ -1488,35 +1489,33 @@ export default function TEMoversLanding() {
                   </AccordionItem>
 
                   <AccordionItem value="special-2" className="bg-gray-200 rounded-lg shadow-sm my-4">
-                    <AccordionTrigger className="px-6 py-4 text-left font-semibold">
-                      Can you help with international moves?
-                    </AccordionTrigger>
-
-                 
-                    <AccordionContent className="px-6 pb-4 text-gray-600">
-                      <p className="mb-4">Yes, we partner with certified international moving specialists:</p>
-                      <div className="space-y-4">
-                        <div>
-                          <strong>Services Included:</strong>
-                          <ul className="mt-2 space-y-1">
-                            <li>• Customs documentation assistance</li>
-                            <li>• Ocean and air freight options</li>
-                            <li>• Destination country partnerships</li>
-                            <li>• Door-to-door international service</li>
-                          </ul>
-                        </div>
-                        <div>
-                          <strong>Popular Destinations:</strong>
-                          <ul className="mt-2 space-y-1">
-                            <li>• Canada and Mexico</li>
-                            <li>• United Kingdom and Europe</li>
-                            <li>• Australia and New Zealand</li>
-                            <li>• Military overseas assignments</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
+    <AccordionTrigger className="px-6 py-4 text-left font-semibold">
+        Can you help with international moves?
+    </AccordionTrigger>
+    <AccordionContent className="px-6 pb-4 text-gray-600">
+        <p className="mb-4">Yes, we partner with certified international moving specialists:</p>
+        <div className="space-y-4">
+            <div>
+                <strong>Services Included:</strong>
+                <ul className="mt-2 space-y-1">
+                    <li>• Customs documentation assistance</li>
+                    <li>• Ocean and air freight options</li>
+                    <li>• Destination country partnerships</li>
+                    <li>• Door-to-door international service</li>
+                </ul>
+            </div>
+            <div>
+                <strong>Popular Destinations:</strong>
+                <ul className="mt-2 space-y-1">
+                    <li>• Canada and Mexico</li>
+                    <li>• United Kingdom and Europe</li>
+                    <li>• Australia and New Zealand</li>
+                    <li>• Military overseas assignments</li>
+                </ul>
+            </div>
+        </div>
+    </AccordionContent>
+</AccordionItem>
                 </Accordion>
 
                 <Accordion type="single" collapsible className="space-y-6">
