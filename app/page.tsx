@@ -38,6 +38,10 @@ import {
   PiggyBank,
   Lightbulb,
   Heart,
+  Route,
+  Weight,
+  Settings,
+  CalendarDays,
 } from "lucide-react"
 import Image from "next/image"
 import FloatingQuoteButton from "@/components/floating-quote-button"
@@ -67,7 +71,7 @@ export default function TEMoversLanding() {
               <Phone className="h-4 w-4 text-red-500" />
               <a href="tel:9049971884" className="font-semibold mobile-lander-click-to-call">(904) 997-1884</a>
             </div>
-            <Button className="bg-red-500 hover:bg-red-600" id="header-quote-btn">
+            <Button className="bg-red-500 hover:bg-red-600 quote-trigger">
               Get Free Quote
             </Button>
           </div>
@@ -92,7 +96,7 @@ export default function TEMoversLanding() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <Badge className="bg-red-500 text-white px-4 py-2 text-sm font-medium opacity-0 animate-fade-in">
-                  🏆 #1 Rated Long Distance Moving Company in Florida
+                  🏆 #1 Rated Long Distance Moving Company in FL
                 </Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
                   From State to State, <span className="text-red-400">T&E Movers</span> Gets You There With Ease
@@ -573,7 +577,7 @@ export default function TEMoversLanding() {
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
                       <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        1
+                        <Route className="h-4 w-4" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900">Distance & Route</h4>
@@ -584,7 +588,7 @@ export default function TEMoversLanding() {
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        2
+                        <Weight className="h-4 w-4" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900">Weight & Volume</h4>
@@ -595,7 +599,7 @@ export default function TEMoversLanding() {
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        3
+                        <Settings className="h-4 w-4" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900">Services Requested</h4>
@@ -606,7 +610,7 @@ export default function TEMoversLanding() {
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        4
+                        <CalendarDays className="h-4 w-4" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900">Timing & Flexibility</h4>
@@ -656,36 +660,13 @@ export default function TEMoversLanding() {
             <div className="space-y-8">
               <Card className="border-0 shadow-xl bg-gradient-to-br from-red-500 to-blue-600 text-white">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Sample Pricing Guide</CardTitle>
-                  <p className="text-blue-100">Typical costs for common long-distance moves</p>
+                  <CardTitle className="text-2xl">Starting at $1,000</CardTitle>
+                  <p className="text-blue-100">Get your exact quote in 60 seconds!</p>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="space-y-4">
-                    <div className="bg-white/10 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold">1-Bedroom Apartment</span>
-                        <span className="text-xl font-bold">$2,500-$4,000</span>
-                      </div>
-                      <p className="text-sm text-blue-100">500-1000 miles • Basic packing included</p>
-                    </div>
-                    <div className="bg-white/10 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold">3-Bedroom House</span>
-                        <span className="text-xl font-bold">$4,500-$7,500</span>
-                      </div>
-                      <p className="text-sm text-blue-100">500-1000 miles • Full-service packing</p>
-                    </div>
-                    <div className="bg-white/10 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold">5-Bedroom House</span>
-                        <span className="text-xl font-bold">$7,500-$12,000</span>
-                      </div>
-                      <p className="text-sm text-blue-100">Cross-country • Premium services</p>
-                    </div>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <p className="text-sm text-center text-blue-100">
-                      *Prices vary based on specific requirements. Get your exact quote in 60 seconds!
+                <CardContent>
+                  <div className="bg-white/10 rounded-lg p-6 text-center">
+                    <p className="text-lg text-blue-100 mb-4">
+                      *Prices vary based on specific requirements. Contact us for a personalized quote.
                     </p>
                   </div>
                 </CardContent>
@@ -712,170 +693,250 @@ export default function TEMoversLanding() {
           </div>
 
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-red-500 to-blue-500 rounded-full"></div>
+            {/* Desktop Timeline */}
+            <div className="hidden lg:block">
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-red-500 to-blue-500 rounded-full"></div>
 
-            <div className="space-y-16">
-              {/* Timeline Item 1 */}
-              <div className="relative flex items-center">
-                <div className="flex-1 pr-8 text-right">
-                  <Card className="border-0 shadow-lg">
-                    <CardHeader>
-                      <CardTitle className="text-xl">Initial Consultation (Day 1)</CardTitle>
-                      <Badge className="w-fit bg-red-100 text-red-700">Free Service</Badge>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600 mb-4">
-                        Our moving consultant conducts a detailed assessment of your needs, either virtually or
-                        in-person.
-                      </p>
-                      <ul className="text-sm text-gray-600 space-y-1">
-                        <li>• Inventory assessment</li>
-                        <li>• Custom quote preparation</li>
-                        <li>• Service recommendations</li>
-                        <li>• Timeline planning</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
+              <div className="space-y-16">
+                {/* Timeline Item 1 */}
+                <div className="relative flex items-center">
+                  <div className="flex-1 pr-8 text-right">
+                    <Card className="border-0 shadow-lg">
+                      <CardHeader>
+                        <CardTitle className="text-xl">Initial Consultation (Day 1)</CardTitle>
+                        <Badge className="w-fit bg-red-100 text-red-700">Free Service</Badge>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600 mb-4">
+                          Our moving consultant conducts a detailed assessment of your needs, either virtually or
+                          in-person.
+                        </p>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          <li>• Inventory assessment</li>
+                          <li>• Custom quote preparation</li>
+                          <li>• Service recommendations</li>
+                          <li>• Timeline planning</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white font-bold z-10">
+                    1
+                  </div>
+                  <div className="flex-1 pl-8"></div>
                 </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white font-bold z-10">
-                  1
+
+                {/* Timeline Item 2 */}
+                <div className="relative flex items-center">
+                  <div className="flex-1 pr-8"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold z-10">
+                    2
+                  </div>
+                  <div className="flex-1 pl-8">
+                    <Card className="border-0 shadow-lg">
+                      <CardHeader>
+                        <CardTitle className="text-xl">Booking & Planning (Days 2-7)</CardTitle>
+                        <Badge className="w-fit bg-blue-100 text-blue-700">Contract Phase</Badge>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600 mb-4">
+                          Once you approve the quote, we begin detailed planning and preparation for your move.
+                        </p>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          <li>• Contract signing</li>
+                          <li>• Move coordination</li>
+                          <li>• Team assignment</li>
+                          <li>• Pre-move checklist</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </div>
                 </div>
-                <div className="flex-1 pl-8"></div>
+
+                {/* Timeline Item 3 */}
+                <div className="relative flex items-center">
+                  <div className="flex-1 pr-8 text-right">
+                    <Card className="border-0 shadow-lg">
+                      <CardHeader>
+                        <CardTitle className="text-xl">Pre-Move Preparation (1-2 Weeks Before)</CardTitle>
+                        <Badge className="w-fit bg-green-100 text-green-700">Preparation Phase</Badge>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600 mb-4">
+                          We help you prepare for moving day with detailed guidance and support.
+                        </p>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          <li>• Packing supplies delivery</li>
+                          <li>• Moving checklist review</li>
+                          <li>• Special items assessment</li>
+                          <li>• Final details confirmation</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold z-10">
+                    3
+                  </div>
+                  <div className="flex-1 pl-8"></div>
+                </div>
+
+                {/* Timeline Item 4 */}
+                <div className="relative flex items-center">
+                  <div className="flex-1 pr-8"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold z-10">
+                    4
+                  </div>
+                  <div className="flex-1 pl-8">
+                    <Card className="border-0 shadow-lg">
+                      <CardHeader>
+                        <CardTitle className="text-xl">Moving Day (Scheduled Date)</CardTitle>
+                        <Badge className="w-fit bg-purple-100 text-purple-700">Execution Phase</Badge>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600 mb-4">
+                          Our professional team arrives on time and handles your move with care and efficiency.
+                        </p>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          <li>• Professional packing (if requested)</li>
+                          <li>• Careful loading and securing</li>
+                          <li>• Real-time tracking updates</li>
+                          <li>• Clean-up and final inspection</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+
+                {/* Timeline Item 5 */}
+                <div className="relative flex items-center">
+                  <div className="flex-1 pr-8 text-right">
+                    <Card className="border-0 shadow-lg">
+                      <CardHeader>
+                        <CardTitle className="text-xl">Delivery & Setup (1-3 Days Later)</CardTitle>
+                        <Badge className="w-fit bg-orange-100 text-orange-700">Completion Phase</Badge>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600 mb-4">
+                          We deliver your belongings safely and help you get settled in your new home.
+                        </p>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          <li>• Safe unloading and placement</li>
+                          <li>• Furniture assembly (if requested)</li>
+                          <li>• Final walkthrough</li>
+                          <li>• Post-move support</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold z-10">
+                    5
+                  </div>
+                  <div className="flex-1 pl-8"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Timeline */}
+            <div className="lg:hidden space-y-8">
+              <div className="text-center">
+                <Card className="border-0 shadow-lg">
+                  <CardHeader>
+                    <CardTitle className="text-xl">Initial Consultation (Day 1)</CardTitle>
+                    <Badge className="w-fit mx-auto bg-red-100 text-red-700">Free Service</Badge>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 mb-4">
+                      Our moving consultant conducts a detailed assessment of your needs, either virtually or
+                      in-person.
+                    </p>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Inventory assessment</li>
+                      <li>• Custom quote preparation</li>
+                      <li>• Service recommendations</li>
+                      <li>• Timeline planning</li>
+                    </ul>
+                  </CardContent>
+                </Card>
               </div>
 
-              {/* Timeline Item 2 */}
-              <div className="relative flex items-center">
-                <div className="flex-1 pr-8"></div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold z-10">
-                  2
-                </div>
-                <div className="flex-1 pl-8">
-                  <Card className="border-0 shadow-lg">
-                    <CardHeader>
-                      <CardTitle className="text-xl">Booking & Planning (Days 2-7)</CardTitle>
-                      <Badge className="w-fit bg-blue-100 text-blue-700">Contract Phase</Badge>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600 mb-4">
-                        Once you approve the quote, we begin detailed planning and preparation for your move.
-                      </p>
-                      <ul className="text-sm text-gray-600 space-y-1">
-                        <li>• Contract signing</li>
-                        <li>• Move coordination</li>
-                        <li>• Team assignment</li>
-                        <li>• Pre-move checklist</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
+              <div className="text-center">
+                <Card className="border-0 shadow-lg">
+                  <CardHeader>
+                    <CardTitle className="text-xl">Booking & Planning (Days 2-7)</CardTitle>
+                    <Badge className="w-fit mx-auto bg-blue-100 text-blue-700">Contract Phase</Badge>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 mb-4">
+                      Once you approve the quote, we begin detailed planning and preparation for your move.
+                    </p>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Contract signing</li>
+                      <li>• Move coordination</li>
+                      <li>• Team assignment</li>
+                      <li>• Pre-move checklist</li>
+                    </ul>
+                  </CardContent>
+                </Card>
               </div>
 
-              {/* Timeline Item 3 */}
-              <div className="relative flex items-center">
-                <div className="flex-1 pr-8 text-right">
-                  <Card className="border-0 shadow-lg">
-                    <CardHeader>
-                      <CardTitle className="text-xl">Pre-Move Preparation (1-2 Weeks Before)</CardTitle>
-                      <Badge className="w-fit bg-green-100 text-green-700">Preparation Phase</Badge>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600 mb-4">
-                        We help you prepare for moving day with detailed guidance and support.
-                      </p>
-                      <ul className="text-sm text-gray-600 space-y-1">
-                        <li>• Packing supplies delivery</li>
-                        <li>• Moving checklist review</li>
-                        <li>• Special items assessment</li>
-                        <li>• Final details confirmation</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold z-10">
-                  3
-                </div>
-                <div className="flex-1 pl-8"></div>
+              <div className="text-center">
+                <Card className="border-0 shadow-lg">
+                  <CardHeader>
+                    <CardTitle className="text-xl">Pre-Move Preparation (1-2 Weeks Before)</CardTitle>
+                    <Badge className="w-fit mx-auto bg-green-100 text-green-700">Preparation Phase</Badge>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 mb-4">
+                      We help you prepare for moving day with detailed guidance and support.
+                    </p>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Packing supplies delivery</li>
+                      <li>• Moving checklist review</li>
+                      <li>• Special items assessment</li>
+                      <li>• Final details confirmation</li>
+                    </ul>
+                  </CardContent>
+                </Card>
               </div>
 
-              {/* Timeline Item 4 */}
-              <div className="relative flex items-center">
-                <div className="flex-1 pr-8"></div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold z-10">
-                  4
-                </div>
-                <div className="flex-1 pl-8">
-                  <Card className="border-0 shadow-lg">
-                    <CardHeader>
-                      <CardTitle className="text-xl">Moving Day (The Big Day!)</CardTitle>
-                      <Badge className="w-fit bg-purple-100 text-purple-700">Execution Phase</Badge>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600 mb-4">
-                        Our professional team arrives on time and handles every aspect of your move with care.
-                      </p>
-                      <ul className="text-sm text-gray-600 space-y-1">
-                        <li>• Professional packing</li>
-                        <li>• Careful loading</li>
-                        <li>• Inventory documentation</li>
-                        <li>• Real-time updates</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
+              <div className="text-center">
+                <Card className="border-0 shadow-lg">
+                  <CardHeader>
+                    <CardTitle className="text-xl">Moving Day (Scheduled Date)</CardTitle>
+                    <Badge className="w-fit mx-auto bg-purple-100 text-purple-700">Execution Phase</Badge>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 mb-4">
+                      Our professional team arrives on time and handles your move with care and efficiency.
+                    </p>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Professional packing (if requested)</li>
+                      <li>• Careful loading and securing</li>
+                      <li>• Real-time tracking updates</li>
+                      <li>• Clean-up and final inspection</li>
+                    </ul>
+                  </CardContent>
+                </Card>
               </div>
 
-              {/* Timeline Item 5 */}
-              <div className="relative flex items-center">
-                <div className="flex-1 pr-8 text-right">
-                  <Card className="border-0 shadow-lg">
-                    <CardHeader>
-                      <CardTitle className="text-xl">Delivery & Setup (Arrival Day)</CardTitle>
-                      <Badge className="w-fit bg-orange-100 text-orange-700">Delivery Phase</Badge>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600 mb-4">
-                        We deliver your belongings on schedule and help you settle into your new home.
-                      </p>
-                      <ul className="text-sm text-gray-600 space-y-1">
-                        <li>• On-time delivery</li>
-                        <li>• Careful unloading</li>
-                        <li>• Furniture placement</li>
-                        <li>• Unpacking services</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold z-10">
-                  5
-                </div>
-                <div className="flex-1 pl-8"></div>
-              </div>
-
-              {/* Timeline Item 6 */}
-              <div className="relative flex items-center">
-                <div className="flex-1 pr-8"></div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center text-white font-bold z-10">
-                  6
-                </div>
-                <div className="flex-1 pl-8">
-                  <Card className="border-0 shadow-lg">
-                    <CardHeader>
-                      <CardTitle className="text-xl">Post-Move Follow-up (Days After)</CardTitle>
-                      <Badge className="w-fit bg-teal-100 text-teal-700">Support Phase</Badge>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600 mb-4">
-                        Our relationship doesn't end at delivery. We follow up to ensure your complete satisfaction.
-                      </p>
-                      <ul className="text-sm text-gray-600 space-y-1">
-                        <li>• Satisfaction survey</li>
-                        <li>• Issue resolution</li>
-                        <li>• Settling-in support</li>
-                        <li>• Future move planning</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
+              <div className="text-center">
+                <Card className="border-0 shadow-lg">
+                  <CardHeader>
+                    <CardTitle className="text-xl">Delivery & Setup (1-3 Days Later)</CardTitle>
+                    <Badge className="w-fit mx-auto bg-orange-100 text-orange-700">Completion Phase</Badge>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 mb-4">
+                      We deliver your belongings safely and help you get settled in your new home.
+                    </p>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Safe unloading and placement</li>
+                      <li>• Furniture assembly (if requested)</li>
+                      <li>• Final walkthrough</li>
+                      <li>• Post-move support</li>
+                    </ul>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
@@ -2093,14 +2154,11 @@ export default function TEMoversLanding() {
               </div>
               <div className="text-right">
                 <div className="flex justify-end space-x-6 text-sm text-gray-400">
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="/privacy-policy" className="hover:text-white transition-colors">
                     Privacy Policy
                   </a>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="/terms-of-service" className="hover:text-white transition-colors">
                     Terms of Service
-                  </a>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Sitemap
                   </a>
                 </div>
               </div>
