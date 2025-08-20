@@ -24,6 +24,15 @@ def to_pascal_case(text):
     """Convert text to PascalCase."""
     return ''.join(word.capitalize() for word in re.split(r'[\s-]', text))
 
+def to_camel_case(text):
+    """Convert text to camelCase for JavaScript variables."""
+    # Remove special characters and split by spaces/hyphens
+    words = re.split(r'[\s\-]+', text)
+    # Capitalize first word and join
+    if words:
+        return words[0].lower() + ''.join(word.capitalize() for word in words[1:])
+    return text.lower()
+
 def replace_content(template_content, original_component_name, new_component_name, original_city, new_city, primary_keyword):
     """
     Replace placeholder content in the template with dynamic, location-specific content
@@ -306,7 +315,7 @@ export default function {new_component_name}() {{
                   <input 
                     type="text" 
                     id="destinationZip" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-transparent"
                     placeholder="e.g., 32082"
                     maxLength="5"
                   />
