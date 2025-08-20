@@ -89,7 +89,6 @@ const moveTypes = ["Residential", "Commercial", "Long Distance", "Local", "Stora
 
 export default function QuoteForm() {
   const { toast } = useToast()
-  const [isSubmitting, setIsSubmitting] = useState(false)
   const [customId, setCustomId] = useState("")
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -130,11 +129,10 @@ export default function QuoteForm() {
     setCustomId(generateCustomId())
   }, [])
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-
+  const handleSubmit = (e: React.FormEvent) => {
     // Basic validation
     if (!formData.name || !formData.email || !formData.phone) {
+      e.preventDefault()
       toast({
         title: "Missing Information",
         description: "Please fill in your name, email, and phone number.",
@@ -144,6 +142,7 @@ export default function QuoteForm() {
     }
 
     if (!formData.movingFromCity || !formData.movingToCity) {
+      e.preventDefault()
       toast({
         title: "Missing Location Information",
         description: "Please provide both moving from and moving to cities.",
@@ -152,85 +151,12 @@ export default function QuoteForm() {
       return
     }
 
-    setIsSubmitting(true)
-
-    try {
-      // Get tracking data
-      const trackingData = getTrackingDataForSubmission()
-      
-      // Create FormData with all form fields and tracking data
-      const formDataToSubmit = new FormData()
-      
-      // Add form fields
-      Object.entries(formData).forEach(([key, value]) => {
-        if (value && typeof value === 'string') {
-          formDataToSubmit.append(key, value)
-        }
-      })
-      
-      // Add tracking data
-      Object.entries(trackingData).forEach(([key, value]) => {
-        if (value && typeof value === 'string') {
-          formDataToSubmit.append(key, value)
-        }
-      })
-      
-      // Add the custom subject line
-      formDataToSubmit.append('subject', `New Moving Quote Request for ${formData.name || 'Customer'} | T&E Moving and Storage LLC | (id:${customId})`)
-      
-      // Add form name for Netlify
-      formDataToSubmit.append('form-name', 'quote-request')
-      
-      // Submit to Netlify
-      const formEntries = Array.from(formDataToSubmit.entries()).map(([key, value]) => [key, String(value)])
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: new URLSearchParams(formEntries).toString()
-      })
-      
-      if (response.ok) {
-        toast({
-          title: "Quote Request Sent!",
-          description: "We'll contact you within 24 hours with your free quote.",
-        })
-
-        // Reset form
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          typeOfMove: "",
-          movingFromStreet: "",
-          movingFromCity: "",
-          movingFromState: "",
-          movingFromZip: "",
-          movingFromBedrooms: "",
-          movingFromFloor: "",
-          movingToStreet: "",
-          movingToCity: "",
-          movingToState: "",
-          movingToZip: "",
-          movingToBedrooms: "",
-          movingToFloor: "",
-          description: "",
-        })
-      }
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Something went wrong. Please try again.",
-        variant: "destructive",
-      })
-    } finally {
-      setIsSubmitting(false)
-    }
+    // If validation passes, let Netlify handle the submission
+    // The action="/thank-you" will redirect after successful submission
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true" name="quote-request">
+    <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true" name="quote-request" action="/thank-you">
       {/* Hidden input for Netlify */}
       <input type="hidden" name="form-name" value="quote-request" />
       
@@ -499,10 +425,9 @@ export default function QuoteForm() {
       {/* Submit Button */}
       <Button
         type="submit"
-        disabled={isSubmitting}
         className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-4 text-lg"
       >
-        {isSubmitting ? "SENDING..." : "SEND"}
+        SEND
       </Button>
     </form>
   )
