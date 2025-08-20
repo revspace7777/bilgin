@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
-import { getTrackingInputs } from "@/lib/form-tracking"
+import { getTrackingInputs, getTrackingDataForSubmission } from "@/lib/form-tracking"
 
 interface FormData {
   name: string
@@ -155,21 +155,40 @@ export default function QuoteForm() {
     setIsSubmitting(true)
 
     try {
-      // Let the form submit naturally to Netlify
-      const form = e.target as HTMLFormElement
-      const formDataToSubmit = new FormData(form)
+      // Get tracking data
+      const trackingData = getTrackingDataForSubmission()
+      
+      // Create FormData with all form fields and tracking data
+      const formDataToSubmit = new FormData()
+      
+      // Add form fields
+      Object.entries(formData).forEach(([key, value]) => {
+        if (value && typeof value === 'string') {
+          formDataToSubmit.append(key, value)
+        }
+      })
+      
+      // Add tracking data
+      Object.entries(trackingData).forEach(([key, value]) => {
+        if (value && typeof value === 'string') {
+          formDataToSubmit.append(key, value)
+        }
+      })
       
       // Add the custom subject line
       formDataToSubmit.append('subject', `New Moving Quote Request for ${formData.name || 'Customer'} | T&E Moving and Storage LLC | (id:${customId})`)
       
-      // Add minimal tracking for admin email
-      formDataToSubmit.append('source', 'Google Ads')
-      formDataToSubmit.append('landing_page', window.location.href)
+      // Add form name for Netlify
+      formDataToSubmit.append('form-name', 'quote-request')
       
-      // Submit to Netlify using form action (Netlify intercepts this)
-      const response = await fetch(form.action || '/', {
+      // Submit to Netlify
+      const formEntries = Array.from(formDataToSubmit.entries()).map(([key, value]) => [key, String(value)])
+      const response = await fetch('/', {
         method: 'POST',
-        body: formDataToSubmit
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams(formEntries).toString()
       })
       
       if (response.ok) {
@@ -211,9 +230,12 @@ export default function QuoteForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true">
+    <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true" name="quote-request">
       {/* Hidden input for Netlify */}
       <input type="hidden" name="form-name" value="quote-request" />
+      
+      {/* Add all tracking inputs */}
+      {getTrackingInputs()}
       
       {/* Custom subject line with generated ID */}
       <input 
@@ -254,7 +276,11 @@ export default function QuoteForm() {
           className="bg-slate-700 border-slate-600 text-white placeholder:text-gray-400 focus:border-red-500"
           required
         />
-        <Select value={formData.typeOfMove} onValueChange={(value) => handleInputChange("typeOfMove", value)}>
+        <Select 
+          name="typeOfMove"
+          value={formData.typeOfMove} 
+          onValueChange={(value) => handleInputChange("typeOfMove", value)}
+        >
           <SelectTrigger className="bg-slate-700 border-slate-600 text-white focus:border-red-500">
             <SelectValue placeholder="Type Of Move" />
           </SelectTrigger>
@@ -266,6 +292,8 @@ export default function QuoteForm() {
             ))}
           </SelectContent>
         </Select>
+        {/* Hidden input for typeOfMove to ensure Netlify captures it */}
+        <input type="hidden" name="typeOfMove" value={formData.typeOfMove} />
       </div>
 
       {/* FROM Section */}
@@ -294,6 +322,7 @@ export default function QuoteForm() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <Select
+            name="movingFromState"
             value={formData.movingFromState}
             onValueChange={(value) => handleInputChange("movingFromState", value)}
           >
@@ -308,6 +337,8 @@ export default function QuoteForm() {
               ))}
             </SelectContent>
           </Select>
+          {/* Hidden input for movingFromState */}
+          <input type="hidden" name="movingFromState" value={formData.movingFromState} />
 
           <Input
             name="movingFromZip"
@@ -320,6 +351,7 @@ export default function QuoteForm() {
           />
 
           <Select
+            name="movingFromBedrooms"
             value={formData.movingFromBedrooms}
             onValueChange={(value) => handleInputChange("movingFromBedrooms", value)}
           >
@@ -334,8 +366,11 @@ export default function QuoteForm() {
               ))}
             </SelectContent>
           </Select>
+          {/* Hidden input for movingFromBedrooms */}
+          <input type="hidden" name="movingFromBedrooms" value={formData.movingFromBedrooms} />
 
-          <Select
+          <Select 
+            name="movingFromFloor"
             value={formData.movingFromFloor}
             onValueChange={(value) => handleInputChange("movingFromFloor", value)}
           >
@@ -350,6 +385,8 @@ export default function QuoteForm() {
               ))}
             </SelectContent>
           </Select>
+          {/* Hidden input for movingFromFloor */}
+          <input type="hidden" name="movingFromFloor" value={formData.movingFromFloor} />
         </div>
       </div>
 
@@ -378,7 +415,11 @@ export default function QuoteForm() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <Select value={formData.movingToState} onValueChange={(value) => handleInputChange("movingToState", value)}>
+          <Select
+            name="movingToState"
+            value={formData.movingToState}
+            onValueChange={(value) => handleInputChange("movingToState", value)}
+          >
             <SelectTrigger className="bg-slate-700 border-slate-600 text-white focus:border-red-500">
               <SelectValue placeholder="State" />
             </SelectTrigger>
@@ -390,6 +431,8 @@ export default function QuoteForm() {
               ))}
             </SelectContent>
           </Select>
+          {/* Hidden input for movingToState */}
+          <input type="hidden" name="movingToState" value={formData.movingToState} />
 
           <Input
             name="movingToZip"
@@ -402,6 +445,7 @@ export default function QuoteForm() {
           />
 
           <Select
+            name="movingToBedrooms"
             value={formData.movingToBedrooms}
             onValueChange={(value) => handleInputChange("movingToBedrooms", value)}
           >
@@ -416,8 +460,14 @@ export default function QuoteForm() {
               ))}
             </SelectContent>
           </Select>
+          {/* Hidden input for movingToBedrooms */}
+          <input type="hidden" name="movingToBedrooms" value={formData.movingToBedrooms} />
 
-          <Select value={formData.movingToFloor} onValueChange={(value) => handleInputChange("movingToFloor", value)}>
+          <Select 
+            name="movingToFloor"
+            value={formData.movingToFloor} 
+            onValueChange={(value) => handleInputChange("movingToFloor", value)}
+          >
             <SelectTrigger className="bg-slate-700 border-slate-600 text-white focus:border-red-500">
               <SelectValue placeholder="Floor" />
             </SelectTrigger>
@@ -429,6 +479,8 @@ export default function QuoteForm() {
               ))}
             </SelectContent>
           </Select>
+          {/* Hidden input for movingToFloor */}
+          <input type="hidden" name="movingToFloor" value={formData.movingToFloor} />
         </div>
       </div>
 
