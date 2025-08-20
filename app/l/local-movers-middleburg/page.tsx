@@ -33,7 +33,7 @@ import Image from "next/image"
 import FloatingQuoteButton from "@/components/floating-quote-button"
 import QuoteFormSlideout from "@/components/quote-form-slideout"
 
-export default function JacksonvilleMovers() {
+export default function LocalMoversMiddleburg() {
   const checkZipCode = () => {
     const startingZip = document.getElementById('startingZip')?.value;
     const destinationZip = document.getElementById('destinationZip')?.value;
@@ -41,8 +41,8 @@ export default function JacksonvilleMovers() {
     const successDiv = document.getElementById('zipSuccess');
     const errorDiv = document.getElementById('zipError');
     
-    // Jacksonville DMA region zip codes
-    const jacksonvilleDMACodes = [
+    // Middleburg DMA region zip codes
+    const middleburgDMACodes = [
       // Duval County
       '32202', '32204', '32205', '32206', '32207', '32208', '32209', '32210',
       '32211', '32212', '32216', '32217', '32218', '32219', '32220', '32221',
@@ -63,8 +63,8 @@ export default function JacksonvilleMovers() {
     if (startingZip && destinationZip) {
       if (resultDiv) resultDiv.classList.remove('hidden');
       
-      // Check if starting zip is in Jacksonville DMA
-      if (jacksonvilleDMACodes.includes(startingZip)) {
+      // Check if starting zip is in Middleburg DMA
+      if (middleburgDMACodes.includes(startingZip)) {
         if (successDiv) successDiv.classList.remove('hidden');
         if (errorDiv) errorDiv.classList.add('hidden');
       } else {
@@ -88,10 +88,10 @@ export default function JacksonvilleMovers() {
       <header className="bg-white shadow-sm border-b sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <Image src="/images/logo-main.png" alt="T&E Movers - Jacksonville Movers" width={60} height={60} className="rounded-full" />
+            <Image src="/images/logo-main.png" alt="T&E Movers - Middleburg Movers" width={60} height={60} className="rounded-full" />
             <div>
-              <h1 className="text-xl font-bold text-gray-900">Jacksonville Movers</h1>
-              <p className="text-sm text-gray-600">Jacksonville Movers</p>
+              <h1 className="text-xl font-bold text-gray-900">Middleburg Movers</h1>
+              <p className="text-sm text-gray-600">Local Movers Middleburg</p>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-6">
@@ -112,13 +112,13 @@ export default function JacksonvilleMovers() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <Badge className="bg-red-500 text-white px-4 py-2 text-sm font-medium animate-pulse">
-                  🏆 #1 Rated Jacksonville Moving Company
+                  🏆 #1 Rated Middleburg Moving Company
                 </Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                  Jacksonville's <span className="text-red-400">Premier Local Movers</span> Since 1998
+                  Middleburg's <span className="text-red-400">Premier Local Movers</span> Since 1998
                 </h1>
                 <p className="text-xl text-blue-100 leading-relaxed">
-                  Your trusted neighbors for seamless local moves throughout Jacksonville and surrounding areas, and
+                  Your trusted neighbors for seamless local moves throughout Middleburg and surrounding areas, and
                   surrounding areas. We've successfully completed over 15,000 local moves with a 99.8% customer
                   satisfaction rate.
                 </p>
@@ -142,7 +142,7 @@ export default function JacksonvilleMovers() {
               <div className="grid grid-cols-3 gap-6 pt-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-red-400">25+</div>
-                  <div className="text-sm text-blue-100">Years serving Jacksonville</div>
+                  <div className="text-sm text-blue-100">Years serving Middleburg</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-red-400">15K+</div>
@@ -158,7 +158,7 @@ export default function JacksonvilleMovers() {
             <div className="relative">
               <Image
                 src="/images/truck-fleet.png"
-                alt="T&E Movers Jacksonville Fleet - Professional Moving Services"
+                alt="T&E Movers Middleburg Fleet - Professional Moving Services"
                 width={600}
                 height={400}
                 className="rounded-lg shadow-2xl"
@@ -167,7 +167,7 @@ export default function JacksonvilleMovers() {
                 <div className="flex items-center space-x-2">
                   <MapPinIcon className="h-6 w-6 text-blue-500" />
                   <div>
-                    <div className="font-semibold">Based in Jacksonville</div>
+                    <div className="font-semibold">Based in Middleburg</div>
                     <div className="text-sm text-gray-600">Serving all local areas</div>
                   </div>
                 </div>
@@ -217,7 +217,7 @@ export default function JacksonvilleMovers() {
               Local Moves Starting at Just <span className="text-red-500">$397</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Perfect for apartments, small homes, and local relocations within 50 miles of Jacksonville. No hidden
+              Perfect for apartments, small homes, and local relocations within 50 miles of Middleburg. No hidden
               fees, no fuel charges, and a price-lock guarantee!
             </p>
           </div>
@@ -268,10 +268,10 @@ export default function JacksonvilleMovers() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Why 15,000+ Jacksonville Families Choose T&E Movers
+              Why 15,000+ Middleburg Families Choose T&E Movers
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              We're not just another moving company. We're your Jacksonville neighbors who understand the local area
+              We're not just another moving company. We're your Middleburg neighbors who understand the local area
               like no one else. Here's what makes us different:
             </p>
           </div>
@@ -282,11 +282,11 @@ export default function JacksonvilleMovers() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
                   <MapPinIcon className="h-8 w-8 text-blue-500" />
                 </div>
-                <CardTitle className="text-xl text-center">Local Jacksonville Experts</CardTitle>
+                <CardTitle className="text-xl text-center">Local Middleburg Experts</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  We know every neighborhood, traffic pattern, and building restriction in Jacksonville. From Riverside
+                  We know every neighborhood, traffic pattern, and building restriction in Middleburg. From Riverside
                   to Mandarin, Nocatee to St. Johns - we navigate like locals because we are locals.
                 </p>
               </CardContent>
@@ -356,7 +356,7 @@ export default function JacksonvilleMovers() {
               <div className="relative">
                 <Image
                   src="/images/facility-overview.png"
-                  alt="T&E Movers Jacksonville Team - Local Moving Experts"
+                  alt="T&E Movers Middleburg Team - Local Moving Experts"
                   width={500}
                   height={300}
                   className="rounded-lg shadow-lg"
@@ -373,19 +373,19 @@ export default function JacksonvilleMovers() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Why Local Knowledge Matters in Jacksonville
+              Why Local Knowledge Matters in Middleburg
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Moving in Jacksonville requires more than just a truck and movers. It requires deep local knowledge that only comes from years of experience in the area.
+              Moving in Middleburg requires more than just a truck and movers. It requires deep local knowledge that only comes from years of experience in the area.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-8">
               <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-gray-900">Local Jacksonville Moving Expertise</h3>
+                <h3 className="text-3xl font-bold text-gray-900">Local Middleburg Moving Expertise</h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Our team knows Jacksonville like the back of our hands. From traffic patterns during peak moving seasons to building restrictions and parking regulations, we navigate the local challenges that out-of-town movers simply can't anticipate.
+                  Our team knows Middleburg like the back of our hands. From traffic patterns during peak moving seasons to building restrictions and parking regulations, we navigate the local challenges that out-of-town movers simply can't anticipate.
                 </p>
                 
                 <div className="grid grid-cols-2 gap-6">
@@ -406,7 +406,7 @@ export default function JacksonvilleMovers() {
             <div className="relative">
               <Image
                 src="/images/facility-overview.png"
-                alt="T&E Movers Jacksonville Team - Local Moving Experts"
+                alt="T&E Movers Middleburg Team - Local Moving Experts"
                 width=500
                 height=300
                 className="rounded-lg shadow-lg"
@@ -424,7 +424,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  We know every neighborhood in Jacksonville, from quiet residential streets to busy commercial districts. This knowledge helps us plan the most efficient moving routes and anticipate potential challenges.
+                  We know every neighborhood in Middleburg, from quiet residential streets to busy commercial districts. This knowledge helps us plan the most efficient moving routes and anticipate potential challenges.
                 </p>
               </CardContent>
             </Card>
@@ -438,7 +438,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Understanding Jacksonville's traffic patterns, school schedules, and seasonal variations helps us schedule moves at optimal times, ensuring minimal disruption to your day.
+                  Understanding Middleburg's traffic patterns, school schedules, and seasonal variations helps us schedule moves at optimal times, ensuring minimal disruption to your day.
                 </p>
               </CardContent>
             </Card>
@@ -452,7 +452,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  From parking permits to building access requirements, we're familiar with all the local regulations that can affect your move in Jacksonville.
+                  From parking permits to building access requirements, we're familiar with all the local regulations that can affect your move in Middleburg.
                 </p>
               </CardContent>
             </Card>
@@ -465,19 +465,19 @@ export default function JacksonvilleMovers() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Why Local Knowledge Matters in Jacksonville
+              Why Local Knowledge Matters in Middleburg
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Moving in Jacksonville requires more than just a truck and movers. It requires deep local knowledge that only comes from years of experience in the area.
+              Moving in Middleburg requires more than just a truck and movers. It requires deep local knowledge that only comes from years of experience in the area.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-8">
               <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-gray-900">Local Jacksonville Moving Expertise</h3>
+                <h3 className="text-3xl font-bold text-gray-900">Local Middleburg Moving Expertise</h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Our team knows Jacksonville like the back of our hands. From traffic patterns during peak moving seasons to building restrictions and parking regulations, we navigate the local challenges that out-of-town movers simply can't anticipate.
+                  Our team knows Middleburg like the back of our hands. From traffic patterns during peak moving seasons to building restrictions and parking regulations, we navigate the local challenges that out-of-town movers simply can't anticipate.
                 </p>
                 
                 <div className="grid grid-cols-2 gap-6">
@@ -498,7 +498,7 @@ export default function JacksonvilleMovers() {
             <div className="relative">
               <Image
                 src="/images/facility-overview.png"
-                alt="T&E Movers Jacksonville Team - Local Moving Experts"
+                alt="T&E Movers Middleburg Team - Local Moving Experts"
                 width=500
                 height=300
                 className="rounded-lg shadow-lg"
@@ -516,7 +516,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  We know every neighborhood in Jacksonville, from quiet residential streets to busy commercial districts. This knowledge helps us plan the most efficient moving routes and anticipate potential challenges.
+                  We know every neighborhood in Middleburg, from quiet residential streets to busy commercial districts. This knowledge helps us plan the most efficient moving routes and anticipate potential challenges.
                 </p>
               </CardContent>
             </Card>
@@ -530,7 +530,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Understanding Jacksonville's traffic patterns, school schedules, and seasonal variations helps us schedule moves at optimal times, ensuring minimal disruption to your day.
+                  Understanding Middleburg's traffic patterns, school schedules, and seasonal variations helps us schedule moves at optimal times, ensuring minimal disruption to your day.
                 </p>
               </CardContent>
             </Card>
@@ -544,7 +544,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  From parking permits to building access requirements, we're familiar with all the local regulations that can affect your move in Jacksonville.
+                  From parking permits to building access requirements, we're familiar with all the local regulations that can affect your move in Middleburg.
                 </p>
               </CardContent>
             </Card>
@@ -557,19 +557,19 @@ export default function JacksonvilleMovers() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Why Local Knowledge Matters in Jacksonville
+              Why Local Knowledge Matters in Middleburg
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Moving in Jacksonville requires more than just a truck and movers. It requires deep local knowledge that only comes from years of experience in the area.
+              Moving in Middleburg requires more than just a truck and movers. It requires deep local knowledge that only comes from years of experience in the area.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-8">
               <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-gray-900">Local Jacksonville Moving Expertise</h3>
+                <h3 className="text-3xl font-bold text-gray-900">Local Middleburg Moving Expertise</h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Our team knows Jacksonville like the back of our hands. From traffic patterns during peak moving seasons to building restrictions and parking regulations, we navigate the local challenges that out-of-town movers simply can't anticipate.
+                  Our team knows Middleburg like the back of our hands. From traffic patterns during peak moving seasons to building restrictions and parking regulations, we navigate the local challenges that out-of-town movers simply can't anticipate.
                 </p>
                 
                 <div className="grid grid-cols-2 gap-6">
@@ -590,7 +590,7 @@ export default function JacksonvilleMovers() {
             <div className="relative">
               <Image
                 src="/images/facility-overview.png"
-                alt="T&E Movers Jacksonville Team - Local Moving Experts"
+                alt="T&E Movers Middleburg Team - Local Moving Experts"
                 width=500
                 height=300
                 className="rounded-lg shadow-lg"
@@ -608,7 +608,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  We know every neighborhood in Jacksonville, from quiet residential streets to busy commercial districts. This knowledge helps us plan the most efficient moving routes and anticipate potential challenges.
+                  We know every neighborhood in Middleburg, from quiet residential streets to busy commercial districts. This knowledge helps us plan the most efficient moving routes and anticipate potential challenges.
                 </p>
               </CardContent>
             </Card>
@@ -622,7 +622,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Understanding Jacksonville's traffic patterns, school schedules, and seasonal variations helps us schedule moves at optimal times, ensuring minimal disruption to your day.
+                  Understanding Middleburg's traffic patterns, school schedules, and seasonal variations helps us schedule moves at optimal times, ensuring minimal disruption to your day.
                 </p>
               </CardContent>
             </Card>
@@ -636,7 +636,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  From parking permits to building access requirements, we're familiar with all the local regulations that can affect your move in Jacksonville.
+                  From parking permits to building access requirements, we're familiar with all the local regulations that can affect your move in Middleburg.
                 </p>
               </CardContent>
             </Card>
@@ -649,19 +649,19 @@ export default function JacksonvilleMovers() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Why Local Knowledge Matters in Jacksonville
+              Why Local Knowledge Matters in Middleburg
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Moving in Jacksonville requires more than just a truck and movers. It requires deep local knowledge that only comes from years of experience in the area.
+              Moving in Middleburg requires more than just a truck and movers. It requires deep local knowledge that only comes from years of experience in the area.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-8">
               <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-gray-900">Local Jacksonville Moving Expertise</h3>
+                <h3 className="text-3xl font-bold text-gray-900">Local Middleburg Moving Expertise</h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Our team knows Jacksonville like the back of our hands. From traffic patterns during peak moving seasons to building restrictions and parking regulations, we navigate the local challenges that out-of-town movers simply can't anticipate.
+                  Our team knows Middleburg like the back of our hands. From traffic patterns during peak moving seasons to building restrictions and parking regulations, we navigate the local challenges that out-of-town movers simply can't anticipate.
                 </p>
                 
                 <div className="grid grid-cols-2 gap-6">
@@ -682,7 +682,7 @@ export default function JacksonvilleMovers() {
             <div className="relative">
               <Image
                 src="/images/facility-overview.png"
-                alt="T&E Movers Jacksonville Team - Local Moving Experts"
+                alt="T&E Movers Middleburg Team - Local Moving Experts"
                 width=500
                 height=300
                 className="rounded-lg shadow-lg"
@@ -700,7 +700,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  We know every neighborhood in Jacksonville, from quiet residential streets to busy commercial districts. This knowledge helps us plan the most efficient moving routes and anticipate potential challenges.
+                  We know every neighborhood in Middleburg, from quiet residential streets to busy commercial districts. This knowledge helps us plan the most efficient moving routes and anticipate potential challenges.
                 </p>
               </CardContent>
             </Card>
@@ -714,7 +714,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Understanding Jacksonville's traffic patterns, school schedules, and seasonal variations helps us schedule moves at optimal times, ensuring minimal disruption to your day.
+                  Understanding Middleburg's traffic patterns, school schedules, and seasonal variations helps us schedule moves at optimal times, ensuring minimal disruption to your day.
                 </p>
               </CardContent>
             </Card>
@@ -728,7 +728,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  From parking permits to building access requirements, we're familiar with all the local regulations that can affect your move in Jacksonville.
+                  From parking permits to building access requirements, we're familiar with all the local regulations that can affect your move in Middleburg.
                 </p>
               </CardContent>
             </Card>
@@ -741,19 +741,19 @@ export default function JacksonvilleMovers() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Why Local Knowledge Matters in Jacksonville
+              Why Local Knowledge Matters in Middleburg
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Moving in Jacksonville requires more than just a truck and movers. It requires deep local knowledge that only comes from years of experience in the area.
+              Moving in Middleburg requires more than just a truck and movers. It requires deep local knowledge that only comes from years of experience in the area.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-8">
               <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-gray-900">Local Jacksonville Moving Expertise</h3>
+                <h3 className="text-3xl font-bold text-gray-900">Local Middleburg Moving Expertise</h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Our team knows Jacksonville like the back of our hands. From traffic patterns during peak moving seasons to building restrictions and parking regulations, we navigate the local challenges that out-of-town movers simply can't anticipate.
+                  Our team knows Middleburg like the back of our hands. From traffic patterns during peak moving seasons to building restrictions and parking regulations, we navigate the local challenges that out-of-town movers simply can't anticipate.
                 </p>
                 
                 <div className="grid grid-cols-2 gap-6">
@@ -774,7 +774,7 @@ export default function JacksonvilleMovers() {
             <div className="relative">
               <Image
                 src="/images/facility-overview.png"
-                alt="T&E Movers Jacksonville Team - Local Moving Experts"
+                alt="T&E Movers Middleburg Team - Local Moving Experts"
                 width=500
                 height=300
                 className="rounded-lg shadow-lg"
@@ -792,7 +792,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  We know every neighborhood in Jacksonville, from quiet residential streets to busy commercial districts. This knowledge helps us plan the most efficient moving routes and anticipate potential challenges.
+                  We know every neighborhood in Middleburg, from quiet residential streets to busy commercial districts. This knowledge helps us plan the most efficient moving routes and anticipate potential challenges.
                 </p>
               </CardContent>
             </Card>
@@ -806,7 +806,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  Understanding Jacksonville's traffic patterns, school schedules, and seasonal variations helps us schedule moves at optimal times, ensuring minimal disruption to your day.
+                  Understanding Middleburg's traffic patterns, school schedules, and seasonal variations helps us schedule moves at optimal times, ensuring minimal disruption to your day.
                 </p>
               </CardContent>
             </Card>
@@ -820,7 +820,7 @@ export default function JacksonvilleMovers() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  From parking permits to building access requirements, we're familiar with all the local regulations that can affect your move in Jacksonville.
+                  From parking permits to building access requirements, we're familiar with all the local regulations that can affect your move in Middleburg.
                 </p>
               </CardContent>
             </Card>
@@ -833,19 +833,25 @@ export default function JacksonvilleMovers() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Serving All of Jacksonville & Surrounding Areas
+              Serving All of Middleburg & Surrounding Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              From Jacksonville to the surrounding communities, from St. Johns County to Clay County - we know every
+              From Middleburg to the surrounding communities, from St. Johns County to Clay County - we know every
               neighborhood and provide expert local moving services throughout Northeast Florida.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                        <Card key="Jacksonville Beach" className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center p-4">
+                        <Card key="Middleburg" className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center p-4">
               <div className="flex items-center justify-center space-x-2">
                 <MapPinIcon className="h-5 w-5 text-red-500" />
-                <span className="font-semibold text-gray-900">Jacksonville Beach</span>
+                <span className="font-semibold text-gray-900">Middleburg</span>
+              </div>
+            </Card>
+            <Card key="Middleburg Beach" className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center p-4">
+              <div className="flex items-center justify-center space-x-2">
+                <MapPinIcon className="h-5 w-5 text-red-500" />
+                <span className="font-semibold text-gray-900">Middleburg Beach</span>
               </div>
             </Card>
             <Card key="Atlantic Beach" className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center p-4">
@@ -882,12 +888,6 @@ export default function JacksonvilleMovers() {
               <div className="flex items-center justify-center space-x-2">
                 <MapPinIcon className="h-5 w-5 text-red-500" />
                 <span className="font-semibold text-gray-900">Fleming Island</span>
-              </div>
-            </Card>
-            <Card key="Middleburg" className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center p-4">
-              <div className="flex items-center justify-center space-x-2">
-                <MapPinIcon className="h-5 w-5 text-red-500" />
-                <span className="font-semibold text-gray-900">Middleburg</span>
               </div>
             </Card>
             <Card key="Green Cove Springs" className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center p-4">
@@ -1035,7 +1035,7 @@ export default function JacksonvilleMovers() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-600 mb-4">
-                      Specialized in apartment and condo moves throughout Jacksonville's many complexes.
+                      Specialized in apartment and condo moves throughout Middleburg's many complexes.
                     </p>
                     <ul className="text-sm text-gray-600 space-y-1">
                       <li>• High-rise building expertise</li>
@@ -1249,9 +1249,9 @@ export default function JacksonvilleMovers() {
       <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Real Jacksonville Moving Stories</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Real Middleburg Moving Stories</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Don't just take our word for it. Here are detailed stories from Jacksonville families and businesses who
+              Don't just take our word for it. Here are detailed stories from Middleburg families and businesses who
               trusted us with their local moves.
             </p>
           </div>
@@ -1268,7 +1268,7 @@ export default function JacksonvilleMovers() {
                 <Quote className="h-8 w-8 text-gray-300 mb-4" />
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   "T&E Moving and storage help us move into our new home today. These guys are very friendly,
-                  professional, and productive. They knew exactly how to navigate our narrow Jacksonville Beach streets
+                  professional, and productive. They knew exactly how to navigate our narrow Middleburg Beach streets
                   and got everything moved in record time. Thank you for your great service!!"
                 </p>
                 <div className="flex items-center">
@@ -1277,7 +1277,7 @@ export default function JacksonvilleMovers() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">Ahmet Birdal</div>
-                    <div className="text-sm text-gray-600">Riverside → Jacksonville Beach</div>
+                    <div className="text-sm text-gray-600">Riverside → Middleburg Beach</div>
                     <div className="text-xs text-gray-500">3-Bedroom House Move</div>
                   </div>
                 </div>
@@ -1295,7 +1295,7 @@ export default function JacksonvilleMovers() {
                 <Quote className="h-8 w-8 text-gray-300 mb-4" />
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   "Really nice movers and really fast and good price 10/10. They moved our entire apartment from
-                  downtown Jacksonville to Nocatee in just 4 hours. The team was incredibly careful with our furniture
+                  downtown Middleburg to Nocatee in just 4 hours. The team was incredibly careful with our furniture
                   and even helped us set everything up in our new place."
                 </p>
                 <div className="flex items-center">
@@ -1304,7 +1304,7 @@ export default function JacksonvilleMovers() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">Demir Bilgin</div>
-                    <div className="text-sm text-gray-600">Downtown Jacksonville → Nocatee</div>
+                    <div className="text-sm text-gray-600">Downtown Middleburg → Nocatee</div>
                     <div className="text-xs text-gray-500">2-Bedroom Apartment Move</div>
                   </div>
                 </div>
@@ -1322,7 +1322,7 @@ export default function JacksonvilleMovers() {
                 <Quote className="h-8 w-8 text-gray-300 mb-4" />
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   "They were on time and professional. Thank you. They moved some light fixtures for my company from our
-                  old Orange Park location to our new Jacksonville office. Even though it was a small job, they treated
+                  old Orange Park location to our new Middleburg office. Even though it was a small job, they treated
                   us like their most important customer."
                 </p>
                 <div className="flex items-center">
@@ -1331,7 +1331,7 @@ export default function JacksonvilleMovers() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">Crystal Blackburn</div>
-                    <div className="text-sm text-gray-600">Orange Park → Jacksonville</div>
+                    <div className="text-sm text-gray-600">Orange Park → Middleburg</div>
                     <div className="text-xs text-gray-500">Commercial Move</div>
                   </div>
                 </div>
@@ -1341,7 +1341,7 @@ export default function JacksonvilleMovers() {
 
           <div className="text-center">
             <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent">
-              Read More Jacksonville Reviews
+              Read More Middleburg Reviews
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
@@ -1354,8 +1354,8 @@ export default function JacksonvilleMovers() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Every Local Moving Question Answered</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              We've been Jacksonville's local moving experts for 25 years. Here are the answers to every question you
-              might have about local moving in Jacksonville and surrounding areas.
+              We've been Middleburg's local moving experts for 25 years. Here are the answers to every question you
+              might have about local moving in Middleburg and surrounding areas.
             </p>
           </div>
 
@@ -1365,7 +1365,7 @@ export default function JacksonvilleMovers() {
               <Accordion type="single" collapsible className="space-y-4">
                 <AccordionItem value="pricing-1" className="bg-gray-50 rounded-lg shadow-sm">
                   <AccordionTrigger className="px-6 py-4 text-left font-semibold">
-                    How much does a local move in Jacksonville cost?
+                    How much does a local move in Middleburg cost?
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-gray-600">
                     <p className="mb-4">
@@ -1410,7 +1410,7 @@ export default function JacksonvilleMovers() {
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-gray-600">
                     <p className="mb-4">
-                      We're proud to be one of the few Jacksonville moving companies with truly transparent pricing.
+                      We're proud to be one of the few Middleburg moving companies with truly transparent pricing.
                       Here's what's included in every quote:
                     </p>
                     <div className="space-y-4">
@@ -1495,14 +1495,14 @@ export default function JacksonvilleMovers() {
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-gray-600">
                     <p className="mb-4">
-                      We serve all of Jacksonville and the greater Northeast Florida region. Our local moving service
+                      We serve all of Middleburg and the greater Northeast Florida region. Our local moving service
                       area includes:
                     </p>
                     <div className="space-y-4">
                       <div>
-                        <strong className="text-blue-600">Jacksonville Proper:</strong>
+                        <strong className="text-blue-600">Middleburg Proper:</strong>
                         <ul className="mt-2 space-y-1 ml-4">
-                          <li>• Downtown Jacksonville</li>
+                          <li>• Downtown Middleburg</li>
                           <li>• Riverside/Avondale</li>
                           <li>• Mandarin</li>
                           <li>• Westside</li>
@@ -1514,7 +1514,7 @@ export default function JacksonvilleMovers() {
                       <div>
                         <strong className="text-green-600">Beach Communities:</strong>
                         <ul className="mt-2 space-y-1 ml-4">
-                          <li>• Jacksonville Beach</li>
+                          <li>• Middleburg Beach</li>
                           <li>• Atlantic Beach</li>
                           <li>• Neptune Beach</li>
                           <li>• Ponte Vedra Beach</li>
@@ -1549,7 +1549,7 @@ export default function JacksonvilleMovers() {
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-gray-600">
                     <p className="mb-4">
-                      Move duration depends on several factors, but here are typical timeframes for Jacksonville local
+                      Move duration depends on several factors, but here are typical timeframes for Middleburg local
                       moves:
                     </p>
                     <div className="space-y-4">
@@ -1652,10 +1652,10 @@ export default function JacksonvilleMovers() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Top 10 Tips for a Stress-Free Jacksonville Move
+              Top 10 Tips for a Stress-Free Middleburg Move
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              After 25 years and 15,000+ local moves in Jacksonville, we've learned what makes the difference between a
+              After 25 years and 15,000+ local moves in Middleburg, we've learned what makes the difference between a
               stressful move and a smooth one. Here are our top insider tips.
             </p>
           </div>
@@ -1666,14 +1666,14 @@ export default function JacksonvilleMovers() {
                 number: "1",
                 title: "Start Planning Early",
                 description:
-                  "Give yourself time to sort, organize, and plan. Start at least 2-3 weeks in advance to avoid last-minute chaos, especially during Jacksonville's busy summer moving season.",
+                  "Give yourself time to sort, organize, and plan. Start at least 2-3 weeks in advance to avoid last-minute chaos, especially during Middleburg's busy summer moving season.",
                 icon: <Calendar className="h-8 w-8" />,
               },
               {
                 number: "2",
-                title: "Hire Local Jacksonville Experts",
+                title: "Hire Local Middleburg Experts",
                 description:
-                  "Choose a licensed and insured moving company that knows Jacksonville inside and out. We know every neighborhood, traffic pattern, and building restriction in the area.",
+                  "Choose a licensed and insured moving company that knows Middleburg inside and out. We know every neighborhood, traffic pattern, and building restriction in the area.",
                 icon: <MapPinIcon className="h-8 w-8" />,
               },
               {
@@ -1687,7 +1687,7 @@ export default function JacksonvilleMovers() {
                 number: "4",
                 title: "Label Everything Clearly",
                 description:
-                  "Label boxes by room and contents. This makes unpacking at your new Jacksonville home much easier and helps our crew place items correctly.",
+                  "Label boxes by room and contents. This makes unpacking at your new Middleburg home much easier and helps our crew place items correctly.",
                 icon: <FileText className="h-8 w-8" />,
               },
               {
@@ -1708,7 +1708,7 @@ export default function JacksonvilleMovers() {
                 number: "7",
                 title: "Schedule Utilities Early",
                 description:
-                  "Arrange for utilities in Jacksonville to be transferred or started before moving day. You don't want to arrive at a home without power or water.",
+                  "Arrange for utilities in Middleburg to be transferred or started before moving day. You don't want to arrive at a home without power or water.",
                 icon: <Zap className="h-8 w-8" />,
               },
               {
@@ -1729,7 +1729,7 @@ export default function JacksonvilleMovers() {
                 number: "10",
                 title: "Relax and Let the Pros Handle It",
                 description:
-                  "Our experienced Jacksonville movers will take care of the packing, loading, transportation, and setup—so you don't have to lift a finger.",
+                  "Our experienced Middleburg movers will take care of the packing, loading, transportation, and setup—so you don't have to lift a finger.",
                 icon: <ThumbsUp className="h-8 w-8" />,
               },
             ].map((tip, index) => (
@@ -1755,7 +1755,7 @@ export default function JacksonvilleMovers() {
           <div className="text-center mt-12">
             <Card className="border-0 shadow-xl bg-gradient-to-r from-red-500 to-blue-600 text-white max-w-2xl mx-auto">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">Ready for a Stress-Free Jacksonville Move?</h3>
+                <h3 className="text-2xl font-bold mb-4">Ready for a Stress-Free Middleburg Move?</h3>
                 <p className="text-blue-100 mb-6">
                   Let our experienced team handle everything while you focus on the excitement of your new home. Get
                   your free quote today!
@@ -1775,9 +1775,9 @@ export default function JacksonvilleMovers() {
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-6">Ready to Move in Jacksonville?</h2>
+            <h2 className="text-4xl lg:text-6xl font-bold mb-6">Ready to Move in Middleburg?</h2>
             <p className="text-xl lg:text-2xl text-blue-100 mb-8 leading-relaxed">
-              Join over 15,000 satisfied Jacksonville families who chose T&E Movers for their local relocation. Your new
+              Join over 15,000 satisfied Middleburg families who chose T&E Movers for their local relocation. Your new
               neighborhood is waiting - let's get you there safely and stress-free.
             </p>
 
@@ -1824,7 +1824,7 @@ export default function JacksonvilleMovers() {
                   <MapPinIcon className="h-8 w-8 text-purple-300" />
                 </div>
                 <h3 className="font-semibold mb-2">Local Experts</h3>
-                <p className="text-blue-100 text-sm">25+ years serving Jacksonville</p>
+                <p className="text-blue-100 text-sm">25+ years serving Middleburg</p>
               </div>
             </div>
           </div>
@@ -1837,14 +1837,14 @@ export default function JacksonvilleMovers() {
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
               <div className="flex items-center space-x-3 mb-6">
-                <Image src="/images/logo-main.png" alt="T&E Movers - Jacksonville Movers" width={50} height={50} className="rounded-full" />
+                <Image src="/images/logo-main.png" alt="T&E Movers - Middleburg Movers" width={50} height={50} className="rounded-full" />
                 <div>
                   <h3 className="text-2xl font-bold">T&E Movers</h3>
-                  <p className="text-sm text-gray-400">Jacksonville's Local Moving Experts</p>
+                  <p className="text-sm text-gray-400">Middleburg's Local Moving Experts</p>
                 </div>
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Family-owned and operated since 1998, we've been Jacksonville's trusted local moving company for over 25
+                Family-owned and operated since 1998, we've been Middleburg's trusted local moving company for over 25
                 years. We're not just your movers - we're your neighbors.
               </p>
               <div className="flex space-x-4">
@@ -1875,10 +1875,10 @@ export default function JacksonvilleMovers() {
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-6">Jacksonville Service Areas</h4>
+              <h4 className="text-lg font-semibold mb-6">Middleburg Service Areas</h4>
               <ul className="space-y-3 text-gray-400">
-                <li className="hover:text-white transition-colors">Downtown Jacksonville</li>
-                <li className="hover:text-white transition-colors">Jacksonville Beach</li>
+                <li className="hover:text-white transition-colors">Downtown Middleburg</li>
+                <li className="hover:text-white transition-colors">Middleburg Beach</li>
                 <li className="hover:text-white transition-colors">Riverside/Avondale</li>
                 <li className="hover:text-white transition-colors">Mandarin</li>
                 <li className="hover:text-white transition-colors">Orange Park</li>
@@ -1909,7 +1909,7 @@ export default function JacksonvilleMovers() {
                   <MapPin className="h-5 w-5 text-green-500" />
                   <div>
                     <div className="font-semibold text-white">6556 Beach Boulevard</div>
-                    <div className="text-sm">Jacksonville, FL 32216</div>
+                    <div className="text-sm">Middleburg, FL 32216</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -1927,7 +1927,7 @@ export default function JacksonvilleMovers() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="text-gray-400">
                 <p>&copy; 2025 T&E Movers. All rights reserved.</p>
-                <p className="text-sm mt-2">Licensed and Insured Jacksonville Moving Company | FL License #IM123456</p>
+                <p className="text-sm mt-2">Licensed and Insured Middleburg Moving Company | FL License #IM123456</p>
               </div>
               <div className="text-right">
                 <div className="flex justify-end space-x-6 text-sm text-gray-400">

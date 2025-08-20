@@ -33,7 +33,7 @@ import Image from "next/image"
 import FloatingQuoteButton from "@/components/floating-quote-button"
 import QuoteFormSlideout from "@/components/quote-form-slideout"
 
-export default function JacksonvilleMovers() {
+export default function MovingCompaniesInJacksonville() {
   const checkZipCode = () => {
     const startingZip = document.getElementById('startingZip')?.value;
     const destinationZip = document.getElementById('destinationZip')?.value;
@@ -91,7 +91,7 @@ export default function JacksonvilleMovers() {
             <Image src="/images/logo-main.png" alt="T&E Movers - Jacksonville Movers" width={60} height={60} className="rounded-full" />
             <div>
               <h1 className="text-xl font-bold text-gray-900">Jacksonville Movers</h1>
-              <p className="text-sm text-gray-600">Jacksonville Movers</p>
+              <p className="text-sm text-gray-600">Moving Companies In Jacksonville</p>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-6">
