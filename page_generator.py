@@ -66,14 +66,22 @@ def replace_content(content: str, old_city: str, new_city: str, new_city_camel_c
     new_component = f"{component_name}Movers"
     content = content.replace(old_component, new_component)
     
-    # 3. Update the zip code checker with a valid JavaScript variable name
-    # This is the critical fix - ensure variable names are valid JavaScript
+    # 3. Update the zip code checker with expanded 100-mile radius zip codes
+    # This covers Jacksonville metro + 100-mile radius including Georgia and South Carolina
     zip_variable_name = f"{new_city_camel_case}DMACodes"
     
-    # Replace the old variable declaration
+    # Load the expanded zip codes from file
+    try:
+        with open('expanded_zip_codes.txt', 'r') as f:
+            expanded_zips = eval(f.read().strip())
+    except:
+        # Fallback to original Jacksonville zip codes if file not found
+        expanded_zips = [32202, 32203, 32204, 32205, 32206, 32207, 32208, 32209, 32210, 32211, 32212, 32214, 32216, 32217, 32218, 32219, 32220, 32221, 32222, 32223, 32224, 32225, 32226, 32227, 32228, 32229, 32230, 32231, 32232, 32233, 32234, 32235, 32236, 32237, 32238, 32239, 32240, 32241, 32244, 32245, 32246, 32247, 32250, 32254, 32255, 32256, 32257, 32258, 32259, 32260, 32266, 32267, 32277]
+    
+    # Replace the old variable declaration with expanded zip codes
     content = re.sub(
         r"const \w+DMACodes = \[.*?\];",
-        f"const {zip_variable_name} = [32202, 32203, 32204, 32205, 32206, 32207, 32208, 32209, 32210, 32211, 32212, 32214, 32216, 32217, 32218, 32219, 32220, 32221, 32222, 32223, 32224, 32225, 32226, 32227, 32228, 32229, 32230, 32231, 32232, 32233, 32234, 32235, 32236, 32237, 32238, 32239, 32240, 32241, 32244, 32245, 32246, 32247, 32250, 32254, 32255, 32256, 32257, 32258, 32259, 32260, 32266, 32267, 32277];",
+        f"const {zip_variable_name} = {expanded_zips};",
         content,
         flags=re.DOTALL
     )
