@@ -1,0 +1,130 @@
+{
+    "serviceArea": {
+      "locations": [
+        {
+          "name": "Jacksonville",
+          "type": "City",
+          "aliases": ["Jax", "JAX"],
+          "zip_codes": [
+            "32202", "32204", "32205", "32206", "32207", "32208", "32209", "32210", 
+            "32211", "32212", "32216", "32217", "32218", "32219", "32220", "32221", 
+            "32222", "32223", "32224", "32225", "32226", "32227", "32228", "32233", 
+            "32234", "32244", "32246", "32250", "32254", "32256", "32257", "32258", 
+            "32277"
+          ]
+        },
+        {
+          "name": "Jacksonville Beach",
+          "type": "City",
+          "aliases": ["Jax Beach"],
+          "zip_codes": ["32250", "32240"]
+        },
+        {
+          "name": "Atlantic Beach",
+          "type": "City",
+          "aliases": [],
+          "zip_codes": ["32233"]
+        },
+        {
+          "name": "Neptune Beach",
+          "type": "City",
+          "aliases": [],
+          "zip_codes": ["32266"]
+        },
+        {
+          "name": "Ponte Vedra Beach",
+          "type": "City",
+          "aliases": ["Ponte Vedra"],
+          "zip_codes": ["32082", "32081"]
+        },
+        {
+          "name": "St. Augustine",
+          "type": "City",
+          "aliases": ["St Aug"],
+          "zip_codes": ["32084", "32086", "32092", "32095", "32080"]
+        },
+        {
+          "name": "Orange Park",
+          "type": "City",
+          "aliases": ["OP"],
+          "zip_codes": ["32065", "32073", "32003"]
+        },
+        {
+          "name": "Fleming Island",
+          "type": "City",
+          "aliases": [],
+          "zip_codes": ["32003"]
+        },
+        {
+          "name": "Middleburg",
+          "type": "City",
+          "aliases": [],
+          "zip_codes": ["32068"]
+        },
+        {
+          "name": "Green Cove Springs",
+          "type": "City",
+          "aliases": [],
+          "zip_codes": ["32043"]
+        },
+        {
+          "name": "Fernandina Beach",
+          "type": "City",
+          "aliases": [],
+          "zip_codes": ["32034"]
+        },
+        {
+          "name": "Amelia Island",
+          "type": "City",
+          "aliases": [],
+          "zip_codes": ["32034"]
+        },
+        {
+          "name": "Nocatee",
+          "type": "Community",
+          "aliases": [],
+          "zip_codes": ["32081"]
+        },
+        {
+          "name": "Duval County",
+          "type": "County",
+          "aliases": ["Duval"],
+          "zip_codes": []
+        },
+        {
+          "name": "St. Johns County",
+          "type": "County",
+          "aliases": ["St Johns", "SJC"],
+          "zip_codes": []
+        },
+        {
+          "name": "Clay County",
+          "type": "County",
+          "aliases": [],
+          "zip_codes": []
+        },
+        {
+          "name": "Mandarin",
+          "type": "Neighborhood",
+          "aliases": [],
+          "zip_codes": ["32223", "32257"]
+        },
+        {
+          "name": "Riverside",
+          "type": "Neighborhood",
+          "aliases": [],
+          "zip_codes": ["32204", "32205"]
+        }
+      ]
+    },
+    "keywordTemplates": [
+      "{location} movers",
+      "{location} moving",
+      "{location} moving company",
+      "{location} moving companies",
+      "movers in {location}",
+      "moving companies in {location}",
+      "local movers {location}"
+    ]
+  }
+  

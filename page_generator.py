@@ -1,283 +1,182 @@
-Of course. The provided Python script fails because it incorrectly manipulates the React component's structure, leading to severe JSX syntax errors like duplicate function declarations, missing closing tags, and invalid JavaScript.
+#!/usr/bin/env python3
+"""
+Next.js Page Generator Script
+Generates geo-targeted landing pages from a master template and JSON data.
+"""
 
-The main issues are:
-
-1.  **Incorrectly Injecting Code:** The script prepends a massive string (`meta_content`) that re-declares the entire React component, causing a nested, invalid structure.
-2.  **Fragile Section Manipulation:** It uses `content.split('{/* ')` to insert new sections, which is unreliable and was causing content duplication.
-3.  **Invalid JSX and JavaScript:** It generates incorrect code like `width=500` (should be `width={500}`), `onClick={{checkZipCode}}` (should be `onClick={checkZipCode}`), and invalid variable names with spaces (e.g., `const ponte vedraDMACodes`).
-
-Here is the completely rewritten and fixed version of `page_generator.py`. This script resolves all syntax issues by using robust regular expressions for section manipulation and correcting all generated code to be valid JSX and JavaScript.
-
-```python
 import json
 import os
 import re
 from pathlib import Path
+from typing import Dict, List, Any
 
-def load_json_data(file_path):
-    """Load and parse the JSON data file."""
-    with open(file_path, 'r', encoding='utf-8') as file:
-        return json.load(file)
-
-def load_template(file_path):
-    """Load the master template file."""
-    with open(file_path, 'r', encoding='utf-8') as file:
-        return file.read()
-
-def slugify(text):
-    """Convert text to a URL-friendly slug."""
-    text = text.lower()
-    text = re.sub(r'[\s_]+', '-', text)  # Replace spaces and underscores with hyphens
-    text = re.sub(r'[^\w-]', '', text)    # Remove all non-word chars except hyphens
-    return text.strip('-')
-
-def to_pascal_case(text):
-    """Convert text to PascalCase."""
-    return ''.join(word.capitalize() for word in re.split(r'[\s-]', text))
-
-def to_camel_case(text):
-    """Convert text to camelCase for JavaScript variables."""
-    words = re.split(r'[\s\-]+', re.sub(r'[^\w\s-]', '', text))
-    if words:
-        return words[0].lower() + ''.join(word.capitalize() for word in words[1:])
-    return text.lower()
-
-def replace_content(template_content, original_component_name, new_component_name, original_city, new_city, primary_keyword):
+def to_camel_case(text: str) -> str:
     """
-    Replace placeholder content in the template with dynamic, location-specific content
-    using regular expressions for robustness.
-    """
-    content = template_content
-
-    # 1. Replace the component name
-    content = content.replace(f"export default function {original_component_name}()", f"export default function {new_component_name}()")
-
-    # 2. Update header and hero content
-    content = content.replace(f"<h1 class=\"text-xl font-bold text-gray-900\">{original_city} Movers</h1>", f"<h1 class=\"text-xl font-bold text-gray-900\">{primary_keyword.title()}</h1>")
-    content = content.replace(f"<p class=\"text-sm text-gray-600\">{original_city} Movers</p>", f"<p class=\"text-sm text-gray-600\">{primary_keyword.title()}</p>")
-    content = content.replace(f"{original_city}'s <span class=\"text-red-400\">Premier Local Movers</span> Since 1998", f"{new_city}'s <span class=\"text-red-400\">Premier Local Movers</span> Since 1998")
-    content = content.replace(f"#1 Rated {original_city} Moving Company", f"#1 Rated {new_city} Moving Company")
-
-    # 3. Update the zip code checker with a valid JavaScript variable name and comment
-    # The list of zip codes is assumed to be the same for all generated pages as per the original script.
-    jacksonvilleDMACodes = [
-      '32202', '32204', '32205', '32206', '32207', '32208', '32209', '32210',
-      '32211', '32212', '32216', '32217', '32218', '32219', '32220', '32221',
-      '32222', '32223', '32224', '32225', '32226', '32227', '32228', '32233',
-      '32234', '32244', '32246', '32250', '32254', '32256', '32257', '32258',
-      '32277', '32080', '32081', '32082', '32084', '32086', '32092', '32095',
-      '32003', '32065', '32068', '32073', '32034', '32035', '32038', '32046',
-      '32058', '32091', '32026', '32025', '32011', '32009', '32030', '32033'
-    ]
+    Convert a string to camelCase format.
+    Handles spaces, hyphens, underscores, and periods properly.
     
-    new_city_camel_case = to_camel_case(new_city)
+    Examples:
+    "Amelia Island" -> "ameliaIsland"
+    "Ponte Vedra Beach" -> "ponteVedraBeach"
+    "St. Augustine" -> "stAugustine"
+    "St. Johns County" -> "stJohnsCounty"
+    """
+    # Remove special characters and split by spaces, hyphens, underscores, and periods
+    words = re.split(r'[\s\-_\.]+', text)
+    
+    # Convert to camelCase
+    if not words:
+        return ""
+    
+    # First word should be lowercase
+    result = words[0].lower()
+    
+    # Subsequent words should be capitalized
+    for word in words[1:]:
+        if word:
+            result += word.capitalize()
+    
+    return result
+
+def replace_content(content: str, old_city: str, new_city: str, new_city_camel_case: str, component_name: str) -> str:
+    """
+    Replace all instances of the old city name with the new city name in the content.
+    Handles various formats and ensures proper JavaScript syntax.
+    """
+    
+    # 1. Replace city names in various contexts (case-insensitive)
+    # Handle "Jacksonville's" -> "New City's"
+    content = re.sub(
+        rf"{re.escape(old_city)}'s",
+        f"{new_city}'s",
+        content,
+        flags=re.IGNORECASE
+    )
+    
+    # Handle "Jacksonville" -> "New City"
+    content = re.sub(
+        rf"\b{re.escape(old_city)}\b",
+        new_city,
+        content,
+        flags=re.IGNORECASE
+    )
+    
+    # 2. Update the component name
+    old_component = "JacksonvilleMovers"
+    new_component = f"{component_name}Movers"
+    content = content.replace(old_component, new_component)
+    
+    # 3. Update the zip code checker with a valid JavaScript variable name
+    # This is the critical fix - ensure variable names are valid JavaScript
     zip_variable_name = f"{new_city_camel_case}DMACodes"
     
-    content = content.replace(f"// {original_city} DMA region zip codes", f"// {new_city} DMA region zip codes")
+    # Replace the old variable declaration
     content = re.sub(
         r"const \w+DMACodes = \[.*?\];",
-        f"const {zip_variable_name} = {json.dumps(jacksonvilleDMACodes, indent=6)};",
+        f"const {zip_variable_name} = [32202, 32203, 32204, 32205, 32206, 32207, 32208, 32209, 32210, 32211, 32212, 32214, 32216, 32217, 32218, 32219, 32220, 32221, 32222, 32223, 32224, 32225, 32226, 32227, 32228, 32229, 32230, 32231, 32232, 32233, 32234, 32235, 32236, 32237, 32238, 32239, 32240, 32241, 32244, 32245, 32246, 32247, 32250, 32254, 32255, 32256, 32257, 32258, 32259, 32260, 32266, 32267, 32277];",
         content,
         flags=re.DOTALL
     )
-    content = content.replace(f"// Check if starting zip is in {original_city} DMA", f"// Check if starting zip is in {new_city} DMA")
-    content = re.sub(r"\w+DMACodes\.includes\(startingZip\)", f"{zip_variable_name}.includes(startingZip)", content)
-
-    # 4. Update all image alt attributes to be city/keyword specific
-    content = content.replace(f'alt="T&E Movers - {original_city} Movers"', f'alt="T&E Movers - {primary_keyword.title()}"')
-    content = content.replace(f'alt="T&E Movers {original_city} Fleet"', f'alt="T&E Movers {new_city} Fleet"')
-    content = content.replace(f'alt="T&E Movers {original_city} Team"', f'alt="T&E Movers {new_city} Team"')
-
-    # 5. Insert Local Area Expertise section (with valid JSX)
-    local_expertise_section = f'''
-      {/* Local Area Expertise Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Why Local Knowledge Matters in {new_city}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Moving in {new_city} requires more than just a truck and movers. It requires deep local knowledge that only comes from years of experience in the area.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-gray-900">Local {new_city} Moving Expertise</h3>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Our team knows {new_city} like the back of our hands. From traffic patterns during peak moving seasons to building restrictions and parking regulations, we navigate the local challenges that out-of-town movers simply can't anticipate.
-                </p>
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center p-4 bg-white rounded-lg shadow-sm">
-                    <MapPinIcon className="h-8 w-8 text-blue-500 mx-auto mb-2" />
-                    <div className="font-semibold text-gray-900">Local Traffic</div>
-                    <div className="text-sm text-gray-600">Know the best routes</div>
-                  </div>
-                  <div className="text-center p-4 bg-white rounded-lg shadow-sm">
-                    <Building className="h-8 w-8 text-green-500 mx-auto mb-2" />
-                    <div className="font-semibold text-gray-900">Building Rules</div>
-                    <div className="text-sm text-gray-600">Access restrictions</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <Image
-                src="/images/facility-overview.png"
-                alt="T&E Movers {new_city} Team - Local Moving Experts"
-                width={{500}}
-                height={{300}}
-                className="rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300"><CardHeader><div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto"><MapPinIcon className="h-8 w-8 text-blue-500" /></div><CardTitle className="text-xl text-center">Neighborhood Knowledge</CardTitle></CardHeader><CardContent className="text-center"><p className="text-gray-600">We know every neighborhood in {new_city}, helping us plan efficient routes.</p></CardContent></Card>
-            <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300"><CardHeader><div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 mx-auto"><Clock className="h-8 w-8 text-green-500" /></div><CardTitle className="text-xl text-center">Timing Expertise</CardTitle></CardHeader><CardContent className="text-center"><p className="text-gray-600">We schedule moves at optimal times to avoid {new_city}'s traffic and disruptions.</p></CardContent></Card>
-            <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300"><CardHeader><div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4 mx-auto"><Shield className="h-8 w-8 text-purple-500" /></div><CardTitle className="text-xl text-center">Local Regulations</CardTitle></CardHeader><CardContent className="text-center"><p className="text-gray-600">We are familiar with parking permits and building access rules in {new_city}.</p></CardContent></Card>
-          </div>
-        </div>
-      </section>'''
     
-    # Use a robust regex to insert the new section after the "Why Choose Us" section
-    why_choose_us_pattern = re.compile(
-        r'(<section className="py-20 bg-white">.*?Why 15,000\+.*?Families Choose T&E Movers.*?</section>)', re.DOTALL
+    # Replace the usage of the variable
+    content = re.sub(
+        r"\w+DMACodes\.includes\(startingZip\)",
+        f"{zip_variable_name}.includes(startingZip)",
+        content
     )
-    content = why_choose_us_pattern.sub(r'\1' + local_expertise_section, content, 1)
-
-    # 6. Update service areas section (with valid JSX)
-    service_areas_list = [
-        "Jacksonville", "Jacksonville Beach", "Atlantic Beach", "Neptune Beach", 
-        "Ponte Vedra Beach", "St. Augustine", "Orange Park", "Fleming Island", 
-        "Middleburg", "Green Cove Springs", "Fernandina Beach", "Amelia Island", 
-        "Nocatee", "St. Johns County", "Mandarin", "Riverside"
-    ]
-    if new_city in service_areas_list:
-        service_areas_list.remove(new_city)
     
-    service_area_cards = "\n".join([f'            <Card key="{area}" className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center p-4"><div className="flex items-center justify-center space-x-2"><MapPinIcon className="h-5 w-5 text-red-500" /><span className="font-semibold text-gray-900">{area}</span></div></Card>' for area in service_areas_list])
-    
-    service_areas_content = f'''{'{/* Service Areas */}'}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Serving All of {new_city} & Surrounding Areas
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              From {new_city} to the surrounding communities, from St. Johns County to Clay County - we know every
-              neighborhood and provide expert local moving services throughout Northeast Florida.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {service_area_cards}
-          </div>
-          <div className="text-center">
-            <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8 mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Check If We Serve Your Area</h3>
-              <p className="text-gray-600 mb-6">Enter your starting and destination zip codes to see if we can help with your move.</p>
-              <div className="grid md:grid-cols-2 gap-4 mb-6">
-                <div>
-                  <label htmlFor="startingZip" className="block text-sm font-medium text-gray-700 mb-2">Starting Zip Code</label>
-                  <input type="text" id="startingZip" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="e.g., 32250" maxLength="5" />
-                </div>
-                <div>
-                  <label htmlFor="destinationZip" className="block text-sm font-medium text-gray-700 mb-2">Destination Zip Code</label>
-                  <input type="text" id="destinationZip" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-transparent" placeholder="e.g., 32082" maxLength="5" />
-                </div>
-              </div>
-              <Button onClick={{'{'}}checkZipCode{{'}'}} className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 text-lg mb-4">Check Service Area</Button>
-              <div id="zipResult" className="hidden">
-                <div id="zipSuccess" className="hidden">
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4"><div className="flex items-center"><CheckCircle className="h-6 w-6 text-green-500 mr-2" /><span className="text-green-800 font-semibold">Great news! We serve your area.</span></div><p className="text-green-700 mt-2">Get your free quote today!</p></div>
-                  <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 text-lg quote-trigger">Get Your Free Quote<ArrowRight className="ml-2 h-5 w-5" /></Button>
-                </div>
-                <div id="zipError" className="hidden">
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-4"><div className="flex items-center"><Shield className="h-6 w-6 text-red-500 mr-2" /><span className="text-red-800 font-semibold">We don't currently serve this area.</span></div><p className="text-red-700 mt-2">Please contact us to discuss options.</p></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>'''
-
-    # Replace the entire original service area section
-    service_areas_pattern = re.compile(
-        r'{/\* Service Areas \*/}.*?<section className="py-20 bg-gradient-to-r from-blue-50 to-purple-50">.*?Serving All of.*?& Surrounding Areas.*?</section>', re.DOTALL
-    )
-    content = service_areas_pattern.sub(service_areas_content, content, 1)
-
-    # 7. Expand use of primary keyword phrase and city name throughout content
-    content = content.replace(f"Why 15,000+ {original_city} Families Choose T&E Movers", f"Why 15,000+ {new_city} Families Choose T&E Movers")
-    content = content.replace(f"Real {original_city} Moving Stories", f"Real {new_city} Moving Stories")
-    content = content.replace(f"Top 10 Tips for a Stress-Free {original_city} Move", f"Top 10 Tips for a Stress-Free {new_city} Move")
-    content = content.replace(f"Ready to Move in {original_city}?", f"Ready to Move in {new_city}?")
-    
-    # Handle possessive and different cases
-    content = content.replace(f"{original_city}'s", f"{new_city}'s")
-    content = content.replace(original_city, new_city)
-
     return content
 
-def main():
-    """Main function to generate pages."""
+def generate_pages():
+    """
+    Main function to generate all the landing pages.
+    """
+    
+    # Load the JSON data
     try:
-        json_file_path = 'json-template_jacksonville-movers.json'
-        template_file_path = 'app/l/jacksonville-movers/page.tsx'
-
-        print("Loading data...")
-        json_data = load_json_data(json_file_path)
-        template_content = load_template(template_file_path)
-        print("Data and template loaded successfully.")
-
-        match = re.search(r"export default function (\w+)\(\)", template_content)
-        if not match:
-            print("Error: Could not find the component name in the template file.")
-            return
-        original_component_name = match.group(1)
-        original_city = "Jacksonville"
-        print(f"Original component name detected: {original_component_name}")
-
-        page_counter = 0
-        for location_data in json_data['serviceArea']['locations']:
-            location_names = [location_data['name']] + location_data.get('aliases', [])
-            
-            for name in location_names:
-                for keyword_template in json_data['keywordTemplates']:
-                    primary_keyword = keyword_template.replace('{location}', name)
-                    file_slug = slugify(primary_keyword)
-                    component_name = to_pascal_case(primary_keyword)
-
-                    output_dir = Path(f"app/l/{file_slug}")
-                    output_dir.mkdir(parents=True, exist_ok=True)
-                    output_file_path = output_dir / "page.tsx"
-
-                    new_page_content = replace_content(
-                        template_content,
-                        original_component_name,
-                        component_name,
-                        original_city,
-                        name,
-                        primary_keyword
-                    )
-
-                    with open(output_file_path, 'w', encoding='utf-8') as f:
-                        f.write(new_page_content)
+        with open('service_area_data.json', 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        print("Error: service_area_data.json not found in current directory")
+        return
+    except json.JSONDecodeError as e:
+        print(f"Error: Invalid JSON in service_area_data.json: {e}")
+        return
+    
+    # Load the master template
+    template_path = Path("app/l/jacksonville-movers/page.tsx")
+    try:
+        with open(template_path, 'r', encoding='utf-8') as f:
+            master_template = f.read()
+    except FileNotFoundError:
+        print(f"Error: Master template not found at {template_path}")
+        return
+    
+    # Get the base output directory
+    base_output_dir = Path("app/l")
+    base_output_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Track generated pages
+    generated_pages = []
+    
+    # Iterate through each location
+    for location in data.get('serviceArea', {}).get('locations', []):
+        primary_name = location.get('name', '')
+        aliases = location.get('aliases', [])
+        
+        # Create a list of all names to iterate over
+        all_names = [primary_name] + aliases
+        
+        # Iterate through each keyword template
+        for keyword_template in data.get('keywordTemplates', []):
+            for name in all_names:
+                if not name.strip():
+                    continue
+                
+                # Generate the primary keyword
+                primary_keyword = keyword_template.replace('{location}', name)
+                
+                # Create the file slug (URL-friendly)
+                file_slug = primary_keyword.lower().replace(' ', '-').replace("'", '').replace('"', '')
+                
+                # Create the component name (PascalCase) - handle special characters
+                # Remove periods and other special chars, then convert to PascalCase
+                clean_name = re.sub(r'[^\w\s]', '', name)  # Remove special characters except spaces
+                component_name = ''.join(word.capitalize() for word in clean_name.split())
+                
+                # Create the output directory
+                output_dir = base_output_dir / file_slug
+                output_dir.mkdir(parents=True, exist_ok=True)
+                
+                # Create the output file path
+                output_file = output_dir / "page.tsx"
+                
+                # Create a fresh copy of the template
+                page_content = master_template
+                
+                # Add "use client" directive at the top for client-side interactivity
+                if not page_content.startswith('"use client"'):
+                    page_content = '"use client"\n\n' + page_content
+                
+                # Convert the new city name to camelCase for JavaScript variables
+                new_city_camel_case = to_camel_case(name)
+                
+                # Replace content
+                page_content = replace_content(page_content, "Jacksonville", name, new_city_camel_case, component_name)
+                
+                # Write the file
+                try:
+                    with open(output_file, 'w', encoding='utf-8') as f:
+                        f.write(page_content)
                     
-                    page_counter += 1
-                    print(f"({page_counter}) Generated: {output_file_path}")
-
-        print(f"\n✅ Successfully generated {page_counter} pages.")
-
-    except FileNotFoundError as e:
-        print(f"Error: File not found. Please check your paths.")
-        print(f"Details: {e}")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+                    generated_pages.append(str(output_file))
+                    print(f"Generated: {output_file}")
+                    
+                except Exception as e:
+                    print(f"Error writing {output_file}: {e}")
+    
+    print(f"\nGeneration complete! Generated {len(generated_pages)} pages.")
+    print("All pages are now ready for the Next.js build process.")
 
 if __name__ == "__main__":
-    main()
-```
+    generate_pages()
