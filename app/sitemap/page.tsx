@@ -77,7 +77,7 @@ export default function SitemapPage() {
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Link href="/" className="block">
+              <Link href="/" className="block" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" className="w-full justify-start">
                   <Home className="mr-2 h-4 w-4" />
                   Home Page
@@ -97,7 +97,7 @@ export default function SitemapPage() {
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Link href="/l/jacksonville-movers" className="block">
+              <Link href="/l/jacksonville-movers" className="block" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" className="w-full justify-start">
                   <MapPin className="mr-2 h-4 w-4" />
                   Jacksonville Local Movers
@@ -117,13 +117,13 @@ export default function SitemapPage() {
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Link href="/ld/jacksonville-interstate-movers" className="block">
+              <Link href="/ld/jacksonville-interstate-movers" className="block" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" className="w-full justify-start">
                   <Truck className="mr-2 h-4 w-4" />
                   Interstate Moving
                 </Button>
               </Link>
-              <Link href="/ld/jacksonville-cross-country-movers" className="block">
+              <Link href="/ld/jacksonville-cross-country-movers" className="block" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" className="w-full justify-start">
                   <Globe className="mr-2 h-4 w-4" />
                   Cross-Country Moving
@@ -144,7 +144,7 @@ export default function SitemapPage() {
           <CardContent>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {floridaCities.map((city) => (
-                <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block">
+                <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full justify-start">
                     <MapPin className="mr-2 h-4 w-4" />
                     Jacksonville to {city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, ' ')}
@@ -166,7 +166,7 @@ export default function SitemapPage() {
           <CardContent>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {georgiaCities.map((city) => (
-                <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block">
+                <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full justify-start">
                     <MapPin className="mr-2 h-4 w-4" />
                     Jacksonville to {city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, ' ')}
@@ -188,7 +188,7 @@ export default function SitemapPage() {
           <CardContent>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {alabamaCities.map((city) => (
-                <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block">
+                <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full justify-start">
                     <MapPin className="mr-2 h-4 w-4" />
                     Jacksonville to {city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, ' ')}
@@ -210,7 +210,7 @@ export default function SitemapPage() {
           <CardContent>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {northCarolinaCities.map((city) => (
-                <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block">
+                <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full justify-start">
                     <MapPin className="mr-2 h-4 w-4" />
                     Jacksonville to {city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, ' ')}
@@ -232,7 +232,7 @@ export default function SitemapPage() {
           <CardContent>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {southCarolinaCities.map((city) => (
-                <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block">
+                <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full justify-start">
                     <MapPin className="mr-2 h-4 w-4" />
                     Jacksonville to {city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, ' ')}

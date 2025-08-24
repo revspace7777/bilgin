@@ -2099,7 +2099,7 @@ export default function TEMoversLanding() {
                   <a href="#" className="hover:text-white transition-colors">
                     Terms of Service
                   </a>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="/sitemap" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                     Sitemap
                   </a>
                 </div>
