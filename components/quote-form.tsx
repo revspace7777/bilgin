@@ -1,8 +1,8 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useEffect } from "react"
+import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -31,56 +31,11 @@ interface FormData {
 }
 
 const states = [
-  "AL",
-  "AK",
-  "AZ",
-  "AR",
-  "CA",
-  "CO",
-  "CT",
-  "DE",
-  "FL",
-  "GA",
-  "HI",
-  "ID",
-  "IL",
-  "IN",
-  "IA",
-  "KS",
-  "KY",
-  "LA",
-  "ME",
-  "MD",
-  "MA",
-  "MI",
-  "MN",
-  "MS",
-  "MO",
-  "MT",
-  "NE",
-  "NV",
-  "NH",
-  "NJ",
-  "NM",
-  "NY",
-  "NC",
-  "ND",
-  "OH",
-  "OK",
-  "OR",
-  "PA",
-  "RI",
-  "SC",
-  "SD",
-  "TN",
-  "TX",
-  "UT",
-  "VT",
-  "VA",
-  "WA",
-  "WV",
-  "WI",
-  "WY",
+  "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
+  "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
+  "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
+  "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
+  "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY",
 ]
 
 const bedroomOptions = ["Studio", "1", "2", "3", "4", "5", "6+"]
@@ -89,6 +44,7 @@ const moveTypes = ["Residential", "Commercial", "Long Distance", "Local", "Stora
 
 export default function QuoteForm() {
   const { toast } = useToast()
+  const router = useRouter()
   const [customId, setCustomId] = useState("")
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -114,7 +70,6 @@ export default function QuoteForm() {
     setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
-  // Generate random 4-character alphanumeric ID
   const generateCustomId = () => {
     const chars = 'abcdefghijklmnopqrstuvwxyz0123456789'
     let result = ''
@@ -124,15 +79,14 @@ export default function QuoteForm() {
     return result
   }
 
-  // Generate ID on component mount
   useEffect(() => {
     setCustomId(generateCustomId())
   }, [])
 
   const handleSubmit = (e: React.FormEvent) => {
-    // Basic validation
+    e.preventDefault()
+
     if (!formData.name || !formData.email || !formData.phone) {
-      e.preventDefault()
       toast({
         title: "Missing Information",
         description: "Please fill in your name, email, and phone number.",
@@ -142,7 +96,6 @@ export default function QuoteForm() {
     }
 
     if (!formData.movingFromCity || !formData.movingToCity) {
-      e.preventDefault()
       toast({
         title: "Missing Location Information",
         description: "Please provide both moving from and moving to cities.",
@@ -151,24 +104,38 @@ export default function QuoteForm() {
       return
     }
 
-    // If validation passes, DON'T prevent default - let Netlify handle it
-    // The form will submit to Netlify and then redirect to /thank-you
+    const allFormData = {
+      ...formData,
+      ...getTrackingDataForSubmission(),
+      subject: `New Moving Quote Request for ${formData.name || 'Customer'} | T&E Moving and Storage LLC | (id:${customId})`,
+    };
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        "form-name": "quote-request",
+        ...allFormData,
+      }).toString(),
+    })
+    .then(() => router.push('/thank-you'))
+    .catch((error) => {
+        toast({
+            title: "Submission Error",
+            description: "There was a problem submitting your form. Please try again.",
+            variant: "destructive",
+        });
+        console.error("Form submission error:", error);
+    });
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true" name="quote-request" action="/thank-you">
-      {/* Hidden input for Netlify */}
+    <form onSubmit={handleSubmit} name="quote-request" className="space-y-6">
+      {/* Hidden input for Netlify, but the primary static form should be in layout.tsx or a separate HTML file */}
       <input type="hidden" name="form-name" value="quote-request" />
       
-      {/* Add all tracking inputs */}
+      {/* Add all tracking inputs for client-side logic */}
       {getTrackingInputs()}
-      
-      {/* Custom subject line with generated ID */}
-      <input 
-        type="hidden" 
-        name="subject" 
-        value={`New Moving Quote Request for ${formData.name || 'Customer'} | T&E Moving and Storage LLC | (id:${customId})`}
-      />
       
       {/* Basic Information Row */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -218,14 +185,11 @@ export default function QuoteForm() {
             ))}
           </SelectContent>
         </Select>
-        {/* Hidden input for typeOfMove to ensure Netlify captures it */}
-        <input type="hidden" name="typeOfMove" value={formData.typeOfMove} />
       </div>
 
       {/* FROM Section */}
       <div className="space-y-4">
         <div className="text-gray-400 text-sm font-semibold tracking-wider uppercase">FROM</div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Input
             name="movingFromStreet"
@@ -245,7 +209,6 @@ export default function QuoteForm() {
             required
           />
         </div>
-
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <Select
             name="movingFromState"
@@ -263,9 +226,6 @@ export default function QuoteForm() {
               ))}
             </SelectContent>
           </Select>
-          {/* Hidden input for movingFromState */}
-          <input type="hidden" name="movingFromState" value={formData.movingFromState} />
-
           <Input
             name="movingFromZip"
             type="text"
@@ -275,7 +235,6 @@ export default function QuoteForm() {
             className="bg-slate-700 border-slate-600 text-white placeholder:text-gray-400 focus:border-red-500"
             maxLength={5}
           />
-
           <Select
             name="movingFromBedrooms"
             value={formData.movingFromBedrooms}
@@ -292,9 +251,6 @@ export default function QuoteForm() {
               ))}
             </SelectContent>
           </Select>
-          {/* Hidden input for movingFromBedrooms */}
-          <input type="hidden" name="movingFromBedrooms" value={formData.movingFromBedrooms} />
-
           <Select 
             name="movingFromFloor"
             value={formData.movingFromFloor}
@@ -311,21 +267,18 @@ export default function QuoteForm() {
               ))}
             </SelectContent>
           </Select>
-          {/* Hidden input for movingFromFloor */}
-          <input type="hidden" name="movingFromFloor" value={formData.movingFromFloor} />
         </div>
       </div>
 
       {/* TO Section */}
       <div className="space-y-4">
         <div className="text-gray-400 text-sm font-semibold tracking-wider uppercase">TO</div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Input
             name="movingToStreet"
             type="text"
             placeholder="Moving To Street"
-            value={formData.movingToStreet}
+            value={formData.movingFromStreet}
             onChange={(e) => handleInputChange("movingToStreet", e.target.value)}
             className="bg-slate-700 border-slate-600 text-white placeholder:text-gray-400 focus:border-red-500"
           />
@@ -339,7 +292,6 @@ export default function QuoteForm() {
             required
           />
         </div>
-
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <Select
             name="movingToState"
@@ -357,9 +309,6 @@ export default function QuoteForm() {
               ))}
             </SelectContent>
           </Select>
-          {/* Hidden input for movingToState */}
-          <input type="hidden" name="movingToState" value={formData.movingToState} />
-
           <Input
             name="movingToZip"
             type="text"
@@ -369,28 +318,24 @@ export default function QuoteForm() {
             className="bg-slate-700 border-slate-600 text-white placeholder:text-gray-400 focus:border-red-500"
             maxLength={5}
           />
-
           <Select
             name="movingToBedrooms"
             value={formData.movingToBedrooms}
             onValueChange={(value) => handleInputChange("movingToBedrooms", value)}
           >
             <SelectTrigger className="bg-slate-700 border-slate-600 text-white focus:border-red-500">
-              <SelectValue placeholder="Bedrooms" />
+              <SelectValue placeholder="Floor" />
             </SelectTrigger>
             <SelectContent className="bg-slate-700 border-slate-600">
-              {bedroomOptions.map((bedroom) => (
-                <SelectItem key={bedroom} value={bedroom} className="text-white hover:bg-slate-600">
-                  {bedroom}
+              {bedroomOptions.map((floor) => (
+                <SelectItem key={floor} value={floor} className="text-white hover:bg-slate-600">
+                  {floor}
                 </SelectItem>
               ))}
             </SelectContent>
           </Select>
-          {/* Hidden input for movingToBedrooms */}
-          <input type="hidden" name="movingToBedrooms" value={formData.movingToBedrooms} />
-
           <Select 
-            name="movingToFloor"
+            name="movingToFloor" 
             value={formData.movingToFloor} 
             onValueChange={(value) => handleInputChange("movingToFloor", value)}
           >
@@ -405,8 +350,6 @@ export default function QuoteForm() {
               ))}
             </SelectContent>
           </Select>
-          {/* Hidden input for movingToFloor */}
-          <input type="hidden" name="movingToFloor" value={formData.movingToFloor} />
         </div>
       </div>
 
