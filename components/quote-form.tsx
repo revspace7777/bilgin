@@ -151,8 +151,8 @@ export default function QuoteForm() {
       return
     }
 
-    // If validation passes, let Netlify handle the submission
-    // The action="/thank-you" will redirect after successful submission
+    // If validation passes, DON'T prevent default - let Netlify handle it
+    // The form will submit to Netlify and then redirect to /thank-you
   }
 
   return (
