@@ -7,7 +7,7 @@
  * - Transparent pricing breakdown
  * - How We Calculate Your Quote (4-step process)
  * - Ways to Save Money (5 tips)
- * - Sample Pricing Guide with "Starting at $1,000"
+ * - Simple "Starting at $1,000" pricing card
  * 
  * This section more accurately reflects reality and is simpler to understand.
  * It conveys the brand messaging better than previous versions.
@@ -128,42 +128,18 @@ export const PricingSectionType3 = () => {
                 <CardTitle className="text-2xl">Starting at $1,000</CardTitle>
                 <p className="text-blue-100">Get your exact quote in 60 seconds!</p>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="space-y-4">
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-semibold">1-Bedroom Apartment</span>
-                      <span className="text-xl font-bold">$2,500-$4,000</span>
-                    </div>
-                    <p className="text-sm text-blue-100">500-1000 miles • Basic packing included</p>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-semibold">3-Bedroom House</span>
-                      <span className="text-xl font-bold">$4,500-$7,500</span>
-                    </div>
-                    <p className="text-sm text-blue-100">500-1000 miles • Full-service packing</p>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-semibold">5-Bedroom House</span>
-                      <span className="text-xl font-bold">$7,500-$12,000</span>
-                    </div>
-                    <p className="text-sm text-blue-100">Cross-country • Premium services</p>
-                  </div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
+              <CardContent>
+                <div className="bg-white/10 rounded-lg p-4 mb-6">
                   <p className="text-sm text-center text-blue-100">
                     *Prices vary based on specific requirements. Contact us for a personalized quote.
                   </p>
                 </div>
+                <Button size="lg" className="w-full bg-red-500 hover:bg-red-600 text-white py-4 text-lg quote-trigger">
+                  Get My Exact Quote Now
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
               </CardContent>
             </Card>
-
-            <Button size="lg" className="w-full bg-red-500 hover:bg-red-600 text-white py-4 text-lg quote-trigger">
-              Get My Exact Quote Now
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
           </div>
         </div>
       </div>
