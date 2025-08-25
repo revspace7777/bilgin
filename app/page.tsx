@@ -550,108 +550,8 @@ export default function TEMoversLanding() {
         </div>
       </section>
 
-      {/* Pricing Transparency */}
-      <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Transparent, Fair Pricing</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              No hidden fees, no surprise costs. Get a detailed estimate that covers everything, with our price-lock guarantee.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-8">What's Included in Every Quote</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <CheckCircle className="h-5 w-5 text-green-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Professional Crew & Equipment</h4>
-                    <p className="text-gray-600">Trained movers, moving truck, dollies, straps, and blankets included.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <CheckCircle className="h-5 w-5 text-green-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Basic Protection Coverage</h4>
-                    <p className="text-gray-600">Standard liability coverage included at no extra cost.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <CheckCircle className="h-5 w-5 text-green-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Loading & Unloading</h4>
-                    <p className="text-gray-600">Complete loading, transport, and unloading services.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <CheckCircle className="h-5 w-5 text-green-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Travel Time & Mileage</h4>
-                    <p className="text-gray-600">All travel costs between locations included in your quote.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8">
-                <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 quote-trigger">
-                  Get Your Detailed Quote
-                  <Calculator className="ml-2 h-5 w-5" />
-                </Button>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Pricing Factors</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                  <span className="text-gray-600">Distance & Route</span>
-                  <span className="font-semibold text-gray-900">Variable</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                  <span className="text-gray-600">Size of Home</span>
-                  <span className="font-semibold text-gray-900">1-5+ Bedrooms</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                  <span className="text-gray-600">Packing Services</span>
-                  <span className="font-semibold text-gray-900">Optional Add-on</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                  <span className="text-gray-600">Storage Needed</span>
-                  <span className="font-semibold text-gray-900">If Required</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                  <span className="text-gray-600">Special Items</span>
-                  <span className="font-semibold text-gray-900">Quoted Separately</span>
-                </div>
-                <div className="flex justify-between items-center py-3">
-                  <span className="text-gray-600">Timing</span>
-                  <span className="font-semibold text-gray-900">Peak vs Off-Peak</span>
-                </div>
-              </div>
-
-              <div className="mt-8 bg-red-50 rounded-lg p-4">
-                <div className="flex items-center space-x-2 mb-2">
-                  <PiggyBank className="h-5 w-5 text-red-500" />
-                  <span className="font-semibold text-red-700">Price Lock Guarantee</span>
-                </div>
-                <p className="text-sm text-red-600">
-                  Your written quote is your final price. No surprises, no hidden fees, no last-minute changes.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Pricing Section */}
+      <PricingSectionType3 />
 
       {/* Moving Process Timeline */}
       <section className="py-20 bg-white">
@@ -1047,9 +947,6 @@ export default function TEMoversLanding() {
             </div>
 
             {/* Pricing & Payment */}
-            <PricingSectionType3 />
-
-            {/* Insurance & Protection */}
             <div className="bg-gray-100 rounded-2xl p-6 mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Insurance & Protection</h3>
               <Accordion type="single" collapsible className="space-y-6">
