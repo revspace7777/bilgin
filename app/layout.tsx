@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
+// Add this line - initialize the font
+const inter = Inter({ subsets: ['latin'] })
+
 export const metadata: Metadata = {
   title: 'T&E Movers - Long Distance Moving Experts | Jacksonville, FL',
   description: 'T&E Movers is your trusted long-distance moving company serving Jacksonville, FL and nationwide. 25+ years experience, 10,000+ successful moves, 99.8% satisfaction rate. Get your free quote today!',
@@ -16,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={Inter.className}>
+      <body className={inter.className}>
         {/* Hidden form for Netlify build detection - applies to ALL pages */}
         <form
           name="quote-request"
