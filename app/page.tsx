@@ -550,151 +550,103 @@ export default function TEMoversLanding() {
       </section>
 
       {/* Pricing Transparency */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
+      <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Transparent Pricing, No Surprises</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Transparent, Fair Pricing</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              We believe in honest, upfront pricing. Here's exactly how we calculate your moving costs and what factors
-              influence your final price.
+              No hidden fees, no surprise costs. Get a detailed estimate that covers everything, with our price-lock guarantee.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="space-y-8">
-              <Card className="border-0 shadow-xl">
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-3">
-                    <Calculator className="h-6 w-6 text-blue-500" />
-                    <span>How We Calculate Your Quote</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        1
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Distance & Route</h4>
-                        <p className="text-gray-600 text-sm">
-                          Mileage between pickup and delivery locations, including any special routing requirements.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        2
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Weight & Volume</h4>
-                        <p className="text-gray-600 text-sm">
-                          Total weight of your belongings and space required in our truck.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        3
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Services Requested</h4>
-                        <p className="text-gray-600 text-sm">
-                          Packing, unpacking, storage, special handling, and additional services.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        4
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Timing & Flexibility</h4>
-                        <p className="text-gray-600 text-sm">
-                          Peak season, specific dates, and delivery window preferences.
-                        </p>
-                      </div>
-                    </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-8">What's Included in Every Quote</h3>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="h-5 w-5 text-green-500" />
                   </div>
-                </CardContent>
-              </Card>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Professional Crew & Equipment</h4>
+                    <p className="text-gray-600">Trained movers, moving truck, dollies, straps, and blankets included.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="h-5 w-5 text-green-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Basic Protection Coverage</h4>
+                    <p className="text-gray-600">Standard liability coverage included at no extra cost.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="h-5 w-5 text-green-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Loading & Unloading</h4>
+                    <p className="text-gray-600">Complete loading, transport, and unloading services.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="h-5 w-5 text-green-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Travel Time & Mileage</h4>
+                    <p className="text-gray-600">All travel costs between locations included in your quote.</p>
+                  </div>
+                </div>
+              </div>
 
-              <Card className="border-0 shadow-xl">
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-3">
-                    <PiggyBank className="h-6 w-6 text-green-500" />
-                    <span>Ways to Save Money</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="h-5 w-5 text-green-500" />
-                      <span className="text-gray-700">Book during off-peak seasons (fall/winter)</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="h-5 w-5 text-green-500" />
-                      <span className="text-gray-700">Choose flexible delivery windows</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="h-5 w-5 text-green-500" />
-                      <span className="text-gray-700">Declutter before moving</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="h-5 w-5 text-green-500" />
-                      <span className="text-gray-700">Pack non-fragile items yourself</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="h-5 w-5 text-green-500" />
-                      <span className="text-gray-700">Book 6+ weeks in advance</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="mt-8">
+                <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 quote-trigger">
+                  Get Your Detailed Quote
+                  <Calculator className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
             </div>
 
-            <div className="space-y-8">
-              <Card className="border-0 shadow-xl bg-gradient-to-br from-red-500 to-blue-600 text-white">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Sample Pricing Guide</CardTitle>
-                  <p className="text-blue-100">Typical costs for common long-distance moves</p>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="space-y-4">
-                    <div className="bg-white/10 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold">1-Bedroom Apartment</span>
-                        <span className="text-xl font-bold">$2,500-$4,000</span>
-                      </div>
-                      <p className="text-sm text-blue-100">500-1000 miles • Basic packing included</p>
-                    </div>
-                    <div className="bg-white/10 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold">3-Bedroom House</span>
-                        <span className="text-xl font-bold">$4,500-$7,500</span>
-                      </div>
-                      <p className="text-sm text-blue-100">500-1000 miles • Full-service packing</p>
-                    </div>
-                    <div className="bg-white/10 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold">5-Bedroom House</span>
-                        <span className="text-xl font-bold">$7,500-$12,000</span>
-                      </div>
-                      <p className="text-sm text-blue-100">Cross-country • Premium services</p>
-                    </div>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <p className="text-sm text-center text-blue-100">
-                      *Prices vary based on specific requirements. Get your exact quote in 60 seconds!
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="bg-white rounded-2xl p-8 shadow-xl">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Pricing Factors</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  <span className="text-gray-600">Distance & Route</span>
+                  <span className="font-semibold text-gray-900">Variable</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  <span className="text-gray-600">Size of Home</span>
+                  <span className="font-semibold text-gray-900">1-5+ Bedrooms</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  <span className="text-gray-600">Packing Services</span>
+                  <span className="font-semibold text-gray-900">Optional Add-on</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  <span className="text-gray-600">Storage Needed</span>
+                  <span className="font-semibold text-gray-900">If Required</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  <span className="text-gray-600">Special Items</span>
+                  <span className="font-semibold text-gray-900">Quoted Separately</span>
+                </div>
+                <div className="flex justify-between items-center py-3">
+                  <span className="text-gray-600">Timing</span>
+                  <span className="font-semibold text-gray-900">Peak vs Off-Peak</span>
+                </div>
+              </div>
 
-              <Button size="lg" className="w-full bg-red-500 hover:bg-red-600 text-white py-4 text-lg quote-trigger">
-                Get My Exact Quote Now
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <div className="mt-8 bg-red-50 rounded-lg p-4">
+                <div className="flex items-center space-x-2 mb-2">
+                  <PiggyBank className="h-5 w-5 text-red-500" />
+                  <span className="font-semibold text-red-700">Price Lock Guarantee</span>
+                </div>
+                <p className="text-sm text-red-600">
+                  Your written quote is your final price. No surprises, no hidden fees, no last-minute changes.
+                </p>
+              </div>
             </div>
           </div>
         </div>
