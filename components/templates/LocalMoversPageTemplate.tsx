@@ -42,7 +42,7 @@ export default function LocalMoversPageTemplate({ data }: Props) {
           <div className="hidden md:flex items-center space-x-6">
             <div className="flex items-center space-x-2 text-sm">
               <Phone className="h-4 w-4 text-red-500" />
-              <span className="font-semibold">(904) 997-1884</span>
+              <a href="tel:9049971884" className="font-semibold hover:text-red-600">(904) 997-1884</a>
             </div>
             <Button className="bg-red-500 hover:bg-red-600 quote-trigger">Get Free Quote</Button>
           </div>
@@ -65,7 +65,7 @@ export default function LocalMoversPageTemplate({ data }: Props) {
                   Get Your Free Quote Now <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg bg-transparent">
-                  <Phone className="mr-2 h-5 w-5" /> Call (904) 997-1884
+                  <Phone className="mr-2 h-5 w-5" /> <a href="tel:9049971884" className="text-white hover:text-blue-900">Call (904) 997-1884</a>
                 </Button>
               </div>
               <div className="grid grid-cols-3 gap-6 pt-8">
@@ -100,7 +100,7 @@ export default function LocalMoversPageTemplate({ data }: Props) {
       </section>
       
       {/* Trust Indicators */}
-      <section className="py-12 bg-white border-b">
+      <section className="py-12 bg-white border-b" data-accolades-section>
           <div className="container mx-auto px-4">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center opacity-70">
                   {(() => {
@@ -402,7 +402,7 @@ export default function LocalMoversPageTemplate({ data }: Props) {
                     </Button>
                     <div className="flex items-center space-x-3 text-xl">
                         <Phone className="h-6 w-6" />
-                        <span>Or call <strong>(904) 997-1884</strong></span>
+                        <span>Or call <a href="tel:9049971884" className="text-white hover:text-red-300"><strong>(904) 997-1884</strong></a></span>
                     </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
@@ -475,7 +475,7 @@ export default function LocalMoversPageTemplate({ data }: Props) {
                         <div className="flex items-center space-x-3">
                             <Phone className="h-5 w-5 text-red-500" />
                             <div>
-                                <div className="font-semibold text-white">(904) 997-1884</div>
+                                <div className="font-semibold text-white"><a href="tel:9049971884" className="text-white hover:text-red-300">(904) 997-1884</a></div>
                                 <div className="text-sm">Free quotes & same-day service</div>
                             </div>
                         </div>
