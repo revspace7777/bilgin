@@ -1,0 +1,154 @@
+{
+    "meta": {
+      "title": "Nocatee's Premier Local Movers | T&E Movers",
+      "description": "Your trusted local movers for Nocatee, FL. We offer affordable, reliable moving services for homes and families in the Nocatee community. Get your free quote today!"
+    },
+    "cityDetails": {
+      "cityName": "Nocatee",
+      "county": "St. Johns County",
+      "colloquialName": "Nocatee",
+      "zipCodes": ["32081"],
+      "neighborhoods": ["Del Webb Nocatee", "Twenty Mile Village", "The Crossing at Twenty Mile", "The Vista at Twenty Mile", "Coastal Oaks at Nocatee", "Artisan Lakes", "The Palms", "The Enclave at Nocatee"]
+    },
+    "header": {
+      "subtitle": "Nocatee's Local Moving Experts"
+    },
+    "hero": {
+      "badgeText": "🏆 #1 Rated Nocatee Moving Company",
+      "headline": "Nocatee's <span class=\"text-red-400\">Premier Local Movers</span> Since 1998",
+      "subheadline": "Your trusted neighbors for seamless local moves throughout the Nocatee community and surrounding areas. We've successfully completed over 15,000 local moves with a 99.8% customer satisfaction rate.",
+      "image": "/images/truck-fleet.png",
+      "imageBannerText": "Based in Nocatee",
+      "stat1": { "value": "25+", "label": "Years in the Area" },
+      "stat2": { "value": "15K+", "label": "Local Moves" },
+      "stat3": { "value": "99.8%", "label": "Satisfaction Rate" }
+    },
+    "trustIndicators": [
+      { "icon": "Award", "label": "St. Johns A+ Rated" },
+      { "icon": "Shield", "label": "Licensed & Insured" },
+      { "icon": "Star", "label": "5-Star Reviews" },
+      { "icon": "Users", "label": "Family Owned" },
+      { "icon": "MapPinIcon", "label": "Local Experts" },
+      { "icon": "Clock", "label": "On-Time Service" }
+    ],
+    "pricing": {
+      "isEnabled": true,
+      "heroPrice": "$397",
+      "heroSubtext": "Perfect for apartments, townhomes, and local relocations within Nocatee. No hidden fees, no fuel charges, and a price-lock guarantee!",
+      "tiers": [
+          { "title": "Apartment/Townhome", "priceRange": "$397", "duration": "2-4 hours", "description": "Ideal for Nocatee apartments and townhomes" },
+          { "title": "2-3 Bedroom Home", "priceRange": "$597-$897", "duration": "4-6 hours", "description": "Includes furniture wrapping and setup" },
+          { "title": "4+ Bedroom Home", "priceRange": "$997+", "duration": "Full-day service", "description": "Perfect for larger Nocatee family homes" }
+      ],
+      "features": ["No fuel charges", "Price-lock guarantee", "Professional wrapping included", "Furniture setup included"]
+    },
+    "whyChooseUs": {
+      "headline": "Why Nocatee Families Choose T&E Movers",
+      "subheadline": "As Nocatee's go-to movers, we are dedicated to providing a seamless moving experience that fits the vibrant lifestyle of our community.",
+      "cards": [
+        { "icon": "MapPinIcon", "title": "Nocatee Community Experts", "description": "We are experts in navigating all of Nocatee's neighborhoods, from Del Webb to Twenty Mile. We know the community rules and access points to ensure a smooth move." },
+        { "icon": "DollarSign", "title": "No Hidden Fees Promise", "description": "The price we quote is the price you pay. No surprises. Our transparent pricing includes everything for a successful move within Nocatee." },
+        { "icon": "Shield", "title": "Careful & Efficient Service", "description": "We treat your home and belongings with the utmost respect, working carefully and efficiently to get you settled into your new Nocatee home as quickly as possible." }
+      ],
+      "promise": {
+        "headline": "The T&E Nocatee Promise",
+        "image": "/images/facility-overview.png",
+        "points": [
+          { "title": "Price-Lock Guarantee", "description": "Your quote is your final price. No surprise charges, ever." },
+          { "title": "On-Time Arrival Promise", "description": "We respect your time. We arrive when scheduled, or your move is 25% off." },
+          { "title": "Zero Damage Guarantee", "description": "We guarantee zero damage to your belongings or we fix/replace at no cost to you." }
+        ]
+      }
+    },
+    "hyperlocalSection": {
+      "headline": "Serving All of Nocatee and Beyond",
+      "subheadline": "We are Nocatee's local moving specialists, also serving Ponte Vedra, St. Johns, and the greater St. Johns County area.",
+      "areaList": ["Nocatee", "Ponte Vedra", "St. Johns", "Jacksonville", "St. Augustine", "Vilano Beach", "Palm Valley", "Sawgrass", "Marsh Landing", "World Golf Village"],
+      "buttonText": "Get My Free Quote"
+    },
+    "services": {
+      "headline": "Complete Nocatee Moving Solutions",
+      "subheadline": "Whether you're moving into your first Nocatee home or relocating within the community, we offer a full range of services to meet your needs.",
+      "tabs": [
+        {
+          "value": "residential",
+          "triggerTitle": "Residential",
+          "cards": [
+            { "icon": "Home", "title": "Single-Family Home Moves", "description": "Expert moving services for all home sizes within Nocatee's diverse neighborhoods.", "details": ["Professional packing", "Furniture assembly", "Appliance services", "HOA compliance"] },
+            { "icon": "Building", "title": "Townhome & Villa Moves", "description": "Efficient and careful moving for Nocatee's townhome and villa communities.", "details": ["Stair and layout expertise", "Tight space navigation", "Community rule adherence", "Efficient service"] },
+            { "icon": "Heart", "title": "55+ Community Moves", "description": "Compassionate moving services for residents in Del Webb and other 55+ Nocatee neighborhoods.", "details": ["Patient, caring approach", "Downsizing assistance", "Unpacking and setup help", "Family coordination"] }
+          ]
+        },
+        { "value": "commercial", "triggerTitle": "Commercial", "cards": [ { "icon": "Building", "title": "Office Relocations", "description": "Minimize downtime with our efficient office moving services.", "details": ["After-hours moving available", "IT equipment specialists", "Furniture disassembly/assembly", "Minimal business disruption"] }, { "icon": "Package", "title": "Retail & Restaurant", "description": "Specialized moving for retail stores and restaurants.", "details": ["Equipment moving", "Inventory handling", "Fixture installation", "Quick turnaround times"] }, { "icon": "FileText", "title": "Medical Offices", "description": "Careful handling of sensitive medical equipment and records.", "details": ["HIPAA compliance", "Medical equipment expertise", "Secure document handling", "Minimal patient disruption"] } ] },
+        { "value": "specialty", "triggerTitle": "Specialty", "cards": [ { "icon": "Package", "title": "Piano Moving", "description": "Expert piano moving with specialized equipment and techniques.", "details": ["All piano types", "Specialized equipment", "Stair navigation", "Climate considerations"] }, { "icon": "Shield", "title": "Gun Safe Moving", "description": "Safe and secure moving of gun safes and heavy security equipment.", "details": ["Heavy lifting equipment", "Secure handling", "Stair navigation", "Placement assistance"] }, { "icon": "Boxes", "title": "Antiques & Art", "description": "White-glove service for valuable antiques and artwork.", "details": ["Custom packing", "Climate control", "Insurance coordination", "Museum-quality care"] } ] },
+        { "value": "additional", "triggerTitle": "Additional", "cards": [ { "icon": "Package", "title": "Packing Services", "description": "Professional packing and unpacking services.", "details": ["Full-service packing", "Partial packing", "Unpacking services", "Packing supplies"] }, { "icon": "Lock", "title": "Storage Solutions", "description": "Secure storage for any timeline needs.", "details": ["Climate-controlled facility", "Short & long-term options", "Vehicle storage", "24/7 security"] }, { "icon": "Wrench", "title": "Junk Removal", "description": "Decluttering and junk removal services.", "details": ["Furniture removal", "Appliance disposal", "Eco-friendly disposal", "Same-day service"] } ] }
+      ]
+    },
+    "testimonials": {
+      "headline": "Real Nocatee Moving Stories",
+      "subheadline": "Don't just take our word for it. Here's what your neighbors in Nocatee are saying about their experience with T&E Movers.",
+      "buttonText": "Be Our Next Success Story",
+      "reviews": [
+        { "customerName": "The Johnson Family", "initials": "JF", "moveRoute": "Twenty Mile Village", "moveType": "Local Nocatee Move", "testimonialText": "T&E Movers was fantastic for our move within Twenty Mile. The crew was professional, friendly, and worked incredibly hard. They made a potentially stressful day completely seamless. Highly recommend them for any Nocatee move!", "rating": 5, "date": "1 month ago" },
+        { "customerName": "Robert and Susan B.", "initials": "RB", "moveRoute": "Ponte Vedra → Del Webb Nocatee", "moveType": "Retirement Move", "testimonialText": "We were downsizing and moving to Del Webb, and the T&E team was so patient and respectful. They handled our belongings with great care and helped us get settled in. A wonderful, stress-free experience.", "rating": 5, "date": "2 months ago" },
+        { "customerName": "Emily W.", "initials": "EW", "moveRoute": "Coastal Oaks at Nocatee", "moveType": "New Home Purchase", "testimonialText": "I used T&E for my move to Coastal Oaks and they were amazing. The quote was accurate, they showed up on time, and the movers were efficient and careful. They made moving into my new home a joy. Thank you!", "rating": 5, "date": "3 months ago" }
+      ]
+    },
+    "faq": {
+      "headline": "Nocatee Moving Questions, Answered",
+      "subheadline": "As Nocatee's preferred local movers, we have the answers to all your questions about moving within our unique community.",
+      "categories": [
+        {
+          "title": "Pricing & Scheduling",
+          "items": [
+            { "question": "How much does a local move in Nocatee cost?", "answer": "Our local moves start at just $397 for townhomes and smaller homes. The final cost depends on the size of your home and any additional services. We provide transparent, upfront quotes with no hidden fees." },
+            { "question": "Are you familiar with the rules for moving in Nocatee communities?", "answer": "Yes, we are experts in Nocatee moves and are familiar with the various community guidelines. We ensure a smooth process that complies with all local rules and regulations." },
+            { "question": "How far in advance should I book my Nocatee move?", "answer": "We recommend booking 3-4 weeks in advance. Nocatee is a very active community, and our schedule fills up quickly, especially on weekends and at the end of the month." }
+          ]
+        },
+        {
+          "title": "Service & Logistics",
+          "items": [
+            { "question": "Do you serve all neighborhoods within Nocatee?", "answer": "Yes, we proudly serve all of Nocatee, including Twenty Mile, Del Webb, Coastal Oaks, and all other neighborhoods. We are your go-to Nocatee movers." },
+            { "question": "Do you offer packing and unpacking services?", "answer": "Yes, we offer full and partial packing services to make your Nocatee move even easier. Our professional packers will ensure your belongings are safe and secure for the move." },
+            { "question": "Can you handle large family homes?", "answer": "Absolutely. Our teams are experienced and equipped to handle large family homes in Nocatee, ensuring an efficient and organized move from start to finish." }
+          ]
+        }
+      ]
+    },
+    "movingTips": {
+      "headline": "Top Tips for a Smooth Nocatee Move",
+      "subheadline": "We're Nocatee's moving experts. Here are our top tips for a seamless relocation within our beautiful community.",
+      "tips": [
+          { "number": "1", "title": "Know Your Community Rules", "description": "Check with your Nocatee neighborhood for any specific moving day rules, such as approved hours or designated parking, and let us know.", "icon": "Calendar" },
+          { "number": "2", "title": "Hire Nocatee Experts", "description": "Choose a moving company that knows Nocatee inside and out. We understand the layouts and access points to save you time and hassle.", "icon": "MapPinIcon" },
+          { "number": "3", "title": "Declutter Before Packing", "description": "Get rid of unwanted items to reduce your load and save money. There are many great donation options serving the Nocatee area.", "icon": "Package" },
+          { "number": "4", "title": "Label for Your New Home", "description": "Label boxes by room and contents. This makes unpacking at your new Nocatee home much faster and helps our crew place items correctly.", "icon": "FileText" },
+          { "number": "5", "title": "Use Quality Materials", "description": "Florida's humidity can weaken cheap boxes. We provide professional packing services and premium materials to protect your belongings.", "icon": "Shield" },
+          { "number": "6", "title": "Protect Your Valuables", "description": "Keep important documents, jewelry, and irreplaceable items with you during the move. Don't pack them in the moving truck.", "icon": "Lock" },
+          { "number": "7", "title": "Schedule Utilities Early", "description": "Arrange for utilities in Nocatee to be transferred or started before moving day. You'll want that AC on and ready!", "icon": "Zap" },
+          { "number": "8", "title": "Pack an Essentials Kit", "description": "Pack a 'first day' box with snacks, toiletries, chargers, and a change of clothes that travels with you, not on the truck.", "icon": "Heart" },
+          { "number": "9", "title": "Communicate With Us", "description": "Let your T&E moving coordinator know about specialty items, access issues, or time restrictions. Clear communication is key!", "icon": "Phone" },
+          { "number": "10", "title": "Relax & Enjoy Nocatee", "description": "You're moving to a fantastic community! Let our team handle the logistics so you can start enjoying the Nocatee lifestyle.", "icon": "ThumbsUp" }
+      ],
+      "cta": {
+          "headline": "Ready for a Stress-Free Nocatee Move?",
+          "subheadline": "Let our experienced team handle everything while you focus on the excitement of your new home. Get your free quote today!",
+          "buttonText": "Get Your Free Quote Now"
+      }
+    },
+    "finalCta": {
+      "headline": "Ready to Move in Nocatee?",
+      "subheadline": "Join thousands of satisfied Nocatee families who chose T&E Movers. Your new home is waiting - let's get you there safely and stress-free.",
+      "buttonText": "Get Your Free Quote",
+      "features": [
+          { "icon": "DollarSign", "title": "Transparent Pricing", "description": "No hidden fees or fuel charges" },
+          { "icon": "Shield", "title": "Zero Damage Guarantee", "description": "We fix or replace anything damaged" },
+          { "icon": "Clock", "title": "On-Time Service", "description": "We respect your schedule" },
+          { "icon": "MapPinIcon", "title": "Nocatee Experts", "description": "25+ years serving St. Johns County" }
+      ]
+    },
+    "footer": {
+        "licenseText": "Licensed and Insured Nocatee Moving Company | FL License #IM123456"
+    }
+  }
