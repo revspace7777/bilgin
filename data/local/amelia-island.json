@@ -1,0 +1,132 @@
+{
+  "meta": {
+      "title": "Amelia Island's Premier Local Movers | T&E Movers",
+      "description": "Your trusted local movers for Amelia Island, FL. We offer affordable, reliable moving services for homes and businesses on the island. Get your free quote today!"
+  },
+  "cityDetails": {
+      "cityName": "Amelia Island",
+      "county": "Nassau County",
+      "colloquialName": "Amelia",
+      "zipCodes": ["32034"],
+      "neighborhoods": ["American Beach", "Summer Beach", "Omni Amelia Island Plantation", "The Ritz-Carlton Area", "Historic Downtown Fernandina", "Main Beach Park", "Fort Clinch State Park Area", "Peters Point Beachfront Park Area"]
+  },
+  "header": {
+      "subtitle": "Amelia Island's Local Moving Experts"
+  },
+  "hero": {
+      "badgeText": "🏆 #1 Rated Amelia Island Moving Company",
+      "headline": "Amelia Island's <span class=\"text-red-400\">Premier Local Movers</span> Since 1998",
+      "subheadline": "Your trusted neighbors for seamless local moves throughout Amelia Island and surrounding areas. We've successfully completed over 15,000 local moves with a 99.8% customer satisfaction rate.",
+      "image": "/images/truck-fleet.png",
+      "imageBannerText": "Based on Amelia Island",
+      "stat1": { "value": "25+", "label": "Years on the Island" },
+      "stat2": { "value": "15K+", "label": "Local Moves" },
+      "stat3": { "value": "99.8%", "label": "Satisfaction Rate" }
+  },
+  "trustIndicators": [
+      { "icon": "Award", "label": "Nassau County A+ Rated" },
+      { "icon": "Shield", "label": "Licensed & Insured" },
+      { "icon": "Star", "label": "5-Star Reviews" },
+      { "icon": "Users", "label": "Family Owned" },
+      { "icon": "MapPinIcon", "label": "Local Experts" },
+      { "icon": "Clock", "label": "On-Time Service" }
+  ],
+  "pricing": {
+      "isEnabled": true,
+      "heroPrice": "$397",
+      "heroSubtext": "Perfect for apartments, homes, and local relocations within 50 miles of Amelia Island. No hidden fees, no fuel charges, and a price-lock guarantee!",
+      "tiers": [
+          { "title": "Condo/Beach House", "priceRange": "$397", "duration": "2-4 hours", "description": "Ideal for beach houses and condos" },
+          { "title": "2-3 Bedroom Home", "priceRange": "$597-$897", "duration": "4-6 hours", "description": "Includes furniture wrapping and setup" },
+          { "title": "4+ Bedroom Home", "priceRange": "$997+", "duration": "Full-day service", "description": "Perfect for larger family homes" }
+      ],
+      "features": ["No fuel charges", "Price-lock guarantee", "Professional wrapping included", "Furniture setup included"]
+  },
+  "whyChooseUs": {
+      "headline": "Why Amelia Island Residents Choose T&E Movers",
+      "subheadline": "We're your Amelia Island neighbors, committed to providing a top-quality moving experience with a focus on careful, reliable service for our island community.",
+      "cards": [
+          { "icon": "MapPinIcon", "title": "Amelia Island Specialists", "description": "From the historic downtown to the south end resorts, we know every part of Amelia Island. Our local expertise ensures a smooth and efficient move." },
+          { "icon": "DollarSign", "title": "No Hidden Fees Promise", "description": "The price we quote is the price you pay. No surprises. Our transparent pricing includes everything for a successful move on Amelia Island." },
+          { "icon": "Shield", "title": "Coastal Home Care", "description": "We take extra precautions to protect your home from sand and salt during the move, ensuring your property is treated with the utmost care." }
+      ],
+      "promise": {
+          "headline": "The T&E Amelia Island Promise",
+          "image": "/images/facility-overview.png",
+          "points": [
+              { "title": "Price-Lock Guarantee", "description": "Your quote is your final price. No surprise charges, ever." },
+              { "title": "On-Time Arrival Promise", "description": "We respect your time. We arrive when scheduled, or your move is 25% off." },
+              { "title": "Zero Damage Guarantee", "description": "We guarantee zero damage to your belongings or we fix/replace at no cost to you." }
+          ]
+      }
+  },
+  "hyperlocalSection": {
+      "headline": "Serving All of Amelia Island & Nassau County",
+      "subheadline": "From Fernandina Beach to Yulee, we provide expert local moving services throughout Amelia Island and the surrounding Nassau County communities.",
+      "areaList": ["Amelia Island", "Fernandina Beach", "Yulee", "American Beach", "Summer Beach", "Omni Plantation", "Callahan", "Hilliard", "Nassauville", "Franklintown"],
+      "buttonText": "Get My Free Quote"
+  },
+  "services": {
+      "headline": "Complete Amelia Island Moving Solutions",
+      "subheadline": "From historic downtown homes to oceanfront condos, we handle every type of local move on Amelia Island with unmatched care and professionalism.",
+      "tabs": [
+          { "value": "residential", "triggerTitle": "Residential", "cards": [ { "icon": "Home", "title": "Beach House & Condo Moves", "description": "Expert moving services for beach houses, condos, and apartments on Amelia Island.", "details": ["Professional packing", "Furniture assembly", "Coastal home protection", "HOA compliance"] }, { "icon": "Building", "title": "Historic Downtown Moves", "description": "Specialized care for moving in and out of the historic homes of downtown Fernandina Beach.", "details": ["Antique handling", "Narrow street navigation", "Historic preservation care", "Efficient service"] }, { "icon": "Heart", "title": "Senior & Retirement Moves", "description": "Compassionate and precise moving services for seniors and retirees in the Amelia Island area.", "details": ["Patient, caring approach", "Downsizing assistance", "Unpacking services", "Family coordination"] } ] },
+          { "value": "commercial", "triggerTitle": "Commercial", "cards": [ { "icon": "Building", "title": "Office Relocations", "description": "Minimize downtime with our efficient office moving services.", "details": ["After-hours moving available", "IT equipment specialists", "Furniture disassembly/assembly", "Minimal business disruption"] }, { "icon": "Package", "title": "Retail & Restaurant", "description": "Specialized moving for retail stores and restaurants.", "details": ["Equipment moving", "Inventory handling", "Fixture installation", "Quick turnaround times"] }, { "icon": "FileText", "title": "Medical Offices", "description": "Careful handling of sensitive medical equipment and records.", "details": ["HIPAA compliance", "Medical equipment expertise", "Secure document handling", "Minimal patient disruption"] } ] },
+          { "value": "specialty", "triggerTitle": "Specialty", "cards": [ { "icon": "Package", "title": "Piano Moving", "description": "Expert piano moving with specialized equipment and techniques.", "details": ["All piano types", "Specialized equipment", "Stair navigation", "Climate considerations"] }, { "icon": "Shield", "title": "Gun Safe Moving", "description": "Safe and secure moving of gun safes and heavy security equipment.", "details": ["Heavy lifting equipment", "Secure handling", "Stair navigation", "Placement assistance"] }, { "icon": "Boxes", "title": "Antiques & Art", "description": "White-glove service for valuable antiques and artwork.", "details": ["Custom packing", "Climate control", "Insurance coordination", "Museum-quality care"] } ] },
+          { "value": "additional", "triggerTitle": "Additional", "cards": [ { "icon": "Package", "title": "Packing Services", "description": "Professional packing and unpacking services.", "details": ["Full-service packing", "Partial packing", "Unpacking services", "Packing supplies"] }, { "icon": "Lock", "title": "Storage Solutions", "description": "Secure storage for any timeline needs.", "details": ["Climate-controlled facility", "Short & long-term options", "Vehicle storage", "24/7 security"] }, { "icon": "Wrench", "title": "Junk Removal", "description": "Decluttering and junk removal services.", "details": ["Furniture removal", "Appliance disposal", "Eco-friendly disposal", "Same-day service"] } ] }
+      ]
+  },
+  "testimonials": {
+      "headline": "Real Amelia Island Moving Stories",
+      "subheadline": "Don't just take our word for it. Here's what your neighbors on Amelia Island are saying about their experience with T&E Movers.",
+      "buttonText": "Be Our Next Success Story",
+      "reviews": [
+          { "customerName": "The Peterson Family", "initials": "PF", "moveRoute": "Amelia Island Plantation", "moveType": "Local Family Move", "testimonialText": "T&E Movers was incredible for our move within the Plantation. The crew was professional, courteous, and handled everything with care. They made the entire process so easy and stress-free. Highly recommend!", "rating": 5, "date": "1 month ago" },
+          { "customerName": "Michael R.", "initials": "MR", "moveRoute": "Summer Beach", "moveType": "Condo Move", "testimonialText": "I used T&E for my condo move in Summer Beach and was extremely impressed. They were on time, worked efficiently, and the final price was exactly as quoted. The movers were fantastic. A+ service.", "rating": 5, "date": "2 months ago" },
+          { "customerName": "Jennifer S.", "initials": "JS", "moveRoute": "Historic Downtown Fernandina", "moveType": "Home Move", "testimonialText": "Moving my historic home was a big job, but T&E handled it perfectly. They were so careful with my antiques and the old house itself. I couldn't have asked for a better moving experience. Thank you!", "rating": 5, "date": "3 months ago" }
+      ]
+  },
+  "faq": {
+      "headline": "Amelia Island Moving Questions, Answered",
+      "subheadline": "As Amelia Island's trusted local movers for over 25 years, we have the answers to all your questions about moving on our beautiful island.",
+      "categories": [
+          { "title": "Pricing & Scheduling", "items": [ { "question": "How much does a local move on Amelia Island cost?", "answer": "Our local moves start at just $397. The final cost depends on the size of your home, access for our trucks, and any extra services. We provide transparent, upfront quotes with a price-lock guarantee." }, { "question": "Are you familiar with the resort communities on Amelia Island?", "answer": "Yes, we have extensive experience moving families in all of Amelia Island's communities, including the Omni Plantation and Summer Beach. We are well-versed in their specific moving guidelines." }, { "question": "How far in advance should I book my move?", "answer": "We recommend booking 3-4 weeks in advance, especially during peak seasons. Amelia Island is a popular destination, and our schedule fills up quickly." } ] },
+          { "title": "Service & Logistics", "items": [ { "question": "What areas do you serve around Amelia Island?", "answer": "We serve all of Nassau County, including Amelia Island, Fernandina Beach, and Yulee. We also handle moves to and from Jacksonville and other neighboring areas." }, { "question": "Do you offer packing services for delicate coastal decor?", "answer": "Yes, we offer both full and partial packing services, with a special focus on protecting delicate items like glassware, artwork, and coastal decor to ensure they arrive safely." }, { "question": "Can you handle moves in and out of high-rise condos?", "answer": "Absolutely. Our teams are experienced in high-rise condo moves and are proficient in using elevators and navigating tight spaces to ensure a safe and efficient move." } ] }
+      ]
+  },
+  "movingTips": {
+      "headline": "Top Tips for a Smooth Amelia Island Move",
+      "subheadline": "After 25 years of moving families in Nassau County, we know how to make your Amelia Island relocation a success. Here are our top tips.",
+      "tips": [
+          { "number": "1", "title": "Know Your Community Rules", "description": "Check with your HOA or condo association for any specific moving day rules, such as approved hours or elevator reservations, and let us know.", "icon": "Calendar" },
+          { "number": "2", "title": "Hire Amelia Island Experts", "description": "Choose a moving company that knows Amelia Island. We understand the island's logistics to make your move as efficient as possible.", "icon": "MapPinIcon" },
+          { "number": "3", "title": "Declutter Before Packing", "description": "Get rid of unwanted items to reduce your load and save money. There are several great donation centers in the Nassau County area.", "icon": "Package" },
+          { "number": "4", "title": "Label for Your New Home", "description": "Label boxes by room and contents. This makes unpacking at your new Amelia Island home much faster and helps our crew place items correctly.", "icon": "FileText" },
+          { "number": "5", "title": "Use Quality Materials", "description": "Florida's coastal air can weaken cheap boxes. We provide professional packing services and premium materials to protect your belongings.", "icon": "Shield" },
+          { "number": "6", "title": "Protect Your Valuables", "description": "Keep important documents, jewelry, and irreplaceable items with you during the move. Don't pack them in the moving truck.", "icon": "Lock" },
+          { "number": "7", "title": "Schedule Utilities Early", "description": "Arrange for utilities on Amelia Island to be transferred or started before moving day. You'll want that AC on and ready!", "icon": "Zap" },
+          { "number": "8", "title": "Pack an Essentials Kit", "description": "Pack a 'first night' box with snacks, toiletries, chargers, and a change of clothes that travels with you, not on the truck.", "icon": "Heart" },
+          { "number": "9", "title": "Communicate With Us", "description": "Let your T&E moving coordinator know about specialty items, access issues, or time restrictions. Clear communication is key!", "icon": "Phone" },
+          { "number": "10", "title": "Relax & Enjoy Island Life", "description": "You're moving to a beautiful island! Let our experienced team handle the heavy lifting so you can start enjoying your new home.", "icon": "ThumbsUp" }
+      ],
+      "cta": {
+          "headline": "Ready for a Stress-Free Amelia Island Move?",
+          "subheadline": "Let our experienced team handle everything while you focus on the excitement of your new home. Get your free quote today!",
+          "buttonText": "Get Your Free Quote Now"
+      }
+  },
+  "finalCta": {
+      "headline": "Ready to Move in Amelia Island?",
+      "subheadline": "Join thousands of satisfied Nassau County families who chose T&E Movers. Your new home is waiting - let's get you there safely and stress-free.",
+      "buttonText": "Get Your Free Quote",
+      "features": [
+          { "icon": "DollarSign", "title": "Transparent Pricing", "description": "No hidden fees or fuel charges" },
+          { "icon": "Shield", "title": "Zero Damage Guarantee", "description": "We fix or replace anything damaged" },
+          { "icon": "Clock", "title": "On-Time Service", "description": "We respect your schedule" },
+          { "icon": "MapPinIcon", "title": "Amelia Island Experts", "description": "25+ years serving Nassau County" }
+      ]
+  },
+  "footer": {
+      "licenseText": "Licensed and Insured Amelia Island Moving Company | FL License #IM123456"
+  }
+}

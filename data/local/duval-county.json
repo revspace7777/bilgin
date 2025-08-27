@@ -1,0 +1,132 @@
+{
+  "meta": {
+      "title": "Duval County's Premier Local Movers | T&E Movers",
+      "description": "Your trusted local movers for Duval County, FL. We offer affordable, reliable moving services for homes and businesses. Get your free quote today!"
+  },
+  "cityDetails": {
+      "cityName": "Duval County",
+      "county": "Duval County",
+      "colloquialName": "Duval",
+      "zipCodes": ["32202", "32204", "32205", "32206", "32207", "32208", "32209", "32210", "32211", "32216", "32217", "32218", "32223", "32224", "32225", "32244", "32246", "32250", "32256", "32257", "32258", "32277"],
+      "neighborhoods": ["Jacksonville", "Jacksonville Beach", "Atlantic Beach", "Neptune Beach", "Baldwin", "Mandarin", "Riverside", "San Marco"]
+  },
+  "header": {
+      "subtitle": "Duval County's Local Moving Experts"
+  },
+  "hero": {
+      "badgeText": "🏆 #1 Rated Duval County Moving Company",
+      "headline": "Duval County's <span class=\"text-red-400\">Premier Local Movers</span> Since 1998",
+      "subheadline": "Your trusted neighbors for seamless local moves throughout Duval County and surrounding areas. We've successfully completed over 15,000 local moves with a 99.8% customer satisfaction rate.",
+      "image": "/images/truck-fleet.png",
+      "imageBannerText": "Based in Duval County",
+      "stat1": { "value": "25+", "label": "Years in Duval" },
+      "stat2": { "value": "15K+", "label": "Local Moves" },
+      "stat3": { "value": "99.8%", "label": "Satisfaction Rate" }
+  },
+  "trustIndicators": [
+      { "icon": "Award", "label": "Duval County A+ Rated" },
+      { "icon": "Shield", "label": "Licensed & Insured" },
+      { "icon": "Star", "label": "5-Star Reviews" },
+      { "icon": "Users", "label": "Family Owned" },
+      { "icon": "MapPinIcon", "label": "Local Experts" },
+      { "icon": "Clock", "label": "On-Time Service" }
+  ],
+  "pricing": {
+      "isEnabled": true,
+      "heroPrice": "$397",
+      "heroSubtext": "Perfect for apartments, homes, and local relocations within 50 miles of Duval County. No hidden fees, no fuel charges, and a price-lock guarantee!",
+      "tiers": [
+          { "title": "Studio/1-Bedroom Apartment", "priceRange": "$397", "duration": "2-4 hours", "description": "Ideal for apartments and condos" },
+          { "title": "2-3 Bedroom Home", "priceRange": "$597-$897", "duration": "4-6 hours", "description": "Includes furniture wrapping and setup" },
+          { "title": "4+ Bedroom Home", "priceRange": "$997+", "duration": "Full-day service", "description": "Perfect for larger family homes" }
+      ],
+      "features": ["No fuel charges", "Price-lock guarantee", "Professional wrapping included", "Furniture setup included"]
+  },
+  "whyChooseUs": {
+      "headline": "Why Duval County Families Trust T&E Movers",
+      "subheadline": "We're your Duval County neighbors, committed to providing a top-quality moving experience with a focus on friendly, reliable service for our diverse communities.",
+      "cards": [
+          { "icon": "MapPinIcon", "title": "Duval County Specialists", "description": "From the Northside to the Southside, the beaches to the Westside, we know every corner of Duval County. Our local knowledge ensures an efficient and stress-free move." },
+          { "icon": "DollarSign", "title": "No Hidden Fees Promise", "description": "The price we quote is the price you pay. No surprises. Our transparent pricing includes everything for a successful move in Duval County." },
+          { "icon": "Shield", "title": "Reliable & Punctual", "description": "We respect your time and your trust. Our crews are always on time, professional, and ready to work, ensuring your Duval County move stays on schedule." }
+      ],
+      "promise": {
+          "headline": "The T&E Duval County Promise",
+          "image": "/images/facility-overview.png",
+          "points": [
+              { "title": "Price-Lock Guarantee", "description": "Your quote is your final price. No surprise charges, ever." },
+              { "title": "On-Time Arrival Promise", "description": "We respect your time. We arrive when scheduled, or your move is 25% off." },
+              { "title": "Zero Damage Guarantee", "description": "We guarantee zero damage to your belongings or we fix/replace at no cost to you." }
+          ]
+      }
+  },
+  "hyperlocalSection": {
+      "headline": "Serving All of Duval County",
+      "subheadline": "From Jacksonville Beach to Baldwin, we provide expert local moving services throughout Duval County and the surrounding Northeast Florida area.",
+      "areaList": ["Jacksonville", "Jacksonville Beach", "Atlantic Beach", "Neptune Beach", "Baldwin", "Mandarin", "Riverside", "San Marco", "Arlington", "Southside"],
+      "buttonText": "Get My Free Quote"
+  },
+  "services": {
+      "headline": "Complete Duval County Moving Solutions",
+      "subheadline": "From high-rise apartments to suburban homes, we handle every type of local move in Duval County with unmatched care and professionalism.",
+      "tabs": [
+          { "value": "residential", "triggerTitle": "Residential", "cards": [ { "icon": "Home", "title": "Single-Family Home Moves", "description": "Expert moving services for single-family homes throughout Duval County's diverse neighborhoods.", "details": ["Professional packing", "Furniture assembly", "Appliance services", "Neighborhood expertise"] }, { "icon": "Building", "title": "Apartment & Condo Moves", "description": "Efficient and careful moving for apartments and condos, from downtown high-rises to beachside communities.", "details": ["Stair and elevator expertise", "Tight space navigation", "Community rule adherence", "Efficient service"] }, { "icon": "Heart", "title": "Military & Senior Moves", "description": "Compassionate and precise moving services for military families and seniors throughout Duval County.", "details": ["Patient, caring approach", "Downsizing assistance", "Military discount available", "Family coordination"] } ] },
+          { "value": "commercial", "triggerTitle": "Commercial", "cards": [ { "icon": "Building", "title": "Office Relocations", "description": "Minimize downtime with our efficient office moving services.", "details": ["After-hours moving available", "IT equipment specialists", "Furniture disassembly/assembly", "Minimal business disruption"] }, { "icon": "Package", "title": "Retail & Restaurant", "description": "Specialized moving for retail stores and restaurants.", "details": ["Equipment moving", "Inventory handling", "Fixture installation", "Quick turnaround times"] }, { "icon": "FileText", "title": "Medical Offices", "description": "Careful handling of sensitive medical equipment and records.", "details": ["HIPAA compliance", "Medical equipment expertise", "Secure document handling", "Minimal patient disruption"] } ] },
+          { "value": "specialty", "triggerTitle": "Specialty", "cards": [ { "icon": "Package", "title": "Piano Moving", "description": "Expert piano moving with specialized equipment and techniques.", "details": ["All piano types", "Specialized equipment", "Stair navigation", "Climate considerations"] }, { "icon": "Shield", "title": "Gun Safe Moving", "description": "Safe and secure moving of gun safes and heavy security equipment.", "details": ["Heavy lifting equipment", "Secure handling", "Stair navigation", "Placement assistance"] }, { "icon": "Boxes", "title": "Antiques & Art", "description": "White-glove service for valuable antiques and artwork.", "details": ["Custom packing", "Climate control", "Insurance coordination", "Museum-quality care"] } ] },
+          { "value": "additional", "triggerTitle": "Additional", "cards": [ { "icon": "Package", "title": "Packing Services", "description": "Professional packing and unpacking services.", "details": ["Full-service packing", "Partial packing", "Unpacking services", "Packing supplies"] }, { "icon": "Lock", "title": "Storage Solutions", "description": "Secure storage for any timeline needs.", "details": ["Climate-controlled facility", "Short & long-term options", "Vehicle storage", "24/7 security"] }, { "icon": "Wrench", "title": "Junk Removal", "description": "Decluttering and junk removal services.", "details": ["Furniture removal", "Appliance disposal", "Eco-friendly disposal", "Same-day service"] } ] }
+      ]
+  },
+  "testimonials": {
+      "headline": "Real Duval County Moving Stories",
+      "subheadline": "Don't just take our word for it. Here's what your neighbors in Duval County are saying about their experience with T&E Movers.",
+      "buttonText": "Be Our Next Success Story",
+      "reviews": [
+          { "customerName": "The Brown Family", "initials": "BF", "moveRoute": "Mandarin", "moveType": "Local Family Move", "testimonialText": "T&E Movers was a fantastic choice for our move in Mandarin. The crew was professional, hardworking, and very efficient. They made our moving day completely stress-free. We would highly recommend them to anyone in Duval County.", "rating": 5, "date": "1 month ago" },
+          { "customerName": "Michael T.", "initials": "MT", "moveRoute": "Riverside", "moveType": "Apartment Move", "testimonialText": "I was very impressed with the service from T&E Movers. They were on time, professional, and took great care of my belongings. The final price was fair and exactly what was quoted. A truly great experience.", "rating": 5, "date": "2 months ago" },
+          { "customerName": "Linda S.", "initials": "LS", "moveRoute": "Jacksonville Beach", "moveType": "Condo Move", "testimonialText": "I used T&E for my condo move at the beach and they were wonderful. The movers were friendly, fast, and very careful with my furniture. I would definitely use them again and recommend them to my neighbors.", "rating": 5, "date": "3 months ago" }
+      ]
+  },
+  "faq": {
+      "headline": "Duval County Moving Questions, Answered",
+      "subheadline": "As Duval County's trusted local movers for over 25 years, we have the answers to all your questions about moving in our community.",
+      "categories": [
+          { "title": "Pricing & Scheduling", "items": [ { "question": "How much does a local move in Duval County cost?", "answer": "Our local moves start at just $397. The final cost depends on the size of your home, distance, and any additional services. We provide transparent, upfront quotes with a price-lock guarantee." }, { "question": "Are you familiar with the different areas of Duval County?", "answer": "Yes, we have extensive experience moving families throughout Duval County, from the historic neighborhoods of Riverside and San Marco to the beaches and the growing suburbs. We know the county well." }, { "question": "Do you offer military discounts?", "answer": "Yes, we are proud to offer a discount for active-duty and retired military personnel. Please mention your service when booking your move to receive the discount." } ] },
+          { "title": "Service & Logistics", "items": [ { "question": "What areas do you serve in Duval County?", "answer": "We serve all of Duval County, including Jacksonville, Jacksonville Beach, Atlantic Beach, Neptune Beach, and Baldwin. We also handle moves to and from the surrounding counties." }, { "question": "Do you offer packing services?", "answer": "Yes, we offer both full and partial packing services. Our professional packers can handle everything, allowing you to focus on other aspects of your move." }, { "question": "Can you handle moves in and out of high-rise buildings?", "answer": "Absolutely. Our teams are experienced in high-rise moves and are proficient in using elevators and navigating tight spaces to ensure a safe and efficient move." } ] }
+      ]
+  },
+  "movingTips": {
+      "headline": "Top Tips for a Smooth Duval County Move",
+      "subheadline": "After 25 years of moving families in Northeast Florida, we know how to make your Duval County relocation a success. Here are our top tips.",
+      "tips": [
+          { "number": "1", "title": "Plan for Your Neighborhood", "description": "Whether you're moving to a historic area or a new suburb, let us know about any specific access details for a smooth moving day.", "icon": "Calendar" },
+          { "number": "2", "title": "Hire True Local Movers", "description": "Choose a licensed and insured moving company that knows Duval County. We understand the local roads and traffic patterns to make your move efficient.", "icon": "MapPinIcon" },
+          { "number": "3", "title": "Declutter Before Packing", "description": "Get rid of unwanted items to reduce your load and save money. Duval County has many convenient donation centers and disposal sites.", "icon": "Package" },
+          { "number": "4", "title": "Label for Your New Home", "description": "Label boxes by room and contents. This makes unpacking at your new Duval County home much faster and helps our crew place items correctly.", "icon": "FileText" },
+          { "number": "5", "title": "Use Quality Materials", "description": "Florida's humidity can weaken cheap boxes. We provide professional packing services and premium materials to protect your belongings.", "icon": "Shield" },
+          { "number": "6", "title": "Protect Your Valuables", "description": "Keep important documents, jewelry, and irreplaceable items with you during the move. Don't pack them in the moving truck.", "icon": "Lock" },
+          { "number": "7", "title": "Schedule Utilities Early", "description": "Arrange for utilities in Duval County to be transferred or started before moving day. You'll want that AC on and ready!", "icon": "Zap" },
+          { "number": "8", "title": "Pack an Essentials Kit", "description": "Pack a 'first night' box with snacks, toiletries, chargers, and a change of clothes that travels with you, not on the truck.", "icon": "Heart" },
+          { "number": "9", "title": "Communicate With Us", "description": "Let your T&E moving coordinator know about specialty items, access issues, or time restrictions. Clear communication is key!", "icon": "Phone" },
+          { "number": "10", "title": "Relax & Settle In", "description": "You're moving to a great county! Let our experienced team handle the heavy lifting so you can start enjoying your new home.", "icon": "ThumbsUp" }
+      ],
+      "cta": {
+          "headline": "Ready for a Stress-Free Duval County Move?",
+          "subheadline": "Let our experienced team handle everything while you focus on the excitement of your new home. Get your free quote today!",
+          "buttonText": "Get Your Free Quote Now"
+      }
+  },
+  "finalCta": {
+      "headline": "Ready to Move in Duval County?",
+      "subheadline": "Join thousands of satisfied Duval County families who chose T&E Movers. Your new home is waiting - let's get you there safely and stress-free.",
+      "buttonText": "Get Your Free Quote",
+      "features": [
+          { "icon": "DollarSign", "title": "Transparent Pricing", "description": "No hidden fees or fuel charges" },
+          { "icon": "Shield", "title": "Zero Damage Guarantee", "description": "We fix or replace anything damaged" },
+          { "icon": "Clock", "title": "On-Time Service", "description": "We respect your schedule" },
+          { "icon": "MapPinIcon", "title": "Duval County Experts", "description": "25+ years serving Northeast Florida" }
+      ]
+  },
+  "footer": {
+      "licenseText": "Licensed and Insured Duval County Moving Company | FL License #IM123456"
+  }
+}

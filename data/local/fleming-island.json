@@ -1,0 +1,132 @@
+{
+  "meta": {
+      "title": "Fleming Island's Premier Local Movers | T&E Movers",
+      "description": "Your trusted local movers for Fleming Island, FL. We offer affordable, reliable moving services for homes and families in the Fleming Island community. Get your free quote today!"
+  },
+  "cityDetails": {
+      "cityName": "Fleming Island",
+      "county": "Clay County",
+      "colloquialName": "Fleming Island",
+      "zipCodes": ["32003"],
+      "neighborhoods": ["Fleming Island Plantation", "Eagle Harbor", "Margaret's Walk", "Pace Island", "Hibernia Plantation", "Black Creek at Eagle Harbor", "Rivergate", "The Links"]
+  },
+  "header": {
+      "subtitle": "Fleming Island's Local Moving Experts"
+  },
+  "hero": {
+      "badgeText": "🏆 #1 Rated Fleming Island Moving Company",
+      "headline": "Fleming Island's <span class=\"text-red-400\">Premier Local Movers</span> Since 1998",
+      "subheadline": "Your trusted neighbors for seamless local moves throughout Fleming Island and surrounding areas. We've successfully completed over 15,000 local moves with a 99.8% customer satisfaction rate.",
+      "image": "/images/truck-fleet.png",
+      "imageBannerText": "Based in Fleming Island",
+      "stat1": { "value": "25+", "label": "Years on the Island" },
+      "stat2": { "value": "15K+", "label": "Local Moves" },
+      "stat3": { "value": "99.8%", "label": "Satisfaction Rate" }
+  },
+  "trustIndicators": [
+      { "icon": "Award", "label": "Clay County A+ Rated" },
+      { "icon": "Shield", "label": "Licensed & Insured" },
+      { "icon": "Star", "label": "5-Star Reviews" },
+      { "icon": "Users", "label": "Family Owned" },
+      { "icon": "MapPinIcon", "label": "Local Experts" },
+      { "icon": "Clock", "label": "On-Time Service" }
+  ],
+  "pricing": {
+      "isEnabled": true,
+      "heroPrice": "$397",
+      "heroSubtext": "Perfect for apartments, homes, and local relocations within 50 miles of Fleming Island. No hidden fees, no fuel charges, and a price-lock guarantee!",
+      "tiers": [
+          { "title": "Apartment/Townhome", "priceRange": "$397", "duration": "2-4 hours", "description": "Ideal for Fleming Island apartments" },
+          { "title": "2-3 Bedroom Home", "priceRange": "$597-$897", "duration": "4-6 hours", "description": "Includes furniture wrapping and setup" },
+          { "title": "4+ Bedroom Home", "priceRange": "$997+", "duration": "Full-day service", "description": "Perfect for larger plantation homes" }
+      ],
+      "features": ["No fuel charges", "Price-lock guarantee", "Professional wrapping included", "Furniture setup included"]
+  },
+  "whyChooseUs": {
+      "headline": "Why Fleming Island Families Choose T&E Movers",
+      "subheadline": "As Fleming Island's preferred movers, we provide a premium, reliable service that meets the high standards of our community.",
+      "cards": [
+          { "icon": "MapPinIcon", "title": "Fleming Island Experts", "description": "We are intimately familiar with all of Fleming Island's communities, including Eagle Harbor and Fleming Island Plantation, ensuring a smooth and efficient move." },
+          { "icon": "DollarSign", "title": "No Hidden Fees Promise", "description": "The price we quote is the price you pay. No surprises. Our transparent pricing includes everything for a successful move on Fleming Island." },
+          { "icon": "Shield", "title": "Careful & Professional", "description": "We treat your home and belongings with the utmost care and professionalism, so you can relax and enjoy a stress-free move." }
+      ],
+      "promise": {
+          "headline": "The T&E Fleming Island Promise",
+          "image": "/images/facility-overview.png",
+          "points": [
+              { "title": "Price-Lock Guarantee", "description": "Your quote is your final price. No surprise charges, ever." },
+              { "title": "On-Time Arrival Promise", "description": "We respect your time. We arrive when scheduled, or your move is 25% off." },
+              { "title": "Zero Damage Guarantee", "description": "We guarantee zero damage to your belongings or we fix/replace at no cost to you." }
+          ]
+      }
+  },
+  "hyperlocalSection": {
+      "headline": "Serving All of Fleming Island & Clay County",
+      "subheadline": "We are Fleming Island's local moving specialists, also serving Orange Park, Green Cove Springs, and the greater Clay County area.",
+      "areaList": ["Fleming Island", "Eagle Harbor", "Pace Island", "Doctors Inlet", "Orange Park", "Lakeside", "Asbury Lake", "Middleburg", "Hibernia", "Black Creek"],
+      "buttonText": "Get My Free Quote"
+  },
+  "services": {
+      "headline": "Complete Fleming Island Moving Solutions",
+      "subheadline": "From waterfront homes to family-friendly neighborhoods, we handle every type of local move in Fleming Island with unmatched care and professionalism.",
+      "tabs": [
+          { "value": "residential", "triggerTitle": "Residential", "cards": [ { "icon": "Home", "title": "Plantation Home Moves", "description": "Expert moving services for homes in Fleming Island Plantation, Eagle Harbor, and other communities.", "details": ["Professional packing", "Furniture assembly", "Appliance services", "HOA compliance"] }, { "icon": "Building", "title": "Apartment & Townhome Moves", "description": "Efficient and careful moving for Fleming Island's apartment and townhome residents.", "details": ["Stair and elevator expertise", "Tight space navigation", "Community rule adherence", "Efficient service"] }, { "icon": "Heart", "title": "Senior & Family Moves", "description": "Compassionate and precise moving services for families and seniors in the Fleming Island area.", "details": ["Patient, caring approach", "Downsizing assistance", "School zoning expertise", "Family coordination"] } ] },
+          { "value": "commercial", "triggerTitle": "Commercial", "cards": [ { "icon": "Building", "title": "Office Relocations", "description": "Minimize downtime with our efficient office moving services.", "details": ["After-hours moving available", "IT equipment specialists", "Furniture disassembly/assembly", "Minimal business disruption"] }, { "icon": "Package", "title": "Retail & Restaurant", "description": "Specialized moving for retail stores and restaurants.", "details": ["Equipment moving", "Inventory handling", "Fixture installation", "Quick turnaround times"] }, { "icon": "FileText", "title": "Medical Offices", "description": "Careful handling of sensitive medical equipment and records.", "details": ["HIPAA compliance", "Medical equipment expertise", "Secure document handling", "Minimal patient disruption"] } ] },
+          { "value": "specialty", "triggerTitle": "Specialty", "cards": [ { "icon": "Package", "title": "Piano Moving", "description": "Expert piano moving with specialized equipment and techniques.", "details": ["All piano types", "Specialized equipment", "Stair navigation", "Climate considerations"] }, { "icon": "Shield", "title": "Gun Safe Moving", "description": "Safe and secure moving of gun safes and heavy security equipment.", "details": ["Heavy lifting equipment", "Secure handling", "Stair navigation", "Placement assistance"] }, { "icon": "Boxes", "title": "Antiques & Art", "description": "White-glove service for valuable antiques and artwork.", "details": ["Custom packing", "Climate control", "Insurance coordination", "Museum-quality care"] } ] },
+          { "value": "additional", "triggerTitle": "Additional", "cards": [ { "icon": "Package", "title": "Packing Services", "description": "Professional packing and unpacking services.", "details": ["Full-service packing", "Partial packing", "Unpacking services", "Packing supplies"] }, { "icon": "Lock", "title": "Storage Solutions", "description": "Secure storage for any timeline needs.", "details": ["Climate-controlled facility", "Short & long-term options", "Vehicle storage", "24/7 security"] }, { "icon": "Wrench", "title": "Junk Removal", "description": "Decluttering and junk removal services.", "details": ["Furniture removal", "Appliance disposal", "Eco-friendly disposal", "Same-day service"] } ] }
+      ]
+  },
+  "testimonials": {
+      "headline": "Real Fleming Island Moving Stories",
+      "subheadline": "Don't just take our word for it. Here's what your neighbors in Fleming Island are saying about their experience with T&E Movers.",
+      "buttonText": "Be Our Next Success Story",
+      "reviews": [
+          { "customerName": "The Garcia Family", "initials": "GF", "moveRoute": "Eagle Harbor", "moveType": "Local Family Move", "testimonialText": "T&E Movers was exceptional for our move within Eagle Harbor. The team was punctual, professional, and incredibly efficient. They handled our belongings with care and made the day stress-free. Highly recommend!", "rating": 5, "date": "1 month ago" },
+          { "customerName": "David S.", "initials": "DS", "moveRoute": "Fleming Island Plantation", "moveType": "New Home Purchase", "testimonialText": "We used T&E for our move into Fleming Island Plantation and they were fantastic. The crew was friendly, hardworking, and took great care not to damage our new home. The final cost was exactly as quoted. 5-star service.", "rating": 5, "date": "2 months ago" },
+          { "customerName": "Megan R.", "initials": "MR", "moveRoute": "Pace Island", "moveType": "Downsizing Move", "testimonialText": "I was downsizing and moving within Pace Island, and T&E Movers made the process so easy. They were patient and helpful, and their attention to detail was impressive. A wonderful moving experience.", "rating": 5, "date": "3 months ago" }
+      ]
+  },
+  "faq": {
+      "headline": "Fleming Island Moving Questions, Answered",
+      "subheadline": "As Fleming Island's most trusted movers, we have the answers to all your questions about relocating within our beautiful community.",
+      "categories": [
+          { "title": "Pricing & Scheduling", "items": [ { "question": "How much does a local move in Fleming Island cost?", "answer": "Our local moves start at just $397. The final cost depends on the size of your home and any additional services. We provide transparent, upfront quotes with a price-lock guarantee." }, { "question": "Are you experienced with the HOAs in Fleming Island?", "answer": "Yes, we have extensive experience working with the HOAs in Fleming Island Plantation, Eagle Harbor, and other communities. We ensure all moving guidelines are followed." }, { "question": "How far in advance should I book my Fleming Island move?", "answer": "We recommend booking 3-4 weeks in advance, especially during peak seasons like summer and school holidays, as our schedule fills up quickly." } ] },
+          { "title": "Service & Logistics", "items": [ { "question": "Do you serve all of Fleming Island?", "answer": "Yes, we serve every neighborhood in Fleming Island, from the golf course communities to the riverfront properties. We are your true local moving experts." }, { "question": "Do you offer packing services?", "answer": "Yes, we offer comprehensive packing services to make your Fleming Island move as seamless as possible. We can pack your entire home or just specific items." }, { "question": "Can you handle large homes with lots of furniture?", "answer": "Absolutely. Our teams are experienced and equipped to handle large homes, ensuring an efficient and organized move, no matter the size." } ] }
+      ]
+  },
+  "movingTips": {
+      "headline": "Top Tips for a Smooth Fleming Island Move",
+      "subheadline": "With over 25 years of experience moving families in Clay County, we know how to make your Fleming Island relocation a breeze.",
+      "tips": [
+          { "number": "1", "title": "Know Your HOA Rules", "description": "Check with your Fleming Island HOA for any specific moving day rules, such as approved hours or parking, and let us know ahead of time.", "icon": "Calendar" },
+          { "number": "2", "title": "Hire Fleming Island Experts", "description": "Choose a moving company that knows Fleming Island. We understand the community layouts and logistics to make your move as efficient as possible.", "icon": "MapPinIcon" },
+          { "number": "3", "title": "Declutter Before Packing", "description": "Get rid of unwanted items to reduce your load and save money. There are many great donation centers in the Clay County area.", "icon": "Package" },
+          { "number": "4", "title": "Label for Your New Home", "description": "Label boxes by room and contents. This makes unpacking at your new Fleming Island home much faster and helps our crew place items correctly.", "icon": "FileText" },
+          { "number": "5", "title": "Use Quality Materials", "description": "Florida's humidity can weaken cheap boxes. We provide professional packing services and premium materials to protect your belongings.", "icon": "Shield" },
+          { "number": "6", "title": "Protect Your Valuables", "description": "Keep important documents, jewelry, and irreplaceable items with you during the move. Don't pack them in the moving truck.", "icon": "Lock" },
+          { "number": "7", "title": "Schedule Utilities Early", "description": "Arrange for utilities in Fleming Island to be transferred or started before moving day. You'll want that AC on and ready!", "icon": "Zap" },
+          { "number": "8", "title": "Pack an Essentials Kit", "description": "Pack a 'first night' box with snacks, toiletries, chargers, and a change of clothes that travels with you, not on the truck.", "icon": "Heart" },
+          { "number": "9", "title": "Communicate With Us", "description": "Let your T&E moving coordinator know about specialty items, access issues, or time restrictions. Clear communication is key!", "icon": "Phone" },
+          { "number": "10", "title": "Relax & Enjoy Island Life", "description": "You're moving to a wonderful community! Let our experienced team handle the heavy lifting so you can start enjoying your new home.", "icon": "ThumbsUp" }
+      ],
+      "cta": {
+          "headline": "Ready for a Stress-Free Fleming Island Move?",
+          "subheadline": "Let our experienced team handle everything while you focus on the excitement of your new home. Get your free quote today!",
+          "buttonText": "Get Your Free Quote Now"
+      }
+  },
+  "finalCta": {
+      "headline": "Ready to Move in Fleming Island?",
+      "subheadline": "Join thousands of satisfied Clay County families who chose T&E Movers. Your new home is waiting - let's get you there safely and stress-free.",
+      "buttonText": "Get Your Free Quote",
+      "features": [
+          { "icon": "DollarSign", "title": "Transparent Pricing", "description": "No hidden fees or fuel charges" },
+          { "icon": "Shield", "title": "Zero Damage Guarantee", "description": "We fix or replace anything damaged" },
+          { "icon": "Clock", "title": "On-Time Service", "description": "We respect your schedule" },
+          { "icon": "MapPinIcon", "title": "Fleming Island Experts", "description": "25+ years serving Clay County" }
+      ]
+  },
+  "footer": {
+      "licenseText": "Licensed and Insured Fleming Island Moving Company | FL License #IM123456"
+  }
+}
