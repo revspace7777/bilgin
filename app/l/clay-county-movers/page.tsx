@@ -1,5 +1,5 @@
 import LocalMoversPageTemplate from '@/components/templates/LocalMoversPageTemplate';
-import pageData from '@/data/local/jacksonville.json';
+import pageData from '@/data/local/clay-county.json';
 import { Metadata } from 'next';
 import { LocalPageData } from '@/lib/types';
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: typedPageData.meta.description,
 };
 
-export default function JacksonvilleMoversPage() {
+export default function ClayCountyMoversPage() {
   // The page is just the template component with the data passed in
   return <LocalMoversPageTemplate data={typedPageData} />;
 }

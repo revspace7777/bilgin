@@ -1,79 +1,178 @@
 {
-    "meta": {
-      "title": "Top-Rated Jacksonville Movers | T&E Moving and Storage",
-      "description": "Your trusted local movers in Jacksonville, FL. We offer affordable, reliable moving services for homes and businesses. Get your free quote today!"
-    },
-    "cityDetails": {
-      "cityName": "Jacksonville",
-      "colloquialName": "Jax",
-      "county": "Duval County",
-      "zipCodes": ["32202", "32204", "32205", "32206", "32207", "32208", "32209", "32210", "32211", "32216", "32217", "32218", "32223", "32224", "32225", "32244", "32246", "32250", "32256", "32257", "32258", "32277"],
-      "neighborhoods": ["Riverside", "San Marco", "Southside", "Mandarin", "Ortega", "Avondale", "Downtown", "Beaches"]
-    },
-    "header": {
-      "subtitle": "Your Local Moving Experts"
-    },
-    "hero": {
-      "badgeText": "#1 Rated Jacksonville Moving Company",
-      "headline": "Your Trusted Local Movers in Jacksonville, FL",
-      "subheadline": "Experience a stress-free move with Jacksonville's most reliable and professional moving team. We handle your belongings with care, so you can focus on your new beginning.",
-      "imageBannerText": "Based in Jacksonville, Serving All Local Areas",
-      "stat1": { "value": "25+", "label": "Years in Jacksonville" },
-      "stat2": { "value": "15k+", "label": "Local Moves Completed" },
-      "stat3": { "value": "99.8%", "label": "Customer Satisfaction" }
-    },
-    "accolades": {},
-    "pricing": {
-      "isEnabled": true,
-      "price": "$397",
-      "details": "For a 2-man crew for 3 hours of expert moving service."
-    },
-    "whyChooseUs": {
-      "headline": "Why Choose T&E for Your Jacksonville Move?",
-      "subheadline": "We're more than just movers; we're your partners in making your relocation a success. Here's what sets us apart:",
+  "meta": {
+    "title": "Jacksonville's Premier Local Movers | T&E Movers Since 1998",
+    "description": "Your trusted neighbors for seamless local moves throughout Jacksonville. Over 15,000 moves with a 99.8% satisfaction rate. Get your free, no-obligation quote today!"
+  },
+  "cityDetails": {
+    "cityName": "Jacksonville",
+    "county": "Duval County",
+    "colloquialName": "Jax",
+    "zipCodes": ["32202", "32204", "32205", "32206", "32207", "32208", "32209", "32210", "32211", "32216", "32217", "32218", "32223", "32224", "32225", "32244", "32246", "32250", "32256", "32257", "32258", "32277"],
+    "neighborhoods": ["Downtown Jacksonville", "Jacksonville Beach", "Riverside/Avondale", "Mandarin", "Orange Park", "St. Augustine", "Ponte Vedra Beach", "Nocatee"]
+  },
+  "header": {
+    "subtitle": "Jacksonville's Local Moving Experts"
+  },
+  "hero": {
+    "badgeText": "🏆 #1 Rated Jacksonville Moving Company",
+    "headline": "Jacksonville's <span class=\"text-red-400\">Premier Local Movers</span> Since 1998",
+    "subheadline": "Your trusted neighbors for seamless local moves throughout Jacksonville, St. Johns County, and surrounding areas. We've successfully completed over 15,000 local moves with a 99.8% customer satisfaction rate.",
+    "image": "/images/truck-fleet.png",
+    "imageBannerText": "Based in Jacksonville",
+    "stat1": { "value": "25+", "label": "Years in Jacksonville" },
+    "stat2": { "value": "15K+", "label": "Local Moves" },
+    "stat3": { "value": "99.8%", "label": "Satisfaction Rate" }
+  },
+  "trustIndicators": [
+    { "icon": "Award", "label": "BBB A+ Rated" },
+    { "icon": "Shield", "label": "Licensed & Insured" },
+    { "icon": "Star", "label": "5-Star Reviews" },
+    { "icon": "Users", "label": "Family Owned" },
+    { "icon": "MapPinIcon", "label": "Local Experts" },
+    { "icon": "Clock", "label": "Same-Day Service" }
+  ],
+  "pricing": {
+    "isEnabled": true,
+    "heroPrice": "$397",
+    "heroSubtext": "Perfect for apartments, small homes, and local relocations within 50 miles of Jacksonville. No hidden fees, no fuel charges, and a price-lock guarantee!",
+    "tiers": [
+        { "title": "Studio/1-Bedroom Apartment", "priceRange": "$397", "duration": "2-4 hours", "description": "Perfect for students and young professionals" },
+        { "title": "2-3 Bedroom Home", "priceRange": "$597-$897", "duration": "4-6 hours", "description": "Includes furniture wrapping and setup" },
+        { "title": "4+ Bedroom Home", "priceRange": "$997+", "duration": "Full-day service", "description": "May require multiple trucks" }
+    ],
+    "features": ["No fuel charges", "Price-lock guarantee", "Professional wrapping included", "Furniture setup included"]
+  },
+  "whyChooseUs": {
+    "headline": "Why 15,000+ Jacksonville Families Choose T&E Movers",
+    "subheadline": "We're not just another moving company. We're your Jacksonville neighbors who understand the local area like no one else. Here's what makes us different:",
+    "cards": [
+      { "icon": "MapPinIcon", "title": "Local Jacksonville Experts", "description": "We know every neighborhood, traffic pattern, and building restriction in Jacksonville. From Riverside to Mandarin, Nocatee to St. Johns - we navigate like locals because we are locals." },
+      { "icon": "DollarSign", "title": "No Hidden Fees Promise", "description": "What we quote is what you pay. No fuel charges, no surprise fees, no last-minute add-ons. Our transparent pricing includes everything you need for a successful move." },
+      { "icon": "Zap", "title": "Same-Day Service Available", "description": "Need to move today? We offer same-day and next-day local moving services for those unexpected situations. Call us and we'll make it happen." }
+    ],
+    "promise": {
+      "headline": "The T&E Local Moving Promise",
+      "image": "/images/facility-overview.png",
       "points": [
-        { "icon": "Users", "title": "Professional, Vetted Crews", "description": "Our team isn't just strong; they're trained, background-checked professionals dedicated to providing top-tier service." },
-        { "icon": "ThumbsUp", "title": "Transparent Pricing", "description": "No hidden fees or surprise charges. We provide clear, upfront quotes so you know exactly what to expect." },
-        { "icon": "Shield", "title": "Licensed & Insured", "description": "We are fully licensed and insured for your peace of mind. Your belongings are in safe hands from start to finish." }
+        { "title": "Price-Lock Guarantee", "description": "Your quote is your final price. No surprise charges, ever." },
+        { "title": "On-Time Arrival Promise", "description": "We arrive when scheduled, or your move is 25% off." },
+        { "title": "Zero Damage Guarantee", "description": "We guarantee zero damage to your belongings or we fix/replace at no cost." }
       ]
-    },
-    "hyperlocalSection": {
-      "headline": "Serving All of Jacksonville and Surrounding Areas",
-      "subheadline": "From the historic streets of Riverside to the sandy shores of Jax Beach, we know every corner of Duval County.",
-      "areaList": ["St. Johns County", "Ponte Vedra Beach", "St. Augustine", "Nocatee", "Fleming Island", "Orange Park", "Middleburg", "Green Cove Springs", "Amelia Island", "Fernandina Beach", "Neptune Beach", "Atlantic Beach"],
-      "buttonText": "Be Our Next Success Story"
-    },
-    "services": {
-      "headline": "Complete Local Moving Solutions",
-      "subheadline": "We offer a full range of services to cover every aspect of your move in Jacksonville.",
-      "cards": [
-        { "icon": "Home", "title": "Residential Moving", "description": "Apartments, condos, or family homes – we handle moves of all sizes with precision and care." },
-        { "icon": "Building", "title": "Commercial Moving", "description": "Office relocations done efficiently to minimize downtime and get your business back up and running." },
-        { "icon": "Package", "title": "Packing & Unpacking", "description": "Save time and stress. Our expert packers can securely pack your entire home or just the fragile items." },
-        { "icon": "Boxes", "title": "Storage Solutions", "description": "Need to store your items? We offer secure, climate-controlled storage options for short or long-term needs." }
-      ]
-    },
-    "testimonials": {
-      "headline": "What Our Jacksonville Customers Are Saying",
-      "subheadline": "We're proud of our reputation as a top-rated mover in Jax. Here's what your neighbors have to say:",
-      "buttonText": "Be Our Next Success Story",
-      "reviews": [
-        { "customerName": "The Garcia Family", "initials": "GF", "moveRoute": "Riverside → San Marco", "moveType": "Local Family Move", "testimonialText": "T&E Movers made our local move across town in Jacksonville so easy. The crew was professional, fast, and handled our fragile items like they were their own. It made a typically stressful day feel completely manageable." },
-        { "customerName": "Sarah Jenkins", "initials": "SJ", "moveRoute": "Southside → Jax Beach", "moveType": "Apartment Relocation", "testimonialText": "I was worried about moving my apartment to the beach, but the T&E team was incredible. Their pricing was transparent, exactly what they quoted, and they finished the whole move in under 4 hours. Highly recommend their services!" },
-        { "customerName": "Mark Thompson", "initials": "MT", "moveRoute": "Mandarin, Jacksonville", "moveType": "Home Move", "testimonialText": "We used T&E for our move within Mandarin and couldn't be happier. They were punctual, respectful of our property, and went above and beyond to ensure everything was placed perfectly. A truly 5-star experience." }
-      ]
-    },
-    "faq": {
-      "headline": "Frequently Asked Questions",
-      "items": [
-        { "question": "How much does a local move in Jacksonville typically cost?", "answer": "While every move is unique, our local moving services in Jacksonville are competitively priced. The final cost depends on factors like the size of your home, the distance, and any additional services like packing. We provide transparent, upfront quotes with no hidden fees." },
-        { "question": "Are you a licensed and insured moving company?", "answer": "Absolutely. T&E Movers is a fully licensed and insured moving company in the state of Florida. We carry all necessary insurance to protect your belongings and our crew, giving you complete peace of mind during your move." },
-        { "question": "Do you offer packing and unpacking services?", "answer": "Yes, we offer comprehensive packing and unpacking services to make your move as effortless as possible. Our trained packers use high-quality materials to ensure your items are safe and secure. We can handle everything from a few specialty items to your entire household." },
-        { "question": "How far in advance should I book my move?", "answer": "We recommend booking your move at least 2-4 weeks in advance, especially during peak seasons like summer and at the end of the month. However, we can sometimes accommodate last-minute moves, so don't hesitate to give us a call to check our availability." }
-      ]
-    },
-    "prefooter": {
-      "headline": "Ready to Move in Jacksonville?"
     }
+  },
+    "hyperlocalSection": {
+    "headline": "Serving All of Jacksonville & Surrounding Areas",
+    "subheadline": "From downtown Jacksonville to the beaches, from St. Johns County to Clay County - we know every neighborhood and provide expert local moving services throughout Northeast Florida.",
+    "areaList": ["Jacksonville", "Jacksonville Beach", "Atlantic Beach", "Neptune Beach", "Ponte Vedra Beach", "St. Augustine", "Orange Park", "Fleming Island", "Middleburg", "Green Cove Springs", "Fernandina Beach", "Amelia Island", "Nocatee", "St. Johns County", "Mandarin", "Riverside"],
+    "buttonText": "Check If We Serve Your Area"
+  },
+  "services": {
+    "headline": "Complete Local Moving Solutions",
+    "subheadline": "From studio apartments to large homes, from residential to commercial - we handle every type of local move with the same level of care and professionalism.",
+    "tabs": [
+      {
+        "value": "residential",
+        "triggerTitle": "Residential",
+        "cards": [
+          { "icon": "Home", "title": "Apartment Moves", "description": "Specialized in apartment and condo moves throughout Jacksonville's many complexes.", "details": ["High-rise building expertise", "Elevator reservations handled", "Tight space navigation", "Student housing specialists"] },
+          { "icon": "Building", "title": "House Moves", "description": "Full-service house moving from small starter homes to large family estates.", "details": ["Complete packing services", "Furniture disassembly/assembly", "Appliance disconnection/connection", "Garage and attic cleanouts"] },
+          { "icon": "Heart", "title": "Senior Moving", "description": "Compassionate moving services for seniors transitioning to new living situations.", "details": ["Patient, caring approach", "Downsizing assistance", "Assisted living transitions", "Family coordination"] }
+        ]
+      },
+      {
+        "value": "commercial",
+        "triggerTitle": "Commercial",
+        "cards": [
+          { "icon": "Building", "title": "Office Relocations", "description": "Minimize downtime with our efficient office moving services.", "details": ["After-hours moving available", "IT equipment specialists", "Furniture disassembly/assembly", "Minimal business disruption"] },
+          { "icon": "Package", "title": "Retail & Restaurant", "description": "Specialized moving for retail stores and restaurants.", "details": ["Equipment moving", "Inventory handling", "Fixture installation", "Quick turnaround times"] },
+          { "icon": "FileText", "title": "Medical Offices", "description": "Careful handling of sensitive medical equipment and records.", "details": ["HIPAA compliance", "Medical equipment expertise", "Secure document handling", "Minimal patient disruption"] }
+        ]
+      },
+      {
+        "value": "specialty",
+        "triggerTitle": "Specialty",
+        "cards": [
+          { "icon": "Package", "title": "Piano Moving", "description": "Expert piano moving with specialized equipment and techniques.", "details": ["All piano types", "Specialized equipment", "Stair navigation", "Climate considerations"] },
+          { "icon": "Shield", "title": "Gun Safe Moving", "description": "Safe and secure moving of gun safes and heavy security equipment.", "details": ["Heavy lifting equipment", "Secure handling", "Stair navigation", "Placement assistance"] },
+          { "icon": "Boxes", "title": "Antiques & Art", "description": "White-glove service for valuable antiques and artwork.", "details": ["Custom packing", "Climate control", "Insurance coordination", "Museum-quality care"] }
+        ]
+      },
+      {
+        "value": "additional",
+        "triggerTitle": "Additional",
+        "cards": [
+          { "icon": "Package", "title": "Packing Services", "description": "Professional packing and unpacking services.", "details": ["Full-service packing", "Partial packing", "Unpacking services", "Packing supplies"] },
+          { "icon": "Lock", "title": "Storage Solutions", "description": "Secure storage for any timeline needs.", "details": ["Climate-controlled facility", "Short & long-term options", "Vehicle storage", "24/7 security"] },
+          { "icon": "Wrench", "title": "Junk Removal", "description": "Decluttering and junk removal services.", "details": ["Furniture removal", "Appliance disposal", "Eco-friendly disposal", "Same-day service"] }
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "headline": "Real Jacksonville Moving Stories",
+    "subheadline": "Don't just take our word for it. Here are detailed stories from Jacksonville families and businesses who trusted us with their local moves.",
+    "buttonText": "Read More Jacksonville Reviews",
+    "reviews": [
+      { "customerName": "Ahmet Birdal", "initials": "AB", "moveRoute": "Riverside → Jacksonville Beach", "moveType": "3-Bedroom House Move", "testimonialText": "T&E Moving and storage help us move into our new home today. These guys are very friendly, professional, and productive. They knew exactly how to navigate our narrow Jacksonville Beach streets and got everything moved in record time. Thank you for your great service!!", "rating": 5, "date": "1 week ago" },
+      { "customerName": "Demir Bilgin", "initials": "DB", "moveRoute": "Downtown Jacksonville → Nocatee", "moveType": "2-Bedroom Apartment Move", "testimonialText": "Really nice movers and really fast and good price 10/10. They moved our entire apartment from downtown Jacksonville to Nocatee in just 4 hours. The team was incredibly careful with our furniture and even helped us set everything up in our new place.", "rating": 5, "date": "2 weeks ago" },
+      { "customerName": "Crystal Blackburn", "initials": "CB", "moveRoute": "Orange Park → Jacksonville", "moveType": "Commercial Move", "testimonialText": "They were on time and professional. Thank you. They moved some light fixtures for my company from our old Orange Park location to our new Jacksonville office. Even though it was a small job, they treated us like their most important customer.", "rating": 5, "date": "3 weeks ago" }
+    ]
+  },
+    "faq": {
+    "headline": "Every Local Moving Question Answered",
+    "subheadline": "We've been Jacksonville's local moving experts for 25 years. Here are the answers to every question you might have about local moving in Jacksonville and surrounding areas.",
+    "categories": [
+      {
+        "title": "Pricing & Scheduling",
+        "items": [
+          { "question": "How much does a local move in Jacksonville cost?", "answer": "Our local moves start at just $397 for small apartments and 1-2 bedroom homes. The final cost depends on the size of your home, the distance, and any additional services required. We provide a transparent, price-lock guarantee with no hidden fees." },
+          { "question": "Do you really have no hidden fees or fuel charges?", "answer": "We're proud to be one of the few Jacksonville moving companies with truly transparent pricing. Our quote includes all moving equipment, fuel, transportation, furniture wrapping, and basic liability coverage. The price we quote is the price you pay." },
+          { "question": "Can I get same-day or next-day moving service?", "answer": "Yes! We understand that life doesn't always go according to plan. We offer flexible scheduling including same-day and next-day service based on availability. Call us as early as possible to secure a spot." }
+        ]
+      },
+      {
+        "title": "Service & Logistics",
+        "items": [
+          { "question": "What areas do you serve for local moves?", "answer": "We serve all of Jacksonville and the greater Northeast Florida region, including Duval, St. Johns, and Clay counties. This includes all beach communities, Orange Park, St. Augustine, Nocatee, and more. If you're unsure, just give us a call!" },
+          { "question": "How long does a typical local move take?", "answer": "A studio or 1-bedroom apartment typically takes 2-4 hours. A 2-3 bedroom house might take 4-6 hours, and larger homes can take a full day. The duration depends on factors like stairs, distance, and the amount of packing needed." },
+          { "question": "Do you provide packing services and supplies?", "answer": "Yes, we offer comprehensive packing services. You can choose full-service packing, partial packing for fragile items, or simply purchase high-quality packing supplies directly from us. All our moves include professional furniture wrapping at no extra cost." }
+        ]
+      }
+    ]
+  },
+    "movingTips": {
+    "headline": "Top 10 Tips for a Stress-Free Jacksonville Move",
+    "subheadline": "After 25 years and 15,000+ local moves in Jacksonville, we've learned what makes the difference between a stressful move and a smooth one. Here are our top insider tips.",
+    "tips": [
+        { "number": "1", "title": "Start Planning Early", "description": "Give yourself time to sort, organize, and plan. Start at least 2-3 weeks in advance to avoid last-minute chaos, especially during Jacksonville's busy summer moving season.", "icon": "Calendar" },
+        { "number": "2", "title": "Hire Local Jacksonville Experts", "description": "Choose a licensed and insured moving company that knows Jacksonville inside and out. We know every neighborhood, traffic pattern, and building restriction in the area.", "icon": "MapPinIcon" },
+        { "number": "3", "title": "Declutter Before You Pack", "description": "Get rid of unwanted items to reduce your load and save money. Donate, sell, or toss what you no longer need. Less stuff = lower moving costs.", "icon": "Package" },
+        { "number": "4", "title": "Label Everything Clearly", "description": "Label boxes by room and contents. This makes unpacking at your new Jacksonville home much easier and helps our crew place items correctly.", "icon": "FileText" },
+        { "number": "5", "title": "Use Quality Materials", "description": "Cheap boxes or flimsy tape can lead to damaged items. We provide professional packing services and premium materials to protect your belongings.", "icon": "Shield" },
+        { "number": "6", "title": "Protect Your Valuables", "description": "Keep important documents, jewelry, and irreplaceable items with you during the move. Don't pack them in the moving truck.", "icon": "Lock" },
+        { "number": "7", "title": "Schedule Utilities Early", "description": "Arrange for utilities in Jacksonville to be transferred or started before moving day. You don't want to arrive at a home without power or water.", "icon": "Zap" },
+        { "number": "8", "title": "Pack an Essentials Kit", "description": "Pack essentials like snacks, toiletries, phone chargers, and a change of clothes in a separate box that travels with you.", "icon": "Heart" },
+        { "number": "9", "title": "Communicate with Your Movers", "description": "Let your movers know about any specialty items, access issues, or time restrictions. T&E Moving communicates clearly every step of the way.", "icon": "Phone" },
+        { "number": "10", "title": "Relax and Let the Pros Handle It", "description": "Our experienced Jacksonville movers will take care of the packing, loading, transportation, and setup—so you don't have to lift a finger.", "icon": "ThumbsUp" }
+    ],
+    "cta": {
+        "headline": "Ready for a Stress-Free Jacksonville Move?",
+        "subheadline": "Let our experienced team handle everything while you focus on the excitement of your new home. Get your free quote today!",
+        "buttonText": "Get Your Free Quote Now"
+    }
+  },
+  "finalCta": {
+    "headline": "Ready to Move in Jacksonville?",
+    "subheadline": "Join over 15,000 satisfied Jacksonville families who chose T&E Movers for their local relocation. Your new neighborhood is waiting - let's get you there safely and stress-free.",
+    "buttonText": "Get Your $397 Quote Now",
+    "features": [
+        { "icon": "DollarSign", "title": "Starting at $397", "description": "No hidden fees or fuel charges" },
+        { "icon": "Shield", "title": "Zero Damage Guarantee", "description": "We fix or replace anything damaged" },
+        { "icon": "Clock", "title": "Same-Day Service", "description": "Emergency moves available" },
+        { "icon": "MapPinIcon", "title": "Local Experts", "description": "25+ years serving Jacksonville" }
+    ]
+  },
+  "footer": {
+      "licenseText": "Licensed and Insured Jacksonville Moving Company | FL License #IM123456"
   }
-  
+}

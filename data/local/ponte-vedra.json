@@ -1,0 +1,178 @@
+{
+    "meta": {
+      "title": "Ponte Vedra's Premier Local Movers | T&E Movers",
+      "description": "Your trusted neighbors for seamless local moves throughout Ponte Vedra & St. Johns County. 5-star rated, fully insured. Get your free, no-obligation quote today!"
+    },
+    "cityDetails": {
+      "cityName": "Ponte Vedra",
+      "county": "St. Johns County",
+      "colloquialName": "Ponte Vedra",
+      "zipCodes": ["32081", "32082", "32004"],
+      "neighborhoods": ["Nocatee", "Sawgrass", "Marsh Landing", "The Plantation", "Palm Valley", "Vilano Beach", "World Golf Village", "Palencia"]
+    },
+    "header": {
+      "subtitle": "Ponte Vedra's Local Moving Experts"
+    },
+    "hero": {
+      "badgeText": "🏆 #1 Rated Ponte Vedra Moving Company",
+      "headline": "Ponte Vedra's <span class=\"text-red-400\">Elite Local Movers</span> For Your Coastal Lifestyle",
+      "subheadline": "From Nocatee to the oceanfront, we provide a stress-free moving experience for our Ponte Vedra neighbors. Trust the local experts who know St. Johns County inside and out.",
+      "image": "/images/truck-fleet.png",
+      "imageBannerText": "Based in Ponte Vedra",
+      "stat1": { "value": "25+", "label": "Years in the Area" },
+      "stat2": { "value": "15K+", "label": "Local Moves" },
+      "stat3": { "value": "99.8%", "label": "Satisfaction Rate" }
+    },
+    "trustIndicators": [
+      { "icon": "Award", "label": "St. Johns A+ Rated" },
+      { "icon": "Shield", "label": "Licensed & Insured" },
+      { "icon": "Star", "label": "5-Star Reviews" },
+      { "icon": "Users", "label": "Family Owned" },
+      { "icon": "MapPinIcon", "label": "Local Experts" },
+      { "icon": "Clock", "label": "On-Time Service" }
+    ],
+    "pricing": {
+      "isEnabled": true,
+      "heroPrice": "$397",
+      "heroSubtext": "Perfect for apartments, condos, and local relocations within 50 miles of Ponte Vedra. No hidden fees, no fuel charges, and a price-lock guarantee!",
+      "tiers": [
+          { "title": "Studio/1-Bedroom Apartment", "priceRange": "$397", "duration": "2-4 hours", "description": "Ideal for beach condos and apartments" },
+          { "title": "2-3 Bedroom Home", "priceRange": "$597-$897", "duration": "4-6 hours", "description": "Includes furniture wrapping and setup" },
+          { "title": "4+ Bedroom Home", "priceRange": "$997+", "duration": "Full-day service", "description": "Perfect for larger Nocatee homes" }
+      ],
+      "features": ["No fuel charges", "Price-lock guarantee", "Professional wrapping included", "Furniture setup included"]
+    },
+    "whyChooseUs": {
+      "headline": "Why Ponte Vedra Families & Professionals Choose T&E",
+      "subheadline": "We're not just another moving company. We're your Ponte Vedra neighbors, dedicated to providing a premium moving experience that matches the lifestyle of our community.",
+      "cards": [
+        { "icon": "MapPinIcon", "title": "True Ponte Vedra Experts", "description": "We know the regulations for gated communities like Sawgrass and Marsh Landing, and how to navigate the A1A corridor. We are true St. Johns County locals." },
+        { "icon": "DollarSign", "title": "No Hidden Fees Promise", "description": "What we quote is what you pay. No fuel surcharges, no surprise fees. Our transparent pricing includes everything for a successful Ponte Vedra move." },
+        { "icon": "Shield", "title": "White-Glove Care", "description": "We treat your belongings with the utmost respect, providing premium protection for furniture, art, and valuables as a standard part of our service." }
+      ],
+      "promise": {
+        "headline": "The T&E Ponte Vedra Promise",
+        "image": "/images/facility-overview.png",
+        "points": [
+          { "title": "Price-Lock Guarantee", "description": "Your quote is your final price. No surprise charges, ever." },
+          { "title": "On-Time Arrival Promise", "description": "We respect your time. We arrive when scheduled, or your move is 25% off." },
+          { "title": "Zero Damage Guarantee", "description": "We guarantee zero damage to your belongings or we fix/replace at no cost to you." }
+        ]
+      }
+    },
+    "hyperlocalSection": {
+      "headline": "Serving All of Ponte Vedra & St. Johns County",
+      "subheadline": "From the Intracoastal to US-1, we provide expert local moving services throughout Ponte Vedra, Nocatee, St. Augustine, and the surrounding First Coast communities.",
+      "areaList": ["Ponte Vedra Beach", "Nocatee", "St. Augustine", "Jacksonville Beach", "Neptune Beach", "Vilano Beach", "Palm Valley", "Sawgrass", "Marsh Landing", "World Golf Village", "St. Johns", "Julington Creek"],
+      "buttonText": "Get My Free Quote"
+    },
+    "services": {
+      "headline": "Complete Ponte Vedra Moving Solutions",
+      "subheadline": "From luxury condos to large family homes, we handle every type of local move in Ponte Vedra with unmatched care and professionalism.",
+      "tabs": [
+        {
+          "value": "residential",
+          "triggerTitle": "Residential",
+          "cards": [
+            { "icon": "Home", "title": "Condo & Apartment Moves", "description": "Specialized in condo moves along the A1A corridor and throughout Ponte Vedra's many complexes.", "details": ["High-rise building expertise", "HOA compliance", "Tight space navigation", "Elevator logistics"] },
+            { "icon": "Building", "title": "House Moves", "description": "Full-service house moving, from Nocatee starter homes to large estates in Marsh Landing.", "details": ["Complete packing services", "Furniture disassembly/assembly", "Appliance services", "Garage & lanai clearing"] },
+            { "icon": "Heart", "title": "Senior Moving", "description": "Compassionate moving services for seniors transitioning to new living situations in Ponte Vedra.", "details": ["Patient, caring approach", "Downsizing assistance", "Assisted living transitions", "Family coordination"] }
+          ]
+        },
+        {
+          "value": "commercial",
+          "triggerTitle": "Commercial",
+          "cards": [
+            { "icon": "Building", "title": "Office Relocations", "description": "Minimize downtime with our efficient office moving services.", "details": ["After-hours moving available", "IT equipment specialists", "Furniture disassembly/assembly", "Minimal business disruption"] },
+            { "icon": "Package", "title": "Retail & Restaurant", "description": "Specialized moving for retail stores and restaurants.", "details": ["Equipment moving", "Inventory handling", "Fixture installation", "Quick turnaround times"] },
+            { "icon": "FileText", "title": "Medical Offices", "description": "Careful handling of sensitive medical equipment and records.", "details": ["HIPAA compliance", "Medical equipment expertise", "Secure document handling", "Minimal patient disruption"] }
+          ]
+        },
+        {
+          "value": "specialty",
+          "triggerTitle": "Specialty",
+          "cards": [
+            { "icon": "Package", "title": "Piano Moving", "description": "Expert piano moving with specialized equipment and techniques.", "details": ["All piano types", "Specialized equipment", "Stair navigation", "Climate considerations"] },
+            { "icon": "Shield", "title": "Gun Safe Moving", "description": "Safe and secure moving of gun safes and heavy security equipment.", "details": ["Heavy lifting equipment", "Secure handling", "Stair navigation", "Placement assistance"] },
+            { "icon": "Boxes", "title": "Antiques & Art", "description": "White-glove service for valuable antiques and artwork.", "details": ["Custom packing", "Climate control", "Insurance coordination", "Museum-quality care"] }
+          ]
+        },
+        {
+          "value": "additional",
+          "triggerTitle": "Additional",
+          "cards": [
+            { "icon": "Package", "title": "Packing Services", "description": "Professional packing and unpacking services.", "details": ["Full-service packing", "Partial packing", "Unpacking services", "Packing supplies"] },
+            { "icon": "Lock", "title": "Storage Solutions", "description": "Secure storage for any timeline needs.", "details": ["Climate-controlled facility", "Short & long-term options", "Vehicle storage", "24/7 security"] },
+            { "icon": "Wrench", "title": "Junk Removal", "description": "Decluttering and junk removal services.", "details": ["Furniture removal", "Appliance disposal", "Eco-friendly disposal", "Same-day service"] }
+          ]
+        }
+      ]
+    },
+    "testimonials": {
+      "headline": "Real Ponte Vedra Moving Stories",
+      "subheadline": "Don't just take our word for it. Here's what your neighbors in Ponte Vedra are saying about their experience with T&E Movers.",
+      "buttonText": "Be Our Next Success Story",
+      "reviews": [
+        { "customerName": "Jennifer and Tom L.", "initials": "JL", "moveRoute": "Nocatee Town Center → Nocatee", "moveType": "Growing Family Move", "testimonialText": "Moving with two small kids felt overwhelming, but T&E was a lifesaver. They were so patient and worked around our chaotic schedule. They handled the nursery furniture with such care. Made our upgrade to a bigger home in Nocatee so much easier!", "rating": 5, "date": "2 weeks ago" },
+        { "customerName": "Brian S.", "initials": "BS", "moveRoute": "Jax Beach → Sawgrass", "moveType": "Condo Relocation", "testimonialText": "I needed to move my condo and was worried about my art collection and golf clubs. The T&E crew was incredibly professional. They were efficient, on time, and their price was exactly what was quoted. Everything arrived at my new place in Sawgrass without a scratch. 10/10.", "rating": 5, "date": "1 month ago" },
+        { "customerName": "The Patterson Family", "initials": "PF", "moveRoute": "Marsh Landing CC", "moveType": "Downsizing Move", "testimonialText": "We were downsizing within Marsh Landing and had many fragile antiques. The T&E team treated our heirlooms like their own. They were respectful, gentle, and went above and beyond to help us arrange furniture in the new house. A truly first-class service.", "rating": 5, "date": "3 months ago" }
+      ]
+    },
+    "faq": {
+      "headline": "Ponte Vedra Moving Questions, Answered",
+      "subheadline": "We've been St. Johns County's local moving experts for over 25 years. Here are answers to common questions about moving in the Ponte Vedra area.",
+      "categories": [
+        {
+          "title": "Pricing & Scheduling",
+          "items": [
+            { "question": "How much does a local move in Ponte Vedra cost?", "answer": "Our local moves start at just $397 for small condos and apartments. The final cost depends on the size of your home, access (gated communities, elevators), and any extra services. We provide a transparent, price-lock guarantee with no hidden fees." },
+            { "question": "Do you work with HOAs in communities like Nocatee or Sawgrass?", "answer": "Absolutely. We are very familiar with the rules and regulations of Ponte Vedra's gated communities. We handle all the necessary coordination regarding approved moving hours, parking, and elevator reservations to ensure a smooth process." },
+            { "question": "How far in advance should I book my Ponte Vedra move?", "answer": "We recommend booking 3-4 weeks in advance, especially during the spring and fall moving seasons which are popular in Ponte Vedra. However, we can sometimes accommodate last-minute moves, so don't hesitate to call." }
+          ]
+        },
+        {
+          "title": "Service & Logistics",
+          "items": [
+            { "question": "What areas do you serve around Ponte Vedra?", "answer": "We serve all of St. Johns County and the greater Northeast Florida region. This includes Ponte Vedra Beach, Nocatee, St. Augustine, Vilano Beach, Palm Valley, and local moves to and from Jacksonville." },
+            { "question": "How long does a typical local move in Nocatee take?", "answer": "A 2-3 bedroom home in Nocatee might take 4-6 hours. Larger homes can take a full day. The duration depends on factors like community access, distance between homes, and the amount of packing needed." },
+            { "question": "Do you offer packing for fragile coastal decor and artwork?", "answer": "Yes, we specialize in packing fragile items. Our full-service packing includes custom solutions for artwork, glass, and delicate coastal decor to ensure it arrives safely at your new Ponte Vedra home." }
+          ]
+        }
+      ]
+    },
+    "movingTips": {
+      "headline": "Top Tips for a Smooth Ponte Vedra Move",
+      "subheadline": "After 15,000+ local moves in St. Johns County, we know what makes for a seamless coastal relocation. Here are our top insider tips.",
+      "tips": [
+          { "number": "1", "title": "Confirm HOA Rules", "description": "Check with your new and old HOA in Ponte Vedra for their moving day rules, such as specific hours or designated parking, and let us know ahead of time.", "icon": "Calendar" },
+          { "number": "2", "title": "Hire True Local Movers", "description": "Choose a licensed and insured moving company that knows Ponte Vedra's communities. We know every gate code, back road, and shortcut in the area.", "icon": "MapPinIcon" },
+          { "number": "3", "title": "Declutter Before Packing", "description": "Get rid of unwanted items to reduce your load and save money. The St. Johns County area has many great donation centers.", "icon": "Package" },
+          { "number": "4", "title": "Label for Your New Home", "description": "Label boxes by room and contents. This makes unpacking at your new Ponte Vedra home much faster and helps our crew place items correctly.", "icon": "FileText" },
+          { "number": "5", "title": "Use Quality Materials", "description": "Florida's humidity can weaken cheap boxes. We provide professional packing services and premium materials to protect your belongings.", "icon": "Shield" },
+          { "number": "6", "title": "Protect Your Valuables", "description": "Keep important documents, jewelry, and irreplaceable items with you during the move. Don't pack them in the moving truck.", "icon": "Lock" },
+          { "number": "7", "title": "Schedule Utilities Early", "description": "Arrange for FPL and other utilities in Ponte Vedra to be transferred or started before moving day. You'll want that AC running!", "icon": "Zap" },
+          { "number": "8", "title": "Pack an Essentials Kit", "description": "Pack a 'first night' box with snacks, toiletries, chargers, and a change of clothes that travels with you, not on the truck.", "icon": "Heart" },
+          { "number": "9", "title": "Communicate With Us", "description": "Let your T&E moving coordinator know about specialty items, access issues, or time restrictions. Clear communication is key!", "icon": "Phone" },
+          { "number": "10", "title": "Relax & Enjoy the View", "description": "You're moving to Ponte Vedra! Let our experienced team handle the heavy lifting so you can focus on your new coastal lifestyle.", "icon": "ThumbsUp" }
+      ],
+      "cta": {
+          "headline": "Ready for a Stress-Free Ponte Vedra Move?",
+          "subheadline": "Let our experienced team handle everything while you focus on the excitement of your new home. Get your free quote today!",
+          "buttonText": "Get Your Free Quote Now"
+      }
+    },
+    "finalCta": {
+      "headline": "Ready to Move in Ponte Vedra?",
+      "subheadline": "Join thousands of satisfied St. Johns County families who chose T&E Movers. Your new home is waiting - let's get you there safely and stress-free.",
+      "buttonText": "Get Your Free Quote",
+      "features": [
+          { "icon": "DollarSign", "title": "Transparent Pricing", "description": "No hidden fees or fuel charges" },
+          { "icon": "Shield", "title": "Zero Damage Guarantee", "description": "We fix or replace anything damaged" },
+          { "icon": "Clock", "title": "On-Time Service", "description": "We respect your schedule" },
+          { "icon": "MapPinIcon", "title": "Ponte Vedra Experts", "description": "25+ years serving St. Johns County" }
+      ]
+    },
+    "footer": {
+        "licenseText": "Licensed and Insured Ponte Vedra Moving Company | FL License #IM123456"
+    }
+  }

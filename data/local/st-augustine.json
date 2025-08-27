@@ -1,0 +1,154 @@
+{
+    "meta": {
+      "title": "St. Augustine's Premier Local Movers | T&E Movers",
+      "description": "Your trusted local movers for St. Augustine, FL. We offer affordable, reliable moving services for historic homes and new communities. Get your free quote today!"
+    },
+    "cityDetails": {
+      "cityName": "St. Augustine",
+      "county": "St. Johns County",
+      "colloquialName": "St. Aug",
+      "zipCodes": ["32080", "32084", "32086", "32092", "32095"],
+      "neighborhoods": ["Downtown Historic District", "Vilano Beach", "Anastasia Island", "St. Augustine Beach", "Lincolnville", "Davis Shores", "Uptown", "North City"]
+    },
+    "header": {
+      "subtitle": "St. Augustine's Local Moving Experts"
+    },
+    "hero": {
+      "badgeText": "🏆 #1 Rated St. Augustine Moving Company",
+      "headline": "St. Augustine's <span class=\"text-red-400\">Premier Local Movers</span> Since 1998",
+      "subheadline": "Your trusted neighbors for seamless local moves throughout St. Augustine and surrounding areas. We've successfully completed over 15,000 local moves with a 99.8% customer satisfaction rate.",
+      "image": "/images/truck-fleet.png",
+      "imageBannerText": "Based in St. Augustine",
+      "stat1": { "value": "25+", "label": "Years in St. Augustine" },
+      "stat2": { "value": "15K+", "label": "Local Moves" },
+      "stat3": { "value": "99.8%", "label": "Satisfaction Rate" }
+    },
+    "trustIndicators": [
+      { "icon": "Award", "label": "St. Johns A+ Rated" },
+      { "icon": "Shield", "label": "Licensed & Insured" },
+      { "icon": "Star", "label": "5-Star Reviews" },
+      { "icon": "Users", "label": "Family Owned" },
+      { "icon": "MapPinIcon", "label": "Local Experts" },
+      { "icon": "Clock", "label": "On-Time Service" }
+    ],
+    "pricing": {
+      "isEnabled": true,
+      "heroPrice": "$397",
+      "heroSubtext": "Perfect for apartments, historic homes, and local relocations within 50 miles of St. Augustine. No hidden fees, no fuel charges, and a price-lock guarantee!",
+      "tiers": [
+          { "title": "Studio/1-Bedroom Apartment", "priceRange": "$397", "duration": "2-4 hours", "description": "Ideal for downtown apartments & condos" },
+          { "title": "2-3 Bedroom Home", "priceRange": "$597-$897", "duration": "4-6 hours", "description": "Includes furniture wrapping and setup" },
+          { "title": "4+ Bedroom Home", "priceRange": "$997+", "duration": "Full-day service", "description": "Perfect for larger family homes" }
+      ],
+      "features": ["No fuel charges", "Price-lock guarantee", "Professional wrapping included", "Furniture setup included"]
+    },
+    "whyChooseUs": {
+      "headline": "Why St. Augustine Residents Choose T&E Movers",
+      "subheadline": "We're your St. Augustine neighbors, dedicated to providing a premium moving experience that respects the history and charm of our city.",
+      "cards": [
+        { "icon": "MapPinIcon", "title": "Historic Downtown Experts", "description": "We know how to navigate the narrow streets and historic buildings of downtown St. Augustine, ensuring a safe and efficient move for your most precious belongings." },
+        { "icon": "DollarSign", "title": "No Hidden Fees Promise", "description": "What we quote is what you pay. No surprises. Our transparent pricing includes everything you need for a successful move in St. Augustine." },
+        { "icon": "Shield", "title": "Antique & Art Protection", "description": "We provide specialized care for antiques and valuable artwork, a standard part of our service for the unique treasures found in St. Augustine homes." }
+      ],
+      "promise": {
+        "headline": "The T&E St. Augustine Promise",
+        "image": "/images/facility-overview.png",
+        "points": [
+          { "title": "Price-Lock Guarantee", "description": "Your quote is your final price. No surprise charges, ever." },
+          { "title": "On-Time Arrival Promise", "description": "We respect your time. We arrive when scheduled, or your move is 25% off." },
+          { "title": "Zero Damage Guarantee", "description": "We guarantee zero damage to your belongings or we fix/replace at no cost to you." }
+        ]
+      }
+    },
+    "hyperlocalSection": {
+      "headline": "Serving All of St. Augustine & St. Johns County",
+      "subheadline": "From the historic bayfront to the beaches, we provide expert local moving services throughout St. Augustine, Vilano Beach, and the surrounding communities.",
+      "areaList": ["St. Augustine", "St. Augustine Beach", "Vilano Beach", "World Golf Village", "Nocatee", "Ponte Vedra", "Crescent Beach", "Butler Beach", "St. Johns", "Palencia"],
+      "buttonText": "Get My Free Quote"
+    },
+    "services": {
+      "headline": "Complete St. Augustine Moving Solutions",
+      "subheadline": "From historic downtown homes to modern apartments, we handle every type of local move in St. Augustine with unmatched care and professionalism.",
+      "tabs": [
+        {
+          "value": "residential",
+          "triggerTitle": "Residential",
+          "cards": [
+            { "icon": "Home", "title": "Historic Home Moves", "description": "Specialized in moving within the unique constraints of St. Augustine's historic homes.", "details": ["Narrow street navigation", "Historic preservation care", "Antique handling", "HOA compliance"] },
+            { "icon": "Building", "title": "Condo & Beach House Moves", "description": "Full-service moving for condos and beach houses on Anastasia Island and Vilano Beach.", "details": ["Complete packing services", "Furniture disassembly/assembly", "Appliance services", "Elevator logistics"] },
+            { "icon": "Heart", "title": "Senior Moving", "description": "Compassionate moving services for seniors transitioning to new living situations in St. Augustine.", "details": ["Patient, caring approach", "Downsizing assistance", "Assisted living transitions", "Family coordination"] }
+          ]
+        },
+        { "value": "commercial", "triggerTitle": "Commercial", "cards": [ { "icon": "Building", "title": "Office Relocations", "description": "Minimize downtime with our efficient office moving services.", "details": ["After-hours moving available", "IT equipment specialists", "Furniture disassembly/assembly", "Minimal business disruption"] }, { "icon": "Package", "title": "Retail & Restaurant", "description": "Specialized moving for retail stores and restaurants.", "details": ["Equipment moving", "Inventory handling", "Fixture installation", "Quick turnaround times"] }, { "icon": "FileText", "title": "Medical Offices", "description": "Careful handling of sensitive medical equipment and records.", "details": ["HIPAA compliance", "Medical equipment expertise", "Secure document handling", "Minimal patient disruption"] } ] },
+        { "value": "specialty", "triggerTitle": "Specialty", "cards": [ { "icon": "Package", "title": "Piano Moving", "description": "Expert piano moving with specialized equipment and techniques.", "details": ["All piano types", "Specialized equipment", "Stair navigation", "Climate considerations"] }, { "icon": "Shield", "title": "Gun Safe Moving", "description": "Safe and secure moving of gun safes and heavy security equipment.", "details": ["Heavy lifting equipment", "Secure handling", "Stair navigation", "Placement assistance"] }, { "icon": "Boxes", "title": "Antiques & Art", "description": "White-glove service for valuable antiques and artwork.", "details": ["Custom packing", "Climate control", "Insurance coordination", "Museum-quality care"] } ] },
+        { "value": "additional", "triggerTitle": "Additional", "cards": [ { "icon": "Package", "title": "Packing Services", "description": "Professional packing and unpacking services.", "details": ["Full-service packing", "Partial packing", "Unpacking services", "Packing supplies"] }, { "icon": "Lock", "title": "Storage Solutions", "description": "Secure storage for any timeline needs.", "details": ["Climate-controlled facility", "Short & long-term options", "Vehicle storage", "24/7 security"] }, { "icon": "Wrench", "title": "Junk Removal", "description": "Decluttering and junk removal services.", "details": ["Furniture removal", "Appliance disposal", "Eco-friendly disposal", "Same-day service"] } ] }
+      ]
+    },
+    "testimonials": {
+      "headline": "Real St. Augustine Moving Stories",
+      "subheadline": "Don't just take our word for it. Here's what your neighbors in St. Augustine are saying about their experience with T&E Movers.",
+      "buttonText": "Be Our Next Success Story",
+      "reviews": [
+        { "customerName": "Maria G.", "initials": "MG", "moveRoute": "Lincolnville → Davis Shores", "moveType": "Historic Home Move", "testimonialText": "Moving out of our historic home in Lincolnville was emotional, but the T&E team was amazing. They were so careful with the old woodwork and handled our antiques like they were museum pieces. Truly exceptional service.", "rating": 5, "date": "3 weeks ago" },
+        { "customerName": "The Chen Family", "initials": "CF", "moveRoute": "Jacksonville → St. Augustine Beach", "moveType": "Family Relocation", "testimonialText": "We moved from Jax down to St. Augustine Beach and T&E made it a breeze. They were on time, super efficient, and the final price was exactly what they quoted. The crew was friendly and professional. Highly recommend!", "rating": 5, "date": "1 month ago" },
+        { "customerName": "David R.", "initials": "DR", "moveRoute": "Downtown St. Augustine", "moveType": "Apartment Move", "testimonialText": "I was moving apartments downtown and worried about the tight spaces and parking. T&E knew exactly what to do. They had the truck parked and were moving my stuff before I even finished my coffee. Fast, professional, and zero stress.", "rating": 5, "date": "2 months ago" }
+      ]
+    },
+    "faq": {
+      "headline": "St. Augustine Moving Questions, Answered",
+      "subheadline": "We've been St. Augustine's local moving experts for over 25 years. Here are answers to common questions about moving in the nation's oldest city.",
+      "categories": [
+        {
+          "title": "Pricing & Scheduling",
+          "items": [
+            { "question": "How much does a local move in St. Augustine cost?", "answer": "Our local moves start at just $397. The final cost depends on factors like the size of your home, access for our trucks (especially downtown), and any extra services. We provide transparent, price-lock guarantees." },
+            { "question": "Can you handle moves in the historic downtown area?", "answer": "Absolutely. We are experts at navigating the narrow streets and historic properties of downtown St. Augustine. We use smaller trucks and specialized equipment to ensure a safe and efficient move." },
+            { "question": "How far in advance should I book my St. Augustine move?", "answer": "We recommend booking 3-4 weeks in advance, especially during the spring and fall. St. Augustine is a popular destination, and our schedule fills up quickly." }
+          ]
+        },
+        {
+          "title": "Service & Logistics",
+          "items": [
+            { "question": "What areas do you serve around St. Augustine?", "answer": "We serve all of St. Johns County, including St. Augustine, St. Augustine Beach, Vilano Beach, Crescent Beach, and moves to and from Jacksonville, Ponte Vedra, and Nocatee." },
+            { "question": "How do you protect antique furniture?", "answer": "Our crews are specially trained in handling antiques. We use premium padding, custom crating for fragile items, and specialized techniques to ensure your valuable pieces are transported safely." },
+            { "question": "Do you offer packing services?", "answer": "Yes, we offer full and partial packing services. We can pack your entire home or just the fragile items, like glassware and artwork, to ensure they are protected during the move." }
+          ]
+        }
+      ]
+    },
+    "movingTips": {
+      "headline": "Top Tips for a Smooth St. Augustine Move",
+      "subheadline": "After 15,000+ local moves in St. Johns County, we know what makes for a seamless relocation. Here are our top insider tips.",
+      "tips": [
+          { "number": "1", "title": "Plan for Historic Areas", "description": "If you're moving in downtown St. Augustine, discuss access with us beforehand. We'll plan the best route and time to avoid traffic and narrow streets.", "icon": "Calendar" },
+          { "number": "2", "title": "Hire True Local Movers", "description": "Choose a licensed and insured moving company that knows St. Augustine. We understand the unique challenges and beauty of moving in this historic city.", "icon": "MapPinIcon" },
+          { "number": "3", "title": "Declutter Before Packing", "description": "Get rid of unwanted items to reduce your load and save money. St. Johns County has many great donation centers.", "icon": "Package" },
+          { "number": "4", "title": "Label for Your New Home", "description": "Label boxes by room and contents. This makes unpacking at your new St. Augustine home much faster and helps our crew place items correctly.", "icon": "FileText" },
+          { "number": "5", "title": "Use Quality Materials", "description": "Florida's humidity can weaken cheap boxes. We provide professional packing services and premium materials to protect your belongings.", "icon": "Shield" },
+          { "number": "6", "title": "Protect Your Valuables", "description": "Keep important documents, jewelry, and irreplaceable items with you during the move. Don't pack them in the moving truck.", "icon": "Lock" },
+          { "number": "7", "title": "Schedule Utilities Early", "description": "Arrange for utilities in St. Augustine to be transferred or started before moving day. You'll want that AC running!", "icon": "Zap" },
+          { "number": "8", "title": "Pack an Essentials Kit", "description": "Pack a 'first night' box with snacks, toiletries, chargers, and a change of clothes that travels with you, not on the truck.", "icon": "Heart" },
+          { "number": "9", "title": "Communicate With Us", "description": "Let your T&E moving coordinator know about specialty items, access issues, or time restrictions. Clear communication is key!", "icon": "Phone" },
+          { "number": "10", "title": "Relax & Enjoy History", "description": "You're moving to a beautiful, historic city! Let our experienced team handle the heavy lifting so you can start exploring.", "icon": "ThumbsUp" }
+      ],
+      "cta": {
+          "headline": "Ready for a Stress-Free St. Augustine Move?",
+          "subheadline": "Let our experienced team handle everything while you focus on the excitement of your new home. Get your free quote today!",
+          "buttonText": "Get Your Free Quote Now"
+      }
+    },
+    "finalCta": {
+      "headline": "Ready to Move in St. Augustine?",
+      "subheadline": "Join thousands of satisfied St. Johns County families who chose T&E Movers. Your new home is waiting - let's get you there safely and stress-free.",
+      "buttonText": "Get Your Free Quote",
+      "features": [
+          { "icon": "DollarSign", "title": "Transparent Pricing", "description": "No hidden fees or fuel charges" },
+          { "icon": "Shield", "title": "Zero Damage Guarantee", "description": "We fix or replace anything damaged" },
+          { "icon": "Clock", "title": "On-Time Service", "description": "We respect your schedule" },
+          { "icon": "MapPinIcon", "title": "St. Augustine Experts", "description": "25+ years serving St. Johns County" }
+      ]
+    },
+    "footer": {
+        "licenseText": "Licensed and Insured St. Augustine Moving Company | FL License #IM123456"
+    }
+  }

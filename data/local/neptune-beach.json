@@ -1,0 +1,132 @@
+{
+    "meta": {
+      "title": "Neptune Beach's Premier Local Movers | T&E Movers",
+      "description": "Your trusted local movers for Neptune Beach, FL. We offer affordable, reliable moving services for homes and condos in the Neptune Beach community. Get your free quote today!"
+    },
+    "cityDetails": {
+      "cityName": "Neptune Beach",
+      "county": "Duval County",
+      "colloquialName": "Neptune Beach",
+      "zipCodes": ["32266"],
+      "neighborhoods": ["West Neptune Beach", "Oceanfront", "Beaches Town Center", "Atlantic Beach", "Jacksonville Beach", "San Pablo", "Intracoastal West", "Mayport"]
+    },
+    "header": {
+      "subtitle": "Neptune Beach's Local Moving Experts"
+    },
+    "hero": {
+      "badgeText": "🏆 #1 Rated Neptune Beach Moving Company",
+      "headline": "Neptune Beach's <span class=\"text-red-400\">Premier Local Movers</span> Since 1998",
+      "subheadline": "Your trusted neighbors for seamless local moves throughout Neptune Beach and surrounding areas. We've successfully completed over 15,000 local moves with a 99.8% customer satisfaction rate.",
+      "image": "/images/truck-fleet.png",
+      "imageBannerText": "Based in Neptune Beach",
+      "stat1": { "value": "25+", "label": "Years at the Beach" },
+      "stat2": { "value": "15K+", "label": "Local Moves" },
+      "stat3": { "value": "99.8%", "label": "Satisfaction Rate" }
+    },
+    "trustIndicators": [
+      { "icon": "Award", "label": "Beaches A+ Rated" },
+      { "icon": "Shield", "label": "Licensed & Insured" },
+      { "icon": "Star", "label": "5-Star Reviews" },
+      { "icon": "Users", "label": "Family Owned" },
+      { "icon": "MapPinIcon", "label": "Local Experts" },
+      { "icon": "Clock", "label": "On-Time Service" }
+    ],
+    "pricing": {
+      "isEnabled": true,
+      "heroPrice": "$397",
+      "heroSubtext": "Perfect for apartments, condos, and local relocations within 50 miles of Neptune Beach. No hidden fees, no fuel charges, and a price-lock guarantee!",
+      "tiers": [
+          { "title": "Condo/Beach House", "priceRange": "$397", "duration": "2-4 hours", "description": "Ideal for beach houses and condos" },
+          { "title": "2-3 Bedroom Home", "priceRange": "$597-$897", "duration": "4-6 hours", "description": "Includes furniture wrapping and setup" },
+          { "title": "4+ Bedroom Home", "priceRange": "$997+", "duration": "Full-day service", "description": "Perfect for larger family homes" }
+      ],
+      "features": ["No fuel charges", "Price-lock guarantee", "Professional wrapping included", "Furniture setup included"]
+    },
+    "whyChooseUs": {
+      "headline": "Why Neptune Beach Residents Choose T&E Movers",
+      "subheadline": "We're your Neptune Beach neighbors, committed to providing a top-quality moving experience with a focus on careful, reliable service for our tight-knit coastal community.",
+      "cards": [
+        { "icon": "MapPinIcon", "title": "Beaches Specialists", "description": "From the Town Center to the Intracoastal, we know every part of Neptune Beach. Our local expertise ensures a smooth and efficient move in our unique coastal environment." },
+        { "icon": "DollarSign", "title": "No Hidden Fees Promise", "description": "The price we quote is the price you pay. No surprises. Our transparent pricing includes everything for a successful move in Neptune Beach." },
+        { "icon": "Shield", "title": "Coastal Home Care", "description": "We take extra precautions to protect your home from sand and salt during the move, ensuring your property is treated with the utmost care." }
+      ],
+      "promise": {
+        "headline": "The T&E Neptune Beach Promise",
+        "image": "/images/facility-overview.png",
+        "points": [
+          { "title": "Price-Lock Guarantee", "description": "Your quote is your final price. No surprise charges, ever." },
+          { "title": "On-Time Arrival Promise", "description": "We respect your time. We arrive when scheduled, or your move is 25% off." },
+          { "title": "Zero Damage Guarantee", "description": "We guarantee zero damage to your belongings or we fix/replace at no cost to you." }
+        ]
+      }
+    },
+    "hyperlocalSection": {
+      "headline": "Serving All of Neptune Beach & The Beaches",
+      "subheadline": "From Atlantic Beach to Jacksonville Beach, we provide expert local moving services throughout Neptune Beach and the surrounding coastal communities.",
+      "areaList": ["Neptune Beach", "Atlantic Beach", "Jacksonville Beach", "Mayport", "Ponte Vedra Beach", "Intracoastal West", "San Pablo", "Southside", "Baymeadows", "Deerwood"],
+      "buttonText": "Get My Free Quote"
+    },
+      "services": {
+      "headline": "Complete Neptune Beach Moving Solutions",
+      "subheadline": "From classic beach bungalows to modern family homes, we handle every type of local move in Neptune Beach with unmatched care and professionalism.",
+      "tabs": [
+          { "value": "residential", "triggerTitle": "Residential", "cards": [ { "icon": "Home", "title": "Beach Home & Bungalow Moves", "description": "Expert moving services for single-family homes and classic beach bungalows in Neptune Beach.", "details": ["Professional packing", "Furniture assembly", "Coastal home protection", "Neighborhood expertise"] }, { "icon": "Building", "title": "Condo & Apartment Moves", "description": "Efficient and careful moving for condos and apartments, especially near the Beaches Town Center.", "details": ["Stair and elevator expertise", "Tight space navigation", "Community rule adherence", "Efficient service"] }, { "icon": "Heart", "title": "Senior & Family Moves", "description": "Compassionate and precise moving services for families and seniors in the Neptune Beach community.", "details": ["Patient, caring approach", "Downsizing assistance", "Unpacking services", "Family coordination"] } ] },
+          { "value": "commercial", "triggerTitle": "Commercial", "cards": [ { "icon": "Building", "title": "Office Relocations", "description": "Minimize downtime with our efficient office moving services.", "details": ["After-hours moving available", "IT equipment specialists", "Furniture disassembly/assembly", "Minimal business disruption"] }, { "icon": "Package", "title": "Retail & Restaurant", "description": "Specialized moving for retail stores and restaurants.", "details": ["Equipment moving", "Inventory handling", "Fixture installation", "Quick turnaround times"] }, { "icon": "FileText", "title": "Medical Offices", "description": "Careful handling of sensitive medical equipment and records.", "details": ["HIPAA compliance", "Medical equipment expertise", "Secure document handling", "Minimal patient disruption"] } ] },
+          { "value": "specialty", "triggerTitle": "Specialty", "cards": [ { "icon": "Package", "title": "Piano Moving", "description": "Expert piano moving with specialized equipment and techniques.", "details": ["All piano types", "Specialized equipment", "Stair navigation", "Climate considerations"] }, { "icon": "Shield", "title": "Gun Safe Moving", "description": "Safe and secure moving of gun safes and heavy security equipment.", "details": ["Heavy lifting equipment", "Secure handling", "Stair navigation", "Placement assistance"] }, { "icon": "Boxes", "title": "Antiques & Art", "description": "White-glove service for valuable antiques and artwork.", "details": ["Custom packing", "Climate control", "Insurance coordination", "Museum-quality care"] } ] },
+          { "value": "additional", "triggerTitle": "Additional", "cards": [ { "icon": "Package", "title": "Packing Services", "description": "Professional packing and unpacking services.", "details": ["Full-service packing", "Partial packing", "Unpacking services", "Packing supplies"] }, { "icon": "Lock", "title": "Storage Solutions", "description": "Secure storage for any timeline needs.", "details": ["Climate-controlled facility", "Short & long-term options", "Vehicle storage", "24/7 security"] }, { "icon": "Wrench", "title": "Junk Removal", "description": "Decluttering and junk removal services.", "details": ["Furniture removal", "Appliance disposal", "Eco-friendly disposal", "Same-day service"] } ] }
+      ]
+    },
+    "testimonials": {
+      "headline": "Real Neptune Beach Moving Stories",
+      "subheadline": "Don't just take our word for it. Here's what your neighbors in Neptune Beach are saying about their experience with T&E Movers.",
+      "buttonText": "Be Our Next Success Story",
+      "reviews": [
+          { "customerName": "The Knight Family", "initials": "KF", "moveRoute": "West Neptune Beach", "moveType": "Local Family Move", "testimonialText": "We used T&E Movers for our move within Neptune Beach and they were fantastic. The team was professional, efficient, and took great care of our belongings. They made the moving process so easy. Highly recommend!", "rating": 5, "date": "1 month ago" },
+          { "customerName": "Brian D.", "initials": "BD", "moveRoute": "Oceanfront", "moveType": "Condo Move", "testimonialText": "I was very impressed with the crew from T&E Movers. They were on time, worked hard, and were very professional. They handled my condo move perfectly and the final price was very fair. A+ service.", "rating": 5, "date": "2 months ago" },
+          { "customerName": "The Lee Family", "initials": "LF", "moveRoute": "Neptune Beach", "moveType": "New Home Purchase", "testimonialText": "Moving into our new home in Neptune Beach was a great experience thanks to T&E. The crew was friendly, careful, and efficient. They made sure everything was perfect. A truly 5-star service.", "rating": 5, "date": "3 months ago" }
+      ]
+    },
+    "faq": {
+      "headline": "Neptune Beach Moving Questions, Answered",
+      "subheadline": "As the Beaches' trusted local movers for over 25 years, we have the answers to all your questions about moving in our beautiful coastal community.",
+      "categories": [
+          { "title": "Pricing & Scheduling", "items": [ { "question": "How much does a local move in Neptune Beach cost?", "answer": "Our local moves start at just $397. The final cost depends on the size of your home, access, and any extra services. We provide transparent, upfront quotes with a price-lock guarantee." }, { "question": "Are you familiar with the neighborhoods in Neptune Beach?", "answer": "Yes, we have extensive experience moving families throughout Neptune Beach. We know the area well and can navigate its unique streets and properties to ensure an efficient move." }, { "question": "How far in advance should I book my move?", "answer": "We recommend booking 3-4 weeks in advance, especially during the spring and summer. Neptune Beach is a popular moving destination, and our schedule fills up quickly." } ] },
+          { "title": "Service & Logistics", "items": [ { "question": "What areas do you serve around Neptune Beach?", "answer": "We serve all of the beaches communities, including Neptune Beach, Atlantic Beach, and Jacksonville Beach, as well as Mayport and the Intracoastal West area." }, { "question": "Do you offer packing services?", "answer": "Yes, we offer both full and partial packing services. Our professional packers can handle everything, allowing you to focus on other aspects of your move with peace of mind." }, { "question": "Can you handle moves in homes with difficult parking or access?", "answer": "Absolutely. Our teams are experienced in handling various access challenges. Please let us know about your situation when you book so we can plan the best approach." } ] }
+      ]
+    },
+    "movingTips": {
+      "headline": "Top Tips for a Smooth Neptune Beach Move",
+      "subheadline": "After 25 years of moving families at the beaches, we know how to make your Neptune Beach relocation a success. Here are our top tips.",
+      "tips": [
+          { "number": "1", "title": "Plan for Beach Parking", "description": "Let us know about the parking situation at your Neptune Beach home. We'll coordinate the best plan for our truck to ensure a smooth moving day.", "icon": "Calendar" },
+          { "number": "2", "title": "Hire Beaches Experts", "description": "Choose a moving company that knows Neptune Beach. We understand the local logistics to make your move as efficient and stress-free as possible.", "icon": "MapPinIcon" },
+          { "number": "3", "title": "Declutter Before Packing", "description": "Get rid of unwanted items to reduce your load and save money. There are several great donation centers in the Jacksonville area.", "icon": "Package" },
+          { "number": "4", "title": "Label for Your New Home", "description": "Label boxes by room and contents. This makes unpacking at your new Neptune Beach home much faster and helps our crew place items correctly.", "icon": "FileText" },
+          { "number": "5", "title": "Use Quality Materials", "description": "Florida's coastal air can weaken cheap boxes. We provide professional packing services and premium materials to protect your belongings.", "icon": "Shield" },
+          { "number": "6", "title": "Protect Your Valuables", "description": "Keep important documents, jewelry, and irreplaceable items with you during the move. Don't pack them in the moving truck.", "icon": "Lock" },
+          { "number": "7", "title": "Schedule Utilities Early", "description": "Arrange for utilities in Neptune Beach to be transferred or started before moving day. You'll want that AC on and ready!", "icon": "Zap" },
+          { "number": "8", "title": "Pack an Essentials Kit", "description": "Pack a 'first night' box with snacks, toiletries, chargers, and a change of clothes that travels with you, not on the truck.", "icon": "Heart" },
+          { "number": "9", "title": "Communicate With Us", "description": "Let your T&E moving coordinator know about specialty items, access issues, or time restrictions. Clear communication is key!", "icon": "Phone" },
+          { "number": "10", "title": "Relax & Enjoy the Beach", "description": "You're moving to a great community! Let our experienced team handle the heavy lifting so you can start enjoying your new home.", "icon": "ThumbsUp" }
+      ],
+      "cta": {
+          "headline": "Ready for a Stress-Free Neptune Beach Move?",
+          "subheadline": "Let our experienced team handle everything while you focus on the excitement of your new home. Get your free quote today!",
+          "buttonText": "Get Your Free Quote Now"
+      }
+    },
+    "finalCta": {
+      "headline": "Ready to Move in Neptune Beach?",
+      "subheadline": "Join thousands of satisfied beaches residents who chose T&E Movers. Your new home is waiting - let's get you there safely and stress-free.",
+      "buttonText": "Get Your Free Quote",
+      "features": [
+          { "icon": "DollarSign", "title": "Transparent Pricing", "description": "No hidden fees or fuel charges" },
+          { "icon": "Shield", "title": "Zero Damage Guarantee", "description": "We fix or replace anything damaged" },
+          { "icon": "Clock", "title": "On-Time Service", "description": "We respect your schedule" },
+          { "icon": "MapPinIcon", "title": "Neptune Beach Experts", "description": "25+ years serving the beaches" }
+      ]
+    },
+    "footer": {
+        "licenseText": "Licensed and Insured Neptune Beach Moving Company | FL License #IM123456"
+    }
+  }

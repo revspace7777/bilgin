@@ -12,6 +12,28 @@ export default function SitemapPage() {
     day: 'numeric'
   })
   
+  // All local moving service cities
+  const localMovingCities = [
+    'jacksonville',
+    'ponte-vedra', 
+    'st-augustine',
+    'neptune-beach',
+    'atlantic-beach',
+    'jacksonville-beach',
+    'st-johns',
+    'duval-county',
+    'nassau-county',
+    'clay-county',
+    'amelia-island',
+    'fernandina-beach',
+    'green-cove-springs',
+    'middleburg',
+    'fleming-island',
+    'orange-park',
+    'st-johns-county',
+    'nocatee'
+  ]
+
   // Florida cities (based on actual pages)
   const floridaCities = [
     'orlando', 'miami', 'miami-beach', 'miami-gardens', 'tampa', 'fort-lauderdale', 
@@ -97,12 +119,14 @@ export default function SitemapPage() {
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Link href="/l/jacksonville-movers" className="block" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" className="w-full justify-start">
-                  <MapPin className="mr-2 h-4 w-4" />
-                  Jacksonville Local Movers
-                </Button>
-              </Link>
+              {localMovingCities.map((city) => (
+                <Link key={city} href={`/l/${city}-movers`} className="block" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="w-full justify-start">
+                    <MapPin className="mr-2 h-4 w-4" />
+                    {city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, ' ')} Local Movers
+                  </Button>
+                </Link>
+              ))}
             </div>
           </CardContent>
         </Card>

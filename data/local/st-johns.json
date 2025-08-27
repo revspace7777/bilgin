@@ -1,0 +1,132 @@
+{
+    "meta": {
+      "title": "St. Johns' Premier Local Movers | T&E Movers",
+      "description": "Your trusted local movers for St. Johns, FL. We offer affordable, reliable moving services for homes and families in the St. Johns community. Get your free quote today!"
+    },
+    "cityDetails": {
+      "cityName": "St. Johns",
+      "county": "St. Johns County",
+      "colloquialName": "St. Johns",
+      "zipCodes": ["32259", "32260"],
+      "neighborhoods": ["Julington Creek Plantation", "Durbin Crossing", "RiverTown", "Shearwater", "Cimarrone Golf & Country Club", "South Hampton", "St. Johns Forest", "Fruit Cove"]
+    },
+    "header": {
+      "subtitle": "St. Johns' Local Moving Experts"
+    },
+    "hero": {
+      "badgeText": "🏆 #1 Rated St. Johns Moving Company",
+      "headline": "St. Johns' <span class=\"text-red-400\">Premier Local Movers</span> Since 1998",
+      "subheadline": "Your trusted neighbors for seamless local moves throughout St. Johns and surrounding areas. We've successfully completed over 15,000 local moves with a 99.8% customer satisfaction rate.",
+      "image": "/images/truck-fleet.png",
+      "imageBannerText": "Based in St. Johns",
+      "stat1": { "value": "25+", "label": "Years in St. Johns" },
+      "stat2": { "value": "15K+", "label": "Local Moves" },
+      "stat3": { "value": "99.8%", "label": "Satisfaction Rate" }
+    },
+    "trustIndicators": [
+      { "icon": "Award", "label": "St. Johns A+ Rated" },
+      { "icon": "Shield", "label": "Licensed & Insured" },
+      { "icon": "Star", "label": "5-Star Reviews" },
+      { "icon": "Users", "label": "Family Owned" },
+      { "icon": "MapPinIcon", "label": "Local Experts" },
+      { "icon": "Clock", "label": "On-Time Service" }
+    ],
+    "pricing": {
+      "isEnabled": true,
+      "heroPrice": "$397",
+      "heroSubtext": "Perfect for apartments, homes, and local relocations within 50 miles of St. Johns. No hidden fees, no fuel charges, and a price-lock guarantee!",
+      "tiers": [
+          { "title": "Apartment/Townhome", "priceRange": "$397", "duration": "2-4 hours", "description": "Ideal for apartments and townhomes" },
+          { "title": "2-3 Bedroom Home", "priceRange": "$597-$897", "duration": "4-6 hours", "description": "Includes furniture wrapping and setup" },
+          { "title": "4+ Bedroom Home", "priceRange": "$997+", "duration": "Full-day service", "description": "Perfect for larger family homes" }
+      ],
+      "features": ["No fuel charges", "Price-lock guarantee", "Professional wrapping included", "Furniture setup included"]
+    },
+    "whyChooseUs": {
+      "headline": "Why St. Johns Families Choose T&E Movers",
+      "subheadline": "We are your St. Johns neighbors, committed to providing a superior moving experience that caters to the needs of our vibrant, growing communities.",
+      "cards": [
+        { "icon": "MapPinIcon", "title": "Deep Local Knowledge", "description": "From CR 210 to Fruit Cove, we know every neighborhood in St. Johns. We understand the logistics of moving in this rapidly expanding and desirable area." },
+        { "icon": "DollarSign", "title": "No Hidden Fees Promise", "description": "The price we quote is the price you pay. No surprises. Our transparent pricing includes everything for a successful move in St. Johns." },
+        { "icon": "Shield", "title": "Family-Focused Service", "description": "We understand the importance of a smooth transition for your family. We handle your belongings with care, so you can focus on settling into your new St. Johns home." }
+      ],
+      "promise": {
+        "headline": "The T&E St. Johns Promise",
+        "image": "/images/facility-overview.png",
+        "points": [
+          { "title": "Price-Lock Guarantee", "description": "Your quote is your final price. No surprise charges, ever." },
+          { "title": "On-Time Arrival Promise", "description": "We respect your time. We arrive when scheduled, or your move is 25% off." },
+          { "title": "Zero Damage Guarantee", "description": "We guarantee zero damage to your belongings or we fix/replace at no cost to you." }
+        ]
+      }
+    },
+    "hyperlocalSection": {
+      "headline": "Serving All of St. Johns & Surrounding Areas",
+      "subheadline": "From Julington Creek to Durbin Crossing, we provide expert local moving services throughout St. Johns and the greater St. Johns County area.",
+      "areaList": ["St. Johns", "Fruit Cove", "Julington Creek", "Durbin Crossing", "RiverTown", "Nocatee", "Ponte Vedra", "St. Augustine", "World Golf Village", "Shearwater"],
+      "buttonText": "Get My Free Quote"
+    },
+      "services": {
+      "headline": "Complete St. Johns Moving Solutions",
+      "subheadline": "From apartments to large single-family homes, we handle every type of local move in St. Johns with unmatched care and professionalism.",
+      "tabs": [
+          { "value": "residential", "triggerTitle": "Residential", "cards": [ { "icon": "Home", "title": "Single-Family Home Moves", "description": "Specializing in moving families in communities like Julington Creek, Durbin Crossing, and RiverTown.", "details": ["Expert packing", "Furniture assembly", "Appliance services", "HOA compliance"] }, { "icon": "Building", "title": "Apartment & Condo Moves", "description": "Efficient and careful moving for apartments and condos throughout the St. Johns area.", "details": ["Stair and elevator expertise", "Tight space navigation", "Efficient loading/unloading", "Community rule adherence"] }, { "icon": "Heart", "title": "Senior Moving", "description": "Compassionate moving services for seniors transitioning to new living situations in St. Johns.", "details": ["Patient, caring approach", "Downsizing assistance", "Assisted living transitions", "Family coordination"] } ] },
+          { "value": "commercial", "triggerTitle": "Commercial", "cards": [ { "icon": "Building", "title": "Office Relocations", "description": "Minimize downtime with our efficient office moving services.", "details": ["After-hours moving available", "IT equipment specialists", "Furniture disassembly/assembly", "Minimal business disruption"] }, { "icon": "Package", "title": "Retail & Restaurant", "description": "Specialized moving for retail stores and restaurants.", "details": ["Equipment moving", "Inventory handling", "Fixture installation", "Quick turnaround times"] }, { "icon": "FileText", "title": "Medical Offices", "description": "Careful handling of sensitive medical equipment and records.", "details": ["HIPAA compliance", "Medical equipment expertise", "Secure document handling", "Minimal patient disruption"] } ] },
+          { "value": "specialty", "triggerTitle": "Specialty", "cards": [ { "icon": "Package", "title": "Piano Moving", "description": "Expert piano moving with specialized equipment and techniques.", "details": ["All piano types", "Specialized equipment", "Stair navigation", "Climate considerations"] }, { "icon": "Shield", "title": "Gun Safe Moving", "description": "Safe and secure moving of gun safes and heavy security equipment.", "details": ["Heavy lifting equipment", "Secure handling", "Stair navigation", "Placement assistance"] }, { "icon": "Boxes", "title": "Antiques & Art", "description": "White-glove service for valuable antiques and artwork.", "details": ["Custom packing", "Climate control", "Insurance coordination", "Museum-quality care"] } ] },
+          { "value": "additional", "triggerTitle": "Additional", "cards": [ { "icon": "Package", "title": "Packing Services", "description": "Professional packing and unpacking services.", "details": ["Full-service packing", "Partial packing", "Unpacking services", "Packing supplies"] }, { "icon": "Lock", "title": "Storage Solutions", "description": "Secure storage for any timeline needs.", "details": ["Climate-controlled facility", "Short & long-term options", "Vehicle storage", "24/7 security"] }, { "icon": "Wrench", "title": "Junk Removal", "description": "Decluttering and junk removal services.", "details": ["Furniture removal", "Appliance disposal", "Eco-friendly disposal", "Same-day service"] } ] }
+      ]
+    },
+    "testimonials": {
+      "headline": "Real St. Johns Moving Stories",
+      "subheadline": "Don't just take our word for it. Here's what your neighbors in St. Johns are saying about their experience with T&E Movers.",
+      "buttonText": "Be Our Next Success Story",
+      "reviews": [
+          { "customerName": "The Wilson Family", "initials": "WF", "moveRoute": "Durbin Crossing", "moveType": "Local Family Move", "testimonialText": "We had a fantastic experience with T&E Movers for our move to Durbin Crossing. The team was punctual, professional, and took great care of our belongings. They made the whole process seamless and stress-free.", "rating": 5, "date": "1 month ago" },
+          { "customerName": "Jessica B.", "initials": "JB", "moveRoute": "Julington Creek Plantation", "moveType": "Home Move", "testimonialText": "I was very impressed with T&E Movers. They were on time, efficient, and the final price was exactly what they quoted. The crew was friendly and hardworking. I would highly recommend them to anyone moving in St. Johns.", "rating": 5, "date": "2 months ago" },
+          { "customerName": "The Taylor Family", "initials": "TF", "moveRoute": "RiverTown", "moveType": "New Home Purchase", "testimonialText": "Moving into our new home in RiverTown was a breeze thanks to T&E. They were careful with our furniture, and the crew was fantastic. A truly 5-star service that I would recommend to all my new neighbors.", "rating": 5, "date": "3 months ago" }
+      ]
+    },
+      "faq": {
+      "headline": "St. Johns Moving Questions, Answered",
+      "subheadline": "As St. Johns' local moving experts for over 25 years, we have the answers to all your questions about moving in our thriving community.",
+      "categories": [
+          { "title": "Pricing & Scheduling", "items": [ { "question": "How much does a local move in St. Johns cost?", "answer": "Our local moves start at just $397. The final cost depends on the size of your home and any extra services. We provide transparent, price-lock guarantees with no hidden fees." }, { "question": "Are you familiar with the HOAs in St. Johns communities?", "answer": "Yes, we are very experienced with the rules and regulations of HOAs in communities like Julington Creek, Durbin Crossing, and RiverTown, ensuring a smooth moving day." }, { "question": "How far in advance should I book my move?", "answer": "We suggest booking 3-4 weeks in advance. St. Johns is a high-demand area, especially during school breaks and summer, and our schedule fills up quickly." } ] },
+          { "title": "Service & Logistics", "items": [ { "question": "What areas do you serve around St. Johns?", "answer": "We serve all of St. Johns, including Fruit Cove, Julington Creek, and Durbin Crossing. We also handle moves to and from neighboring communities like Nocatee and Ponte Vedra." }, { "question": "Do you offer packing services for large homes?", "answer": "Yes, our full-service packing is ideal for large family homes in St. Johns. Our professional team can efficiently pack your entire house, ensuring everything is protected." }, { "question": "Can you handle moves with difficult access?", "answer": "Absolutely. Our teams are trained to handle various situations. Please let us know about any potential access challenges when you book your move so we can plan accordingly." } ] }
+      ]
+    },
+    "movingTips": {
+      "headline": "Top Tips for a Smooth St. Johns Move",
+      "subheadline": "After 25 years of moving families in St. Johns County, we know how to make your relocation a success. Here are our top tips.",
+      "tips": [
+          { "number": "1", "title": "Check Your HOA Rules", "description": "Many St. Johns communities have specific rules for moving day. Check with your HOA for approved hours and parking, and share the details with us.", "icon": "Calendar" },
+          { "number": "2", "title": "Hire True Local Movers", "description": "Choose a licensed and insured moving company that knows St. Johns. We understand the traffic patterns and community layouts to save you time and hassle.", "icon": "MapPinIcon" },
+          { "number": "3", "title": "Declutter Before Packing", "description": "Get rid of unwanted items to reduce your load and save money. St. Johns has many great donation centers.", "icon": "Package" },
+          { "number": "4", "title": "Label for Your New Home", "description": "Label boxes by room and contents. This makes unpacking at your new St. Johns home much faster and helps our crew place items correctly.", "icon": "FileText" },
+          { "number": "5", "title": "Use Quality Materials", "description": "Florida's humidity can weaken cheap boxes. We provide professional packing services and premium materials to protect your belongings.", "icon": "Shield" },
+          { "number": "6", "title": "Protect Your Valuables", "description": "Keep important documents, jewelry, and irreplaceable items with you during the move. Don't pack them in the moving truck.", "icon": "Lock" },
+          { "number": "7", "title": "Schedule Utilities Early", "description": "Arrange for utilities in St. Johns to be transferred or started before moving day. You'll want that AC on and ready!", "icon": "Zap" },
+          { "number": "8", "title": "Pack an Essentials Kit", "description": "Pack a 'first night' box with snacks, toiletries, chargers, and a change of clothes that travels with you, not on the truck.", "icon": "Heart" },
+          { "number": "9", "title": "Communicate With Us", "description": "Let your T&E moving coordinator know about specialty items, access issues, or time restrictions. Clear communication is key!", "icon": "Phone" },
+          { "number": "10", "title": "Relax & Enjoy Your New Home", "description": "You're moving to a fantastic community! Let our experienced team handle the heavy lifting so you can start enjoying your new home.", "icon": "ThumbsUp" }
+      ],
+      "cta": {
+          "headline": "Ready for a Stress-Free St. Johns Move?",
+          "subheadline": "Let our experienced team handle everything while you focus on the excitement of your new home. Get your free quote today!",
+          "buttonText": "Get Your Free Quote Now"
+      }
+    },
+    "finalCta": {
+      "headline": "Ready to Move in St. Johns?",
+      "subheadline": "Join thousands of satisfied St. Johns County families who chose T&E Movers. Your new home is waiting - let's get you there safely and stress-free.",
+      "buttonText": "Get Your Free Quote",
+      "features": [
+          { "icon": "DollarSign", "title": "Transparent Pricing", "description": "No hidden fees or fuel charges" },
+          { "icon": "Shield", "title": "Zero Damage Guarantee", "description": "We fix or replace anything damaged" },
+          { "icon": "Clock", "title": "On-Time Service", "description": "We respect your schedule" },
+          { "icon": "MapPinIcon", "title": "St. Johns Experts", "description": "25+ years serving St. Johns County" }
+      ]
+    },
+    "footer": {
+        "licenseText": "Licensed and Insured St. Johns Moving Company | FL License #IM123456"
+    }
+  }
