@@ -46,6 +46,7 @@ export default function QuoteForm() {
   const { toast } = useToast()
   const router = useRouter()
   const [customId, setCustomId] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -86,6 +87,11 @@ export default function QuoteForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
+    // Prevent duplicate submissions
+    if (isSubmitting) {
+      return
+    }
+
     if (!formData.name || !formData.email || !formData.phone) {
       toast({
         title: "Missing Information",
@@ -103,6 +109,8 @@ export default function QuoteForm() {
       })
       return
     }
+
+    setIsSubmitting(true)
 
     const allFormData = {
       ...formData,
@@ -126,6 +134,9 @@ export default function QuoteForm() {
             variant: "destructive",
         });
         console.error("Form submission error:", error);
+    })
+    .finally(() => {
+        setIsSubmitting(false)
     });
   }
 
@@ -278,7 +289,7 @@ export default function QuoteForm() {
             name="movingToStreet"
             type="text"
             placeholder="Moving To Street"
-            value={formData.movingFromStreet}
+            value={formData.movingToStreet}
             onChange={(e) => handleInputChange("movingToStreet", e.target.value)}
             className="bg-slate-700 border-slate-600 text-white placeholder:text-gray-400 focus:border-red-500"
           />
@@ -368,9 +379,10 @@ export default function QuoteForm() {
       {/* Submit Button */}
       <Button
         type="submit"
-        className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-4 text-lg"
+        disabled={isSubmitting}
+        className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-4 text-lg disabled:opacity-50"
       >
-        SEND
+        {isSubmitting ? "SENDING..." : "SEND"}
       </Button>
     </form>
   )
