@@ -42,9 +42,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'sanford', 'st-cloud', 'tallahassee', 'tamarac', 'wellington', 'weston'
   ]
 
+  // Georgia cities
+  const georgiaCities = [
+    'atlanta-ga', 'augusta-ga', 'columbus-ga', 'macon-ga', 'savannah-ga', 'athens-ga',
+    'sandy-springs-ga', 'roswell-ga', 'albany-ga', 'johns-creek-ga', 'warner-robins-ga',
+    'alpharetta-ga', 'marietta-ga', 'valdosta-ga', 'smyrna-ga', 'brookhaven-ga',
+    'stonecrest-ga', 'south-fulton-ga', 'dunwoody-ga', 'gainesville-ga'
+  ]
+
+  // Alabama cities
+  const alabamaCities = [
+    'birmingham-al', 'montgomery-al', 'huntsville-al', 'mobile-al', 'tuscaloosa-al',
+    'auburn-al', 'hoover-al', 'madison-al', 'decatur-al', 'dothan-al'
+  ]
+
   // North Carolina cities
   const northCarolinaCities = [
-    'charlotte', 'raleigh', 'greensboro', 'cary', 'high-point', 'rock-hill'
+    'charlotte', 'raleigh', 'greensboro', 'cary', 'high-point', 'greenville-nc', 'rock-hill'
   ]
 
   // South Carolina cities
@@ -85,6 +99,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Long distance moving pages (Jacksonville to various cities)
   const longDistancePages = [
     ...floridaCities.map(city => ({
+      url: `${baseUrl}/ld/jacksonville-to-${city}-movers`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.64,
+    })),
+    ...georgiaCities.map(city => ({
+      url: `${baseUrl}/ld/jacksonville-to-${city}-movers`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.64,
+    })),
+    ...alabamaCities.map(city => ({
       url: `${baseUrl}/ld/jacksonville-to-${city}-movers`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,

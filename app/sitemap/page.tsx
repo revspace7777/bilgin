@@ -4,6 +4,12 @@ import { Badge } from "@/components/ui/badge"
 import { MapPin, Home, Truck, Globe, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
+function formatCityName(city: string) {
+  // Remove state suffixes for display
+  const cleanCity = city.replace(/-(ga|al|nc)$/, '');
+  return cleanCity.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+
 export default function SitemapPage() {
   // Use current date as fallback
   const gitDate = new Date().toLocaleDateString('en-US', {
@@ -50,22 +56,22 @@ export default function SitemapPage() {
 
   // Georgia cities
   const georgiaCities = [
-    'atlanta', 'augusta', 'columbus', 'macon', 'savannah', 'athens',
-    'sandy-springs', 'roswell', 'albany', 'johns-creek', 'warner-robins',
-    'alpharetta', 'marietta', 'valdosta', 'smyrna', 'brookhaven',
-    'stonecrest', 'south-fulton', 'dunwoody', 'gainesville'
+    'atlanta-ga', 'augusta-ga', 'columbus-ga', 'macon-ga', 'savannah-ga', 'athens-ga',
+    'sandy-springs-ga', 'roswell-ga', 'albany-ga', 'johns-creek-ga', 'warner-robins-ga',
+    'alpharetta-ga', 'marietta-ga', 'valdosta-ga', 'smyrna-ga', 'brookhaven-ga',
+    'stonecrest-ga', 'south-fulton-ga', 'dunwoody-ga', 'gainesville-ga'
   ]
 
   // Alabama cities
   const alabamaCities = [
-    'birmingham', 'montgomery', 'huntsville', 'mobile', 'tuscaloosa',
-    'auburn', 'hoover', 'madison', 'decatur', 'dothan'
+    'birmingham-al', 'montgomery-al', 'huntsville-al', 'mobile-al', 'tuscaloosa-al',
+    'auburn-al', 'hoover-al', 'madison-al', 'decatur-al', 'dothan-al'
   ]
 
   // North Carolina cities
   const northCarolinaCities = [
     'charlotte', 'raleigh', 'greensboro', 'cary', 'high-point',
-    'greenville', 'rock-hill'
+    'greenville-nc', 'rock-hill'
   ]
 
   // South Carolina cities
@@ -123,7 +129,7 @@ export default function SitemapPage() {
                 <Link key={city} href={`/l/${city}-movers`} className="block" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full justify-start">
                     <MapPin className="mr-2 h-4 w-4" />
-                    {city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, ' ')} Local Movers
+                    {formatCityName(city)} Local Movers
                   </Button>
                 </Link>
               ))}
@@ -171,7 +177,7 @@ export default function SitemapPage() {
                 <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full justify-start">
                     <MapPin className="mr-2 h-4 w-4" />
-                    Jacksonville to {city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, ' ')}
+                    Jacksonville to {formatCityName(city)}
                   </Button>
                 </Link>
               ))}
@@ -193,7 +199,7 @@ export default function SitemapPage() {
                 <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full justify-start">
                     <MapPin className="mr-2 h-4 w-4" />
-                    Jacksonville to {city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, ' ')}
+                    Jacksonville to {formatCityName(city)}
                   </Button>
                 </Link>
               ))}
@@ -215,7 +221,7 @@ export default function SitemapPage() {
                 <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full justify-start">
                     <MapPin className="mr-2 h-4 w-4" />
-                    Jacksonville to {city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, ' ')}
+                    Jacksonville to {formatCityName(city)}
                   </Button>
                 </Link>
               ))}
@@ -237,7 +243,7 @@ export default function SitemapPage() {
                 <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full justify-start">
                     <MapPin className="mr-2 h-4 w-4" />
-                    Jacksonville to {city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, ' ')}
+                    Jacksonville to {formatCityName(city)}
                   </Button>
                 </Link>
               ))}
@@ -259,7 +265,7 @@ export default function SitemapPage() {
                 <Link key={city} href={`/ld/jacksonville-to-${city}-movers`} className="block" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full justify-start">
                     <MapPin className="mr-2 h-4 w-4" />
-                    Jacksonville to {city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, ' ')}
+                    Jacksonville to {formatCityName(city)}
                   </Button>
                 </Link>
               ))}

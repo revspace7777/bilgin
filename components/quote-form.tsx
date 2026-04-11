@@ -46,6 +46,7 @@ export default function QuoteForm() {
   const { toast } = useToast()
   const router = useRouter()
   const [customId, setCustomId] = useState("")
+  const [isMounted, setIsMounted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -82,6 +83,7 @@ export default function QuoteForm() {
 
   useEffect(() => {
     setCustomId(generateCustomId())
+    setIsMounted(true)
   }, [])
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -146,7 +148,7 @@ export default function QuoteForm() {
       <input type="hidden" name="form-name" value="quote-request" />
       
       {/* Add all tracking inputs for client-side logic */}
-      {getTrackingInputs()}
+      {isMounted && getTrackingInputs()}
       
       {/* Basic Information Row */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
