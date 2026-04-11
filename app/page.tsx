@@ -68,7 +68,7 @@ export default function TEMoversLanding() {
               <Phone className="h-4 w-4 text-red-500" />
               <a href="tel:9049971884" className="font-semibold mobile-lander-click-to-call">(904) 997-1884</a>
             </div>
-            <Button className="bg-red-500 hover:bg-red-600" id="header-quote-btn">
+            <Button className="bg-red-500 hover:bg-red-600 quote-trigger" id="header-quote-btn">
               Get Free Quote
             </Button>
           </div>

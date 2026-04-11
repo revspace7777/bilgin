@@ -16,8 +16,8 @@ export default function QuoteFormSlideout() {
     }
 
     const handleQuoteTrigger = (e: Event) => {
-      const target = e.target as HTMLElement
-      if (target.classList.contains("quote-trigger") || target.closest(".quote-trigger")) {
+      const target = e.target as Element
+      if (target?.closest?.(".quote-trigger")) {
         e.preventDefault()
         setIsOpen(true)
       }
