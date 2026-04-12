@@ -9,7 +9,7 @@ export default function ThankYouPage() {
       {/* Background Banner Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/highwaybanner.jpg"
+          src="/images/thank-you-bg.jpg"
           alt="Moving trucks banner"
           fill
           className="object-cover"
@@ -23,10 +23,10 @@ export default function ThankYouPage() {
         {/* Logo - Positioned as in mobile view */}
         <div className="mb-8">
           <Image
-            src="/TE-logo.png.webp"
+            src="/images/logo-main.svg"
             alt="T&E Moving and Storage"
-            width={120}
-            height={120}
+            width={200}
+            height={200}
             className="mx-auto"
           />
         </div>
