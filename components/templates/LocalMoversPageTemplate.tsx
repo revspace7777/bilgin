@@ -512,9 +512,9 @@ export default function LocalMoversPageTemplate({ data }: Props) {
                     </div>
                     <div className="text-right">
                         <div className="flex justify-end space-x-6 text-sm text-gray-400">
-                            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                            <a href="#" className="hover:text-white transition-colors">Sitemap</a>
+                            <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+                            <a href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</a>
+                            <a href="/sitemap" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Sitemap</a>
                         </div>
                     </div>
                 </div>
